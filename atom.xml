@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yz&#39;s BLOG</title>
+  
+  <subtitle>既许一人以偏爱,愿尽余生之慷慨</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-02-27T04:41:46.009Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>幼稚园园长</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>auto open test</title>
+    <link href="http://yoursite.com/2020/02/27/auto-open-test/"/>
+    <id>http://yoursite.com/2020/02/27/auto-open-test/</id>
+    <published>2020-02-27T04:41:45.000Z</published>
+    <updated>2020-02-27T04:41:46.009Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>first</title>
+    <link href="http://yoursite.com/2020/02/27/first/"/>
+    <id>http://yoursite.com/2020/02/27/first/</id>
+    <published>2020-02-27T03:59:46.000Z</published>
+    <updated>2020-02-27T03:59:46.978Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
