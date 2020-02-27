@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-27T10:25:14.307Z</updated>
+  <updated>2020-02-27T10:38:36.085Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/02/27/faqs/"/>
     <id>http://yoursite.com/2020/02/27/faqs/</id>
     <published>2020-02-27T08:57:36.000Z</published>
-    <updated>2020-02-27T10:25:14.307Z</updated>
+    <updated>2020-02-27T10:38:36.085Z</updated>
     
     <content type="html"><![CDATA[<hr><ul><li><strong>Q: 如何搭建Hexo博客</strong></li></ul><p><strong>A:</strong>工作量较大，本人未完全掌握，故本人无法写一篇教程，请谷歌or百度“Hexo搭建博客”。</p><ul><li><strong>Q:博客搭建资费问题</strong></li></ul><p><strong>A:</strong>使用Hexo搭建博客仅需支付域名费用，若不使用自己的域名，则无需付费。如“<a href="https://yzyyz.top" target="_blank" rel="noopener">https://yzyyz.top</a>”是我的个人域名，我仅需支付它的费用，若不使用<a href="https://yzyyz.top" target="_blank" rel="noopener">https://yzyyz.top</a>，还可以从<a href="https://yzyyz1387.github.io" target="_blank" rel="noopener">https://yzyyz1387.github.io</a>访问我的博客。</p><ul><li><strong>Q:搭建Hexo需要具备什么条件</strong></li></ul><p><strong>A：</strong>一台可联网的windos设备即可完成。</p><ul><li><strong>本人搭建过程中参考的资料</strong></li></ul><hr><ul><li><a href="https://www.jianshu.com/p/c7397489757c" target="_blank" rel="noopener">hexo搭建个人博客</a></li><li><a href="https://blog.csdn.net/qq_27754983/article/details/76143478" target="_blank" rel="noopener">Windows下，Hexo+GitHub搭建博客</a></li><li><a href="https://segmentfault.com/a/1190000017986794" target="_blank" rel="noopener">超详细Hexo+Github Page搭建技术博客教程【持续更新】</a></li><li><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">使用hexo+github搭建免费个人博客详细教程</a></li><li><a href="https://blog.csdn.net/ShelleyLittlehero/article/details/83444703" target="_blank" rel="noopener">npm安装hexo报错</a></li></ul>]]></content>
     
@@ -42,7 +42,9 @@
     
     
     
-      <category term="Hexo，问题" scheme="http://yoursite.com/tags/Hexo%EF%BC%8C%E9%97%AE%E9%A2%98/"/>
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="问题" scheme="http://yoursite.com/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
@@ -81,7 +83,7 @@
     <link href="http://yoursite.com/2020/02/27/firstblog/"/>
     <id>http://yoursite.com/2020/02/27/firstblog/</id>
     <published>2020-02-26T19:09:02.518Z</published>
-    <updated>2020-02-27T10:26:08.604Z</updated>
+    <updated>2020-02-27T10:38:38.414Z</updated>
     
     <content type="html"><![CDATA[<p>#Hello World #</p><p>在进入<strong><a href="https://l-in.cn" target="_blank" rel="noopener" title="隔壁老派（π）的博客">隔壁老派（π）的博客</a></strong>后，博客的简约与优雅感让我内心产生了一种说不出的感觉，是一种羡慕中带着失措，欣赏中带着好奇。在此之前我尝试过做博客，无论是WordPress也好、emlog也好，后来种种原因让我放弃了它们。时间往复，那天看到老派的博客后，我决定打造自己的一片天地，确实，它不同于Qzone、新浪微博等。在求助老派后因为自己的“非法操作”，没有操作成功。</p><p>偶然地，我看到<strong><a href="https://blog.itswincer.com/" target="_blank" rel="noopener" title="Wincer 的博客">Wincer 的博客</a></strong>，几番摸索无果，我向Wincer发送了求助邮件，并在一天后得到了他的回复。自此，我开始了Hexo博客的搭建之路。</p><p>今天——2020年2月27日，一个让人激动的日子。我的Hexo博客<strong><a href="http://yzyyz.top" target="_blank" rel="noopener" title="幼稚园园长的博客">幼稚园园长的博客</a></strong>搭建成功！</p>]]></content>
     
@@ -97,7 +99,9 @@
     
     
     
-      <category term="Hexo，随笔" scheme="http://yoursite.com/tags/Hexo%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
