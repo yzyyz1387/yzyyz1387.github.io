@@ -4,7 +4,20 @@
   
     
     <entry>
-      <title>公告</title>
+      <title>test</title>
+      <link href="/2020/02/27/test/"/>
+      <url>/2020/02/27/test/</url>
+      
+        <content type="html"><![CDATA[<p>测试</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>themegg</title>
       <link href="/2020/02/27/themegg/"/>
       <url>/2020/02/27/themegg/</url>
       
