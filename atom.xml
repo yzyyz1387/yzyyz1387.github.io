@@ -5,9 +5,9 @@
   <subtitle>既许一人以偏爱,愿尽余生之慷慨</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://www.yzyyz.top/"/>
   <updated>2020-02-28T16:35:36.234Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://www.yzyyz.top/</id>
   
   <author>
     <name>幼稚园园长</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Python入门</title>
-    <link href="http://yoursite.com/2020/02/28/Python%E5%85%A5%E9%97%A8/"/>
-    <id>http://yoursite.com/2020/02/28/Python%E5%85%A5%E9%97%A8/</id>
+    <link href="http://www.yzyyz.top/2020/02/28/Python%E5%85%A5%E9%97%A8/"/>
+    <id>http://www.yzyyz.top/2020/02/28/Python%E5%85%A5%E9%97%A8/</id>
     <published>2020-02-28T11:36:50.000Z</published>
     <updated>2020-02-28T16:35:36.234Z</updated>
     
@@ -37,14 +37,14 @@
     
     
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+      <category term="Python" scheme="http://www.yzyyz.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>人生苦短 我用Python</title>
-    <link href="http://yoursite.com/2020/02/28/%E4%BA%BA%E7%94%9F%E8%8B%A6%E7%9F%AD-%E6%88%91%E7%94%A8Python/"/>
-    <id>http://yoursite.com/2020/02/28/%E4%BA%BA%E7%94%9F%E8%8B%A6%E7%9F%AD-%E6%88%91%E7%94%A8Python/</id>
+    <link href="http://www.yzyyz.top/2020/02/28/%E4%BA%BA%E7%94%9F%E8%8B%A6%E7%9F%AD-%E6%88%91%E7%94%A8Python/"/>
+    <id>http://www.yzyyz.top/2020/02/28/%E4%BA%BA%E7%94%9F%E8%8B%A6%E7%9F%AD-%E6%88%91%E7%94%A8Python/</id>
     <published>2020-02-28T09:01:07.000Z</published>
     <updated>2020-02-28T14:33:24.371Z</updated>
     
@@ -63,14 +63,14 @@
     
     
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+      <category term="Python" scheme="http://www.yzyyz.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>我的老爸</title>
-    <link href="http://yoursite.com/2020/02/28/mf/"/>
-    <id>http://yoursite.com/2020/02/28/mf/</id>
+    <link href="http://www.yzyyz.top/2020/02/28/mf/"/>
+    <id>http://www.yzyyz.top/2020/02/28/mf/</id>
     <published>2020-02-28T08:50:16.000Z</published>
     <updated>2020-02-28T14:36:24.158Z</updated>
     
@@ -84,14 +84,14 @@
     
     
     
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.yzyyz.top/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>Q&amp;A:Yz&#39;s Blog</title>
-    <link href="http://yoursite.com/2020/02/27/faqs/"/>
-    <id>http://yoursite.com/2020/02/27/faqs/</id>
+    <link href="http://www.yzyyz.top/2020/02/27/faqs/"/>
+    <id>http://www.yzyyz.top/2020/02/27/faqs/</id>
     <published>2020-02-27T08:57:36.000Z</published>
     <updated>2020-02-28T14:36:28.769Z</updated>
     
@@ -107,14 +107,14 @@
     
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://www.yzyyz.top/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>公告</title>
-    <link href="http://yoursite.com/2020/02/27/themegg/"/>
-    <id>http://yoursite.com/2020/02/27/themegg/</id>
+    <link href="http://www.yzyyz.top/2020/02/27/themegg/"/>
+    <id>http://www.yzyyz.top/2020/02/27/themegg/</id>
     <published>2020-02-27T06:23:20.000Z</published>
     <updated>2020-02-28T17:00:23.982Z</updated>
     
@@ -135,16 +135,16 @@
     
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://www.yzyyz.top/tags/Hexo/"/>
     
-      <category term="公告" scheme="http://yoursite.com/tags/%E5%85%AC%E5%91%8A/"/>
+      <category term="公告" scheme="http://www.yzyyz.top/tags/%E5%85%AC%E5%91%8A/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/02/27/firstblog/"/>
-    <id>http://yoursite.com/2020/02/27/firstblog/</id>
+    <link href="http://www.yzyyz.top/2020/02/27/firstblog/"/>
+    <id>http://www.yzyyz.top/2020/02/27/firstblog/</id>
     <published>2020-02-26T19:09:02.518Z</published>
     <updated>2020-02-27T10:38:38.414Z</updated>
     
@@ -162,9 +162,9 @@
     
     
     
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.yzyyz.top/tags/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://www.yzyyz.top/tags/Hexo/"/>
     
   </entry>
   
