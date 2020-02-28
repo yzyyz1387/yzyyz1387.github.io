@@ -347,8 +347,8 @@
 <h4 id="tab_suitable"> 正确使用缩进</h4>
 
 <p>缩进，即制表（键盘上Tab键）符用来决定代码之间的逻辑关系，所以在使用选择结构和循环结构，或者是编写函数的时候，务必注意缩进的使用，若使用不恰当，会造成程序<font color=#ff0000>报错</font>,如：</p>
-<a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">print(<span class="string">"Hello world"</span>)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>执行后，在PyCharm中则会显示：</p>
 <blockquote>
 <p> <font color=red> print(“Hello world”)</font><br><font color=red>^</font><br><font color=red>IndentationError: expected an indented block</font></p>
@@ -387,17 +387,32 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:              <span class="comment">#开始循环</span></span><br><span class="line">	print(<span class="string">"Hello world"</span>) <span class="comment">#打印文本</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">我是注释示例</span></span><br><span class="line"><span class="string">运行代码将忽视我</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">我也是注释示例</span></span><br><span class="line"><span class="string">运行代码将忽视我</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
 
+<hr>
 <h3 id="identifier&name">二、标识符及命名规则</h3>
 <h4 id="identifier">标识符</h4>
-Python中对标识符的构成是有要求的：以数字或者下划线（_）开头，后跟字母、数字、下划线。
-<table id="tfhover" class="tftable" border="1">
+Python中对标识符构成的要求：以数字或者下划线（_）开头，后跟字母、数字、下划线。
+<table id="name" class="name" border="1">
 <tr style="text-align:center;"><td>合法名称示例</td><td>非法名称示例</td></tr>
 <tr style="text-align:center;"><td>x</td><td >2x</td></tr>
 <tr style="text-align:center;"><td>num_1</td><td>a-b</td></tr>
 <tr style="text-align:center;"><td>python666</td><td>Py 666</td></tr>
 </table>
+同时，标识符区分大小写，命名时最好选择能见文知义的名称。
+推荐使用[驼峰式命名](https://baike.baidu.com/item/%E9%A9%BC%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%86%99/3976226?fr=aladdin "百度百科：驼峰式大小写")，如欲写一个意为my love的标识符，则写MyLove、My_Love。
 
-
+<p>不要使用单、双下划线开头，Python中会有冲突（尽量避免使用）<br>不要使用关键字作为标识符，如 False，True</p>
+<hr>
+<h3 id="=">三、变量与赋值</h3>
+Python不需要申明数据类型，它能自动识别赋值的类型可用函数type(变量名)判断数据类型。
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m=<span class="number">2</span></span><br><span class="line">type(m)</span><br></pre></td></tr></table></figure>
+执行该代码就会输出以下内容，说明赋给m的值2是整型（int）
+> <font color=blue> &lt;class 'int'&gt; </font>
+<table id="fz" class="fz" border="1">
+<tr style="text-align:center;"><td>值</td><td>类型</td></tr>
+<tr style="text-align:center;"><td>2</td><td >int-整型</td></tr>
+<tr style="text-align:center;"><td>2.6</td><td>float-浮点型</td></tr>
+<tr style="text-align:center;"><td>园长</td><td>str-字符串</td></tr>
+</table>
 
           
         </div>
@@ -501,7 +516,7 @@ Python中对标识符的构成是有要求的：以数字或者下划线（_）�
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#pytype"><span class="toc-number">1.</span> <span class="toc-text">一、 Python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tab_suitable"><span class="toc-number">1.1.</span> <span class="toc-text"> 正确使用缩进</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Punctuation"><span class="toc-number">1.2.</span> <span class="toc-text"> 正确使用符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#explan"><span class="toc-number">1.3.</span> <span class="toc-text"> 注释的用法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#identifier&name"><span class="toc-number">2.</span> <span class="toc-text">二、标识符及命名规则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#identifier"><span class="toc-number">2.1.</span> <span class="toc-text">标识符</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#pytype"><span class="toc-number">1.</span> <span class="toc-text">一、 Python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tab_suitable"><span class="toc-number">1.1.</span> <span class="toc-text"> 正确使用缩进</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Punctuation"><span class="toc-number">1.2.</span> <span class="toc-text"> 正确使用符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#explan"><span class="toc-number">1.3.</span> <span class="toc-text"> 注释的用法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#identifier&name"><span class="toc-number">2.</span> <span class="toc-text">二、标识符及命名规则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#identifier"><span class="toc-number">2.1.</span> <span class="toc-text">标识符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#="><span class="toc-number">3.</span> <span class="toc-text">三、变量与赋值</span></a></li></ol>
     </div>
   </section>
 
