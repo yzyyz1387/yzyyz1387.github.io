@@ -398,7 +398,7 @@ Python中对标识符构成的要求：以数字或者下划线（_）开头，�
 <tr style="text-align:center;"><td>python666</td><td>Py 666</td></tr>
 </table>
 同时，标识符区分大小写，命名时最好选择能见文知义的名称。
-推荐使用<a href="https://baike.baidu.com/item/%E9%A9%BC%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%86%99/3976226?fr=aladdin" target="_blank" rel="noopener" type="百度百科：驼峰式大小写">驼峰式命名</a>，如欲写一个意为my love的标识符，则写MyLove、My_Love。
+推荐使用<a href="https://baike.baidu.com/item/%E9%A9%BC%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%86%99/3976226?fr=aladdin" target="_blank" rel="noopener" title="百度百科：驼峰式大小写">驼峰式命名</a>，如欲写一个意为my love的标识符，则写MyLove、My_Love。
 
 <p>不要使用单、双下划线开头，Python中会有冲突（尽量避免使用）<br>不要使用关键字作为标识符，如 False，True</p>
 <hr>
@@ -406,12 +406,17 @@ Python中对标识符构成的要求：以数字或者下划线（_）开头，�
 Python不需要申明数据类型，它能自动识别赋值的类型可用函数type(变量名)判断数据类型。
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m=<span class="number">2</span></span><br><span class="line">type(m)</span><br></pre></td></tr></table></figure>
 执行该代码就会输出以下内容，说明赋给m的值2是整型（int）
-> <font color=blue>&lt;class 'int'&gt; </font> 
+
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;class 'int'&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
 <table id="fz" class="fz" border="1">
 <tr style="text-align:center;"><td>值</td><td>类型</td></tr>
 <tr style="text-align:center;"><td>2</td><td >int-整型</td></tr>
 <tr style="text-align:center;"><td>2.6</td><td>float-浮点型</td></tr>
 <tr style="text-align:center;"><td>园长</td><td>str-字符串</td></tr>
+<tr style="text-align:center;"><td>2=3j</td><td>complex-复数</td></tr>
+<tr style="text-align:center;"><td>True</td><td>bool-布尔值</td></tr>
+<tr style="text-align:center;"><td>[1,2,3,4]</td><td>list-列表</td></tr>
 </table>
 
           
