@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Python常见报错</title>
+      <link href="/2020/03/01/Python%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
+      <url>/2020/03/01/Python%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/</url>
+      
+        <content type="html"><![CDATA[<font color="red"><h4 id="TabSpaces">inconsistent use of tabs and spaces in indentation</h4></font><blockquote><p>问题原因：空格（spaces）和缩进（tab）混用。<br>解决方法：检查代码适当删除。</p></blockquote><hr><font color="red"><h4 id="Tab">expected an indented block</h4></font>>问题原因：缩进错误>解决方法：在箭头指示处改正缩进<hr><font color="red"><h4 id="InvalidS">invalid syntax</h4></font>>  - 问题原因：语法错误>- 括号不完全（括号不成对）>- 缺少冒号>- 使用了中文符号 >>  - 解决方法：>- 使用IDLE的用户，看<span style="background:red;">红色标记</span>处，检查代码并修改；>- 使用PyCharm的用户输出框箭头<font color=red>^</font>处，检查代码并修改。<font color="red"><h4 id="InvalidS">EOL while scanning string literal</h4></font>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python入门</title>
       <link href="/2020/02/28/Python%E5%85%A5%E9%97%A8/"/>
       <url>/2020/02/28/Python%E5%85%A5%E9%97%A8/</url>
