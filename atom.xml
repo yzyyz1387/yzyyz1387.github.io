@@ -197,7 +197,7 @@ inconsistent use of tabs and spaces in indentation
     <link href="http://www.yzyyz.top/2020/02/27/themegg/"/>
     <id>http://www.yzyyz.top/2020/02/27/themegg/</id>
     <published>2020-02-27T06:23:20.000Z</published>
-    <updated>2020-02-29T05:52:48.605Z</updated>
+    <updated>2020-03-26T07:46:11.070Z</updated>
     
     <content type="html"><![CDATA[<p id="themegg">.</p><ul><li><strong>本站公告</strong><br>本站属于<a href="http://yzyyz.top" target="_blank" rel="noopener" title="幼稚园园长的博客">幼稚园园长</a></li></ul><ul><li><p><strong>联系我：</strong><br>邮箱：<a href="mailto:youzyyz1384@qq.com">youzyyz1384@qq.com</a> </p></li><li><p><strong>搭建博客</strong><br>参见<a href="https://yzyyz.top/2020/02/27/faqs/" target="_blank" rel="noopener" title="Yz&#39;s Blog Q&amp;A">https://yzyyz.top/2020/02/27/faqs/</a></p></li></ul>]]></content>
     
@@ -246,6 +246,30 @@ inconsistent use of tabs and spaces in indentation
       <category term="Hexo" scheme="http://www.yzyyz.top/tags/Hexo/"/>
     
       <category term="随笔" scheme="http://www.yzyyz.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>实时疫情地图</title>
+    <link href="http://www.yzyyz.top/2020/01/01/COVID-19/"/>
+    <id>http://www.yzyyz.top/2020/01/01/COVID-19/</id>
+    <published>2020-01-01T07:36:18.000Z</published>
+    <updated>2020-03-26T07:46:13.340Z</updated>
+    
+    <content type="html"><![CDATA[<iframe src="https://www.lovestu.com/api/project/cnmapyinqing/obj.php" height="500" frameborder="no" border="0" width="100%"> </iframe>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe src=&quot;https://www.lovestu.com/api/project/cnmapyinqing/obj.php&quot; height=&quot;500&quot; frameborder=&quot;no&quot; border=&quot;0&quot; width=&quot;100%&quot;&gt; &lt;/iframe&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="公告" scheme="http://www.yzyyz.top/tags/%E5%85%AC%E5%91%8A/"/>
     
   </entry>
   

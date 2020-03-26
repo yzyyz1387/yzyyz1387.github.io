@@ -67,6 +67,12 @@
 
 
 <body>
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
   
   <div class="cover-wrapper">
     <cover class='cover  half'>
@@ -902,8 +908,8 @@ inconsistent use of tabs and spaces in indentation
   <div class='content article-entry'>
     
       
-        <img src='https://static.oneplus.cn/data/attachment/forum/202002/27/232657mdstjdnn9dtndtst.png'
-        >
+        <fancybox><img src='https://static.oneplus.cn/data/attachment/forum/202002/27/232657mdstjdnn9dtndtst.png'
+        ></fancybox>
       
     
   </div>
@@ -1019,17 +1025,41 @@ inconsistent use of tabs and spaces in indentation
     
     。
   </div>
-  
+    
     <div class='copyright'>
-    <p><a href="https://xaoxuu.com" target="_blank" rel="noopener">Copyright © 2017-2020 Mr. X</a></p>
 
+    <p><a href="https://yzyyz.top" target="_blank" rel="noopener">Copyright © 2020 yzyyz</a></p>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("27/02/2020 14:04:15");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+   
+<!---字数统计----->
+<i class="fas fa-chart-area"></i>
+<span class="post-count">字数统计：3.3k</span>
+<br/>
+<!----ip签名图---->
     <img src="http://39.98.144.53/ip" >
-
-
     </div>
   
 </footer>
 <script>setLoadingBarProgress(80);</script>
+
+
 <script>
 (function(){
     var bp = document.createElement('script');
