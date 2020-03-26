@@ -67,6 +67,7 @@
 
 
 <body>
+
 <!--浏览器搞笑标题-->
 <script type="text/javascript" src="/js/FunnyTitle.js"></script>
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
@@ -642,6 +643,7 @@
     
   
 </div>
+
 <aside class='l_side'>
   
     
@@ -904,11 +906,13 @@
 
     <p><a href="https://yzyyz.top" target="_blank" rel="noopener">Copyright © 2020 yzyyz</a></p>
 
+
+<!-----运行时间------->
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 <script>
     var now = new Date(); 
     function createtime() { 
-        var grt= new Date("27/02/2020 14:04:15");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        var grt= new Date("02/27/2020 14:04:15");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
         now.setTime(now.getTime()+250); 
         days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
         hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
