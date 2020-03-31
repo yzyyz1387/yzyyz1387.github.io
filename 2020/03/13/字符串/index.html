@@ -443,26 +443,27 @@ color="56,152,252" opacity='0.9' zIndex="-2" count="200" src="//cdn.bootcss.com/
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注:  ①大小写字母的Unicode编码都是按顺序排列的</span><br><span class="line">     ②小写字母的编码整体大于大写字母的编码，大写字母的编码大于数字的编码</span><br></pre></td></tr></table></figure>
 <h4 id="bulidin">内置字符串处理方法</h4>
 <h5 id="StrFind">字符串的查找</h5>
-find()和rfind()用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会返回-1
+**find()**和**rfind()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会返回-1
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Thisisyz'sblog,bolgiscool"</span></span><br><span class="line">print(s.find(<span class="string">"blog"</span>))  <span class="comment">#"bolg"在字符串s中第一次出现的位置</span></span><br><span class="line">print(s.rfind(<span class="string">"is"</span>))   <span class="comment">#"is"在字符串是中最后一次出现的位置</span></span><br><span class="line">print(s.find(<span class="string">"666"</span>))</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>10<br>19<br>-1
 </blockquote>
 <br>
-index()和rindex()用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会抛出异常
+**index()**和**rindex()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会抛出异常
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Thisisyz'sblog,bolgiscool"</span></span><br><span class="line">print(s.index(<span class="string">"blog"</span>))  <span class="comment">#"bolg"在字符串s中第一次出现的位置</span></span><br><span class="line">print(s.rindex(<span class="string">"is"</span>))   <span class="comment">#"is"在字符串是中最后一次出现的位置</span></span><br><span class="line">print(s.index(<span class="string">"666"</span>))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p> print(s.index("666"))<br>ValueError: substring not found<br>10<br>19</p>
 </blockquote>
 <br/>
-count()用来返回字符串在范围内出现的次数,不存在会返回0
+**count()**用来返回字符串在范围内出现的次数,不存在会返回0
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"python I love python pppp"</span></span><br><span class="line">print(s.count(<span class="string">"p"</span>))</span><br><span class="line">print(s.count(<span class="string">"python"</span>))</span><br><span class="line">print(s.count(<span class="string">"66"</span>))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>6<br>2<br>0</p>
 </blockquote>
-<hr>
+<hr><br>
 <h5 id="StrSplit">字符串的分割</h5>
+ **split()**和 **rsplit()**方法分别用来以指定字符为分隔符，从原字符串<>左端和右端开始将其分隔成多个字符串
           
         </div>
         
@@ -561,11 +562,6 @@ count()用来返回字符串在范围内出现的次数,不存在会返回0
                                   
                                 </a>
                             </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 干货</a>
-                                </h6>
                             
                         </span>
                     </section>
@@ -876,19 +872,10 @@ count()用来返回字符串在范围内出现的次数,不存在会返回0
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Python/" title="Python: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Python" style="background-color: #F9EBEA;">Python
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Hexo/" title="Hexo: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Hexo" style="background-color: #F5EEF8;">Hexo
+                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
                         <span class="tag-length">3</span>
                     </span>
                 </a>
@@ -897,7 +884,7 @@ count()用来返回字符串在范围内出现的次数,不存在会返回0
                 <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="随笔" style="background-color: #D5F5E3;">随笔
+                            data-tagname="随笔" style="background-color: #F5EEF8;">随笔
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -906,17 +893,26 @@ count()用来返回字符串在范围内出现的次数,不存在会返回0
                 <a href="/tags/%E5%85%AC%E5%91%8A/" title="公告: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="公告" style="background-color: #E8F8F5;">公告
+                            data-tagname="公告" style="background-color: #D5F5E3;">公告
                         <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E5%B9%B2%E8%B4%A7/" title="干货: 2">
+                <a href="/tags/Python/" title="Python: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Python" style="background-color: #E8F8F5;">Python
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%B9%B2%E8%B4%A7/" title="干货: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="干货" style="background-color: #FEF9E7;">干货
-                        <span class="tag-length">2</span>
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
