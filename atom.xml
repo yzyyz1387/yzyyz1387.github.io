@@ -43,7 +43,7 @@
     <link href="http://www.yzyyz.top/2020/03/22/ip/"/>
     <id>http://www.yzyyz.top/2020/03/22/ip/</id>
     <published>2020-03-22T15:28:11.000Z</published>
-    <updated>2020-04-01T14:14:10.858Z</updated>
+    <updated>2020-04-01T15:05:27.402Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/ip.png" alt=""><br/><br>直接上源码<br>源码是<strong>php</strong>的</p><a id="more"></a><p>应该都可以看懂了，喜欢的话，自己在美化一下，换换图片啥的<br>直接上传到支持php的空间，再调用即可</p><hr><br/><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在html中插入：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://39.98.144.53/ip"</span>&gt;</span></span><br><span class="line">"<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://39.98.144.53/ip"</span>&gt;</span>"</span><br><span class="line">这是是放在我的服务器里的，你可以直接调用</span><br></pre></td></tr></table></figure><hr><br/>预览图：<br><img src="http://39.98.144.53/ip"title="点击下载"><hr><br/>源码下载地址（蓝奏云）<br><a href="https://www.lanzous.com/iajmfvc" target="_blank" rel="noopener">https://www.lanzous.com/iajmfvc</a>]]></content>
     
@@ -54,6 +54,8 @@
     </summary>
     
     
+    
+      <category term="干货" scheme="http://www.yzyyz.top/tags/%E5%B9%B2%E8%B4%A7/"/>
     
   </entry>
   
