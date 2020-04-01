@@ -156,6 +156,25 @@
     
     
     <entry>
+      <title>实时疫情地图</title>
+      <link href="/2020/02/27/COVID-19/"/>
+      <url>/2020/02/27/COVID-19/</url>
+      
+        <content type="html"><![CDATA[<iframe src="https://www.lovestu.com/api/project/cnmapyinqing/obj.php" height="500" frameborder="no" border="0" width="100%"> </iframe>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 公告 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>幼稚园园长</title>
       <link href="/2020/02/27/themegg/"/>
       <url>/2020/02/27/themegg/</url>
@@ -190,25 +209,6 @@
             <tag> Hexo </tag>
             
             <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>实时疫情地图</title>
-      <link href="/2020/01/01/COVID-19/"/>
-      <url>/2020/01/01/COVID-19/</url>
-      
-        <content type="html"><![CDATA[<iframe src="https://www.lovestu.com/api/project/cnmapyinqing/obj.php" height="500" frameborder="no" border="0" width="100%"> </iframe>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 公告 </tag>
             
         </tags>
       
