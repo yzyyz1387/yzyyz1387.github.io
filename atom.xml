@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.yzyyz.top/"/>
-  <updated>2020-04-03T17:38:14.040Z</updated>
+  <updated>2020-04-05T07:32:21.929Z</updated>
   <id>http://www.yzyyz.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网易云音乐一键打卡</title>
+    <link href="http://www.yzyyz.top/2020/04/05/CloudMusic/"/>
+    <id>http://www.yzyyz.top/2020/04/05/CloudMusic/</id>
+    <published>2020-04-05T07:20:40.000Z</published>
+    <updated>2020-04-05T07:32:21.929Z</updated>
+    
+    <content type="html"><![CDATA[<iframe src="http://39.98.144.53/cm" width="100%" height="400" scrolling="yes" />来源：[网易云音乐升级助手](http://www.nma.pub "来源")详见友链]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe src=&quot;http://39.98.144.53/cm&quot; width=&quot;100%&quot; height=&quot;400&quot; scrolling=&quot;yes&quot; /&gt;
+来源：[网易云音乐升级助手](http://www.nma.pub &quot;来源&quot;)详见友链
+      
+    
+    </summary>
+    
+    
+    
+      <category term="干货" scheme="http://www.yzyyz.top/tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>4月4日全国哀悼</title>
