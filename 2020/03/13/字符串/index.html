@@ -547,28 +547,47 @@ color="56,152,252" opacity='0.9' zIndex="-2" count="200" src="//cdn.bootcss.com/
 </table>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注:  ①大小写字母的Unicode编码都是按顺序排列的</span><br><span class="line">     ②小写字母的编码整体大于大写字母的编码，大写字母的编码大于数字的编码</span><br></pre></td></tr></table></figure>
 <h4 id="bulidin">内置字符串处理方法</h4>
-<h5 id="StrFind">字符串的查找</h5>
-**find()**和**rfind()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会返回-1
+<h5 id="StrFind">字符串的**查找**</h5>
+ - **find()**和**rfind()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会返回-1
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Thisisyz'sblog,bolgiscool"</span></span><br><span class="line">print(s.find(<span class="string">"blog"</span>))  <span class="comment">#"bolg"在字符串s中第一次出现的位置</span></span><br><span class="line">print(s.rfind(<span class="string">"is"</span>))   <span class="comment">#"is"在字符串是中最后一次出现的位置</span></span><br><span class="line">print(s.find(<span class="string">"666"</span>))</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>10<br>19<br>-1
 </blockquote>
 <br>
-**index()**和**rindex()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会抛出异常
+ - **index()**和**rindex()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会抛出异常
+ 用法：`字符串.index('要查找的字符')`
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Thisisyz'sblog,bolgiscool"</span></span><br><span class="line">print(s.index(<span class="string">"blog"</span>))  <span class="comment">#"bolg"在字符串s中第一次出现的位置</span></span><br><span class="line">print(s.rindex(<span class="string">"is"</span>))   <span class="comment">#"is"在字符串是中最后一次出现的位置</span></span><br><span class="line">print(s.index(<span class="string">"666"</span>))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p> print(s.index("666"))<br>ValueError: substring not found<br>10<br>19</p>
 </blockquote>
 <br/>
-**count()**用来返回字符串在范围内出现的次数,不存在会返回0
+ - **count()**用来返回字符串在范围内出现的次数,不存在会返回0
+ 用法：`字符串.count('要计数的字符')`
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"python I love python pppp"</span></span><br><span class="line">print(s.count(<span class="string">"p"</span>))</span><br><span class="line">print(s.count(<span class="string">"python"</span>))</span><br><span class="line">print(s.count(<span class="string">"66"</span>))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>6<br>2<br>0</p>
 </blockquote>
 <hr><br>
-<h5 id="StrSplit">字符串的分割</h5>
- **split()**和 **rsplit()**方法分别用来以指定字符为分隔符，从原字符串<font color="red">左端</font>和<font color="red">右端</font>开始将其分隔成多个字符串
+<h5 id="StrSplit">字符串的**分割**</h5>
+ - **split()**和 **rsplit()**方法分别用来以指定字符为分隔符，从原字符串<font color="red">左端</font>和<font color="red">右端</font>开始将其分隔成多个字符串
+
+<p>用法：<code>变量.resplit(&#39;分割符&#39;,maxsplit=最大分割次数)</code>maxsplit可缺省</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="string">"一,二,三,四,五,六"</span></span><br><span class="line">print(a.split(<span class="string">','</span>,maxsplit=<span class="number">2</span>))   <span class="comment">#按','分割,分两次</span></span><br><span class="line">print(a.rsplit(<span class="string">','</span>,maxsplit=<span class="number">2</span>))  <span class="comment">#按','分割,分两次</span></span><br><span class="line"></span><br><span class="line">b=<span class="string">'H E L L O'</span></span><br><span class="line">print(b.split()) <span class="comment">#按照默认分割</span></span><br><span class="line">print(b.split(maxsplit=<span class="number">3</span>))<span class="comment">#按照默认从右分割三次</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>[‘一’, ‘二’, ‘三,四,五,六’]<br>[‘一,二,三,四’, ‘五’, ‘六’]<br>[‘H’, ‘E’, ‘L’, ‘L’, ‘O’]<br>[‘H E’, ‘L’, ‘L’, ‘O’]</p>
+</blockquote>
+<p>可见分割后返回的结果是<code>列表</code><br>默认按照空白字符<code>(空格，制表符，换行符)</code>来分割</p>
+<ul>
+<li><strong>partition()</strong>和 <strong>rpartition()</strong>方法分别用来以指定字符串为分隔符将原字符串分隔为 3 个 部分：<br><code>分隔符之前的字符串-----分隔符字符串-----分隔符之后的字符串</code><br>如果指定的字符串不在原字符串中，则返回原字符串和两个空字符串。<br>如果字符串中有多个分隔符，则：<br>&nbsp;&nbsp;&nbsp;&nbsp;partition()方法按从左向右遇到的第一个分隔符来进行分隔;<br>&nbsp;&nbsp;&nbsp;&nbsp;rpartition()方法按从右向左遇到 的第一个分隔符来进行分隔。</li>
+</ul>
+<p>用法：<code>字符串.aprtition(&#39;分隔字符&#39;)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;&quot;一,二,三,四,三,二,一&quot;</span><br><span class="line">print(a.partition(&#39;三&#39;))</span><br><span class="line">print(a.rpartition(&#39;三&#39;))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>(‘一,二,’, <font color=red>‘三’</font>, ‘,四,三,二,一’)<br>(‘一,二,三,四,’, <font color=red>‘三’</font>, ‘,二,一’)</p>
+</blockquote>
 
           
         </div>
@@ -765,7 +784,7 @@ color="56,152,252" opacity='0.9' zIndex="-2" count="200" src="//cdn.bootcss.com/
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#StrS"><span class="toc-number">1.</span> <span class="toc-text">字符串的索引与切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StrJandC"><span class="toc-number">2.</span> <span class="toc-text">字符串处理与操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jsuan"><span class="toc-number">2.1.</span> <span class="toc-text">字符串基本运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hanshu"><span class="toc-number">2.2.</span> <span class="toc-text">字符串处理函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bulidin"><span class="toc-number">2.3.</span> <span class="toc-text">内置字符串处理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#StrFind"><span class="toc-number">2.3.1.</span> <span class="toc-text">字符串的查找</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrSplit"><span class="toc-number">2.3.2.</span> <span class="toc-text">字符串的分割</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#StrS"><span class="toc-number">1.</span> <span class="toc-text">字符串的索引与切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StrJandC"><span class="toc-number">2.</span> <span class="toc-text">字符串处理与操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jsuan"><span class="toc-number">2.1.</span> <span class="toc-text">字符串基本运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hanshu"><span class="toc-number">2.2.</span> <span class="toc-text">字符串处理函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bulidin"><span class="toc-number">2.3.</span> <span class="toc-text">内置字符串处理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#StrFind"><span class="toc-number">2.3.1.</span> <span class="toc-text">字符串的**查找**</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrSplit"><span class="toc-number">2.3.2.</span> <span class="toc-text">字符串的**分割**</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1149,7 +1168,7 @@ setInterval("createtime()",250);
    
 <!---字数统计----->
 <i class="fas fa-chart-area"></i>
-<span class="post-count">字数统计：4k</span>
+<span class="post-count">字数统计：4.3k</span>
 <br/>
 <!----ip签名图---->
     <img src="http://39.98.144.53/ip" >
