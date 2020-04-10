@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yzyyz.top/"/>
-  <updated>2020-04-10T17:35:26.861Z</updated>
+  <updated>2020-04-10T17:35:54.803Z</updated>
   <id>https://yzyyz.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yzyyz.top/archives/eed1cf7f.html"/>
     <id>https://yzyyz.top/archives/eed1cf7f.html</id>
     <published>2020-04-10T16:41:54.000Z</published>
-    <updated>2020-04-10T17:35:26.861Z</updated>
+    <updated>2020-04-10T17:35:54.803Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/nwafujkdk.jpg" alt></p><blockquote><p>‘xxx,你怎么没打卡，你是不是睡过头了？哈哈哈’<br>‘你还没打卡，快去打卡啊，在线等，急！’<br>‘………….’</p></blockquote><a id="more"></a><h3 id="thought">萌生想法</h3>&nbsp;&nbsp;疫情以来每天都要完成健康打卡，说来惭愧，有时候我真的就忘了，还要去监督别人。在上次用Python给钓鱼网站提交垃圾信息后，我就想着用Python来实现一键提交，然后再配合windos的计划任务，每天自动提交岂不是美滋滋。&nbsp;&nbsp;今天`2020年4月11日`（过了0点），我完成了适合自己的脚本。不出意外的话下一个零点我就可以一键上报了。看看实验图：<p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/pynwafusb.png" alt><br>这里显示<code>今天已经填报过了</code>是因为我主动提交了信息，目的是方便我抓数据。<br>一天只能提交一次实在不方便我抓数据，其实昨天有机会来着，被我浪费了。</p><hr><br><h3 id="problems">发现问题</h3>&nbsp;&nbsp;但是有问题存在 - 别人怎么用？ - 怎么登陆？<p>这个时候就要提到<code>Cookie</code>了</p><blockquote><p>???什么饼干</p></blockquote><p><strong>Cookie</strong><br>简单地说，某网站能<code>&#39;一周免登陆&#39;</code>就是用到了Cookie</p><blockquote><p>百度百科：<br>Cookie，有时也用其复数形式 Cookies。类型为“小型文本文件”，是某些网站为了辨别用户身份，进行Session跟踪而储存在用户本地终端上的数据（通常经过加密），<code>由用户客户端计算机暂时或永久保存的信息</code>。</p></blockquote><p>我的想法是：要想大家都能用还需要登录抓取Cookie<br>现在<code>2020/4/11 1:35:06</code>睡觉啦，明天继续</p>]]></content>
     
@@ -47,17 +47,13 @@
     <link href="https://yzyyz.top/archives/d53cb876.html"/>
     <id>https://yzyyz.top/archives/d53cb876.html</id>
     <published>2020-04-10T11:42:16.000Z</published>
-    <updated>2020-04-10T13:19:32.199Z</updated>
+    <updated>2020-04-10T17:40:05.693Z</updated>
     
-    <content type="html"><![CDATA[<p>博客基本稳定了，想再做一下优化，听传言可以将DNS解析到<code>ClouldFlare</code><br>刚开始我在网上看到的是这样的</p><blockquote><p>Cloudflare 不提供中文服务, 中国客户应该使用百度云加速。 百度云加速是第一个在中国和海外为网络性能提供加速，安全和智能服务的中文服务。 云加速提供与 Cloudflare同样的功能 (CDN、 DNS、 DDOS、 Web安全防护等)， 并且专门为中国网络和市场需求进行了优化。</p></blockquote><p>然后…</p><a id="more"></a><p>傻傻地，我就把我的域名解析过去了，后来发现打开网站好像变慢了，我就去看了一下我的DNS解析，发现ip在美国，<code>我：what??????</code>这就翻车了呀<br>而后我看到：</p><blockquote><p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/cloudflare.png" alt></p></blockquote><p>原来免费的服务不能挂在中国，要想快，<code>买！套！餐1</code><br>那就…还是换回去吧<br>换来换去等DNS缓存刷新都等了十几个小时，期间网站一直不正常[手动流汗]<br>但其优点还是有的：</p><blockquote><p>Cloudflare这个域名解析服务商相信很多人一定不陌生，它好像是目前唯一免费提供CDN服务的商家，但由于其cdn服务器多数在国外，在国内的访问速度不佳，甚至起不到加速效果，反而会减速。但通过cdn访问，能是你的服务器匿名性提升不少，也能有效避免DDOS攻击，还能减少服务器流量开支，何乐而不为呢？<br>————————————————<br><a href="https://blog.csdn.net/qq_29654777/java/article/details/104251525" target="_blank" rel="external nofollow noopener noreferrer" title="点击打开原文">原文链接</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/DNS.jpg" alt><br>博客基本稳定了，想再做一下优化，听传言可以将DNS解析到<code>ClouldFlare</code><br>刚开始我在网上看到的是…</p><a id="more"></a><blockquote><p>Cloudflare 提供中文服务, 中国客户应该使用百度云加速。 百度云加速是第一个在中国和海外为网络性能提供加速，安全和智能服务的中文服务。 云加速提供与 Cloudflare同样的功能 (CDN、 DNS、 DDOS、 Web安全防护等)， 并且专门为中国网络和市场需求进行了优化。</p></blockquote><p>然后,傻傻地，我就把我的域名解析过去了，后来发现打开网站好像变慢了，我就去看了一下我的DNS解析，发现ip在美国，<code>我：what??????</code>这就翻车了呀<br>而后我看到：</p><blockquote><p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/cloudflare.png" alt></p></blockquote><p>原来免费的服务不能挂在中国，要想快，<code>买！套！餐1</code><br>那就…还是换回去吧<br>换来换去等DNS缓存刷新都等了十几个小时，期间网站一直不正常[手动流汗]<br>但其优点还是有的：</p><blockquote><p>Cloudflare这个域名解析服务商相信很多人一定不陌生，它好像是目前唯一免费提供CDN服务的商家，但由于其cdn服务器多数在国外，在国内的访问速度不佳，甚至起不到加速效果，反而会减速。但通过cdn访问，能是你的服务器匿名性提升不少，也能有效避免DDOS攻击，还能减少服务器流量开支，何乐而不为呢？<br>————————————————<br><a href="https://blog.csdn.net/qq_29654777/java/article/details/104251525" target="_blank" rel="external nofollow noopener noreferrer" title="点击打开原文">原文链接</a></p></blockquote>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;博客基本稳定了，想再做一下优化，听传言可以将DNS解析到&lt;code&gt;ClouldFlare&lt;/code&gt;&lt;br&gt;刚开始我在网上看到的是这样的&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Cloudflare 不提供中文服务, 中国客户应该使用百度云加速。 百度云加速是第一个在中国和海外为网络性能提供加速，安全和智能服务的中文服务。 云加速提供与 Cloudflare同样的功能 (CDN、 DNS、 DDOS、 Web安全防护等)， 并且专门为中国网络和市场需求进行了优化。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;然后…&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://blog-1255979927.cos.ap-chengdu.myqcloud.com/DNS.jpg&quot; alt&gt;&lt;br&gt;博客基本稳定了，想再做一下优化，听传言可以将DNS解析到&lt;code&gt;ClouldFlare&lt;/code&gt;&lt;br&gt;刚开始我在网上看到的是…&lt;/p&gt;
     
     </summary>
     
