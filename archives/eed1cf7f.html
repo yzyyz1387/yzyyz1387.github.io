@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Python常见报错 | 幼稚园园长</title>
+  <title>使用Python一键完成健康打卡 | 幼稚园园长</title>
   
   <meta name="keywords" content="幼稚园园长,博客,blog,园长博客,Yz's Blog,园长Python3">
   
@@ -326,8 +326,8 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         
   
     <h1 class="title">
-      <a href="/archives/82e008c9.html">
-        Python常见报错
+      <a href="/archives/eed1cf7f.html">
+        使用Python一键完成健康打卡
       </a>
     </h1>
   
@@ -363,7 +363,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>消息发布于：2020年3月1日</p>
+    <p>消息发布于：2020年4月11日</p>
   </a>
 </div>
 
@@ -397,131 +397,33 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          <p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/se.png" alt><br></p>
-<p><strong>Python常见报错索引</strong></p>
+          <p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/nwafujkdk.jpg" alt></p>
 <blockquote>
-<p>2020/3/1 21:00:14 </p>
+<p>‘xxx,你怎么没打卡，你是不是睡过头了？哈哈哈’<br>‘你还没打卡，快去打卡啊，在线等，急！’<br>‘………….’</p>
 </blockquote>
-<p>持续更新中.。。.<br>电脑用户请在右侧本文目录进行索引<br>手机用户请在右上方点开目录(三点三横)按钮进行索引<br><font color="#ffbe76"><br>推荐大家编程时使用PyCharm，检查错误非常方便<br></font></p>
-<font color="red">
-<h4 id="TabSpaces">
-inconsistent use of tabs and spaces in indentation
-</h4></font>
-
-<blockquote>
-<ul>
-<li>问题原因：空格（spaces）和缩进（tab）混用。</li>
-<li>解决方法：检查代码适当删除。</li>
-</ul>
-</blockquote>
-<hr>
-<br>
-
 <a id="more"></a>
+<h3 id="thought">萌生想法</h3>
+&nbsp;&nbsp;疫情以来每天都要完成健康打卡，说来惭愧，有时候我真的就忘了，还要去监督别人。在上次用Python给钓鱼网站提交垃圾信息后，我就想着用Python来实现一键提交，然后再配合windos的计划任务，每天自动提交岂不是美滋滋。
+&nbsp;&nbsp;今天`2020年4月11日`（过了0点），我完成了适合自己的脚本。不出意外的话下一个零点我就可以一键上报了。
+看看实验图：
 
-<font color="red">
-<h4 id="Tab">
-expected an indented block
-</h4></font>
-
-<blockquote>
-<ul>
-<li>问题原因：缩进错误</li>
-<li>解决方法：在箭头指示处改正缩进</li>
-</ul>
-</blockquote>
+<p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/pynwafusb.png" alt><br>这里显示<code>今天已经填报过了</code>是因为我主动提交了信息，目的是方便我抓数据。<br>一天只能提交一次实在不方便我抓数据，其实昨天有机会来着，被我浪费了。</p>
 <hr>
 <br>
+<h3 id="problems">发现问题</h3>
+&nbsp;&nbsp;但是有问题存在
+ - 别人怎么用？
+ - 怎么登陆？
 
-<font color="red">
-<h4 id="InvalidS">
-invalid syntax
-</h4></font>
-
-
+<p>这个时候就要提到<code>Cookie</code>了</p>
 <blockquote>
-<ul>
-<li><p>问题原因：语法错误</p>
-<ul>
-<li>括号不完全（括号不成对）</li>
-<li>缺少冒号</li>
-<li>使用了中文符号 </li>
-</ul>
-</li>
-<li><p>解决方法：</p>
-<ul>
-<li>使用IDLE的用户，看<span style="background:#ff7979;">红色标记</span>处，检查代码并修改；</li>
-<li>使用PyCharm的用户输出框箭头<font color="red">^</font>处，检查代码并修改。</li>
-</ul>
-</li>
-</ul>
+<p>???什么饼干</p>
 </blockquote>
-<hr>
-<br>
-
-<font color="red">
-<h4 id="EOL">
-EOL while scanning string literal
-</h4></font>
-
+<p><strong>Cookie</strong><br>简单地说，某网站能<code>&#39;一周免登陆&#39;</code>就是用到了Cookie</p>
 <blockquote>
-<ul>
-<li>问题原因：引号未成对出现</li>
-<li>解决方法：<ul>
-<li>使用IDLE的用户，查代码并修改；</li>
-<li>使用PyCharm的用户输出框箭头<font color="red">^</font>处，检查代码并修改。</li>
-</ul>
-</li>
-</ul>
+<p>百度百科：<br>Cookie，有时也用其复数形式 Cookies。类型为“小型文本文件”，是某些网站为了辨别用户身份，进行Session跟踪而储存在用户本地终端上的数据（通常经过加密），<code>由用户客户端计算机暂时或永久保存的信息</code>。</p>
 </blockquote>
-<hr>
-<br>
-
-<font color="red">
-<h4 id="EOF">
-unexpected EOF while parsing
-</h4></font>
-
-<blockquote>
-<p>问题原因：我仅在print缺引号时出现此报错<br>解决方法：那就检查代码看print的引号吧</p>
-</blockquote>
-<hr>
-<br>
-
-<font color="red">
-<h4 id="character">
- invalid character in identifier
-</h4>
-</font>
-
-<blockquote>
-<p>问题原因：使用了中文符号<br>解决方法：在报错出找到用错的符号并改正</p>
-</blockquote>
-<hr>
-<br>
-
-
-
-<font color="red">
-<h4 id="Unsupported">
-unsupported operand type(s) for ....
-</h4>
-</font>
-请看下图：
-
-<p><img src="https://static.oneplus.cn/data/attachment/forum/202003/01/212958vqfh13i3zeo89ggq.jpg" alt></p>
-<p>这是我的好友<a href="https://user.qzone.qq.com/2313631959?source=aiostar" target="_blank" rel="external nofollow noopener noreferrer" title="访问小余的Qzone">小余</a>遇到的问题，由图可见代码中：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = input(<span class="string">"请输入一个三位数"</span>)</span><br><span class="line">a = x//<span class="number">100</span></span><br><span class="line">......</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>报错是：<br><font color="red">unsupported operand type(s) for // ‘str’ and ‘int’</font><br>即不支持字符串（str）和整型（int）取余（//）的操作<br>那么我们调用<a href="https://www.runoob.com/python/python-func-eval.html" target="_blank" rel="external nofollow noopener noreferrer" title="Python内置函数eval">Python内置函数eval</a>即可。<br>（赋值类型参见这篇文章：<a href="https://yzyyz.top/2020/02/28/Python%E5%85%A5%E9%97%A8/" title="python入门">Python入门</a>）</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = eval(input(<span class="string">"请输入一个三位数"</span>))</span><br><span class="line">a = x//<span class="number">100</span></span><br><span class="line">......</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>待更，最后编辑与2020/3/1 22:01:39 </p>
-</blockquote>
+<p>我的想法是：要想大家都能用还需要登录抓取Cookie<br>现在<code>2020/4/11 1:35:06</code>睡觉啦，明天继续</p>
 
           
         </div>
@@ -541,7 +443,7 @@ unsupported operand type(s) for ....
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Python</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>干货</p></a></div>
 
 
         
@@ -552,24 +454,9 @@ unsupported operand type(s) for ....
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/82e008c9.html&title=Python常见报错 | 幼稚园园长&summary=
-Python常见报错索引
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/eed1cf7f.html&title=使用Python一键完成健康打卡 | 幼稚园园长&summary=
 
-2020/3/1 21:00:14 
-
-持续更新中.。。.电脑用户请在右侧本文目录进行索引手机用户请在右上方点开目录(三点三横)按钮进行索引推荐大家编程时使用PyCharm，检查错误非常方便
-
-
-inconsistent use of tabs and spaces in indentation
-
-
-
-
-问题原因：空格（spaces）和缩进（tab）混用。
-解决方法：检查代码适当删除。
-
-
-
+‘xxx,你怎么没打卡，你是不是睡过头了？哈哈哈’‘你还没打卡，快去打卡啊，在线等，急！’‘………….’
 " target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
@@ -578,24 +465,9 @@ inconsistent use of tabs and spaces in indentation
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/82e008c9.html&title=Python常见报错 | 幼稚园园长&summary=
-Python常见报错索引
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/eed1cf7f.html&title=使用Python一键完成健康打卡 | 幼稚园园长&summary=
 
-2020/3/1 21:00:14 
-
-持续更新中.。。.电脑用户请在右侧本文目录进行索引手机用户请在右上方点开目录(三点三横)按钮进行索引推荐大家编程时使用PyCharm，检查错误非常方便
-
-
-inconsistent use of tabs and spaces in indentation
-
-
-
-
-问题原因：空格（spaces）和缩进（tab）混用。
-解决方法：检查代码适当删除。
-
-
-
+‘xxx,你怎么没打卡，你是不是睡过头了？哈哈哈’‘你还没打卡，快去打卡啊，在线等，急！’‘………….’
 " target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
@@ -604,24 +476,9 @@ inconsistent use of tabs and spaces in indentation
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/82e008c9.html&title=Python常见报错 | 幼稚园园长&summary=
-Python常见报错索引
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/eed1cf7f.html&title=使用Python一键完成健康打卡 | 幼稚园园长&summary=
 
-2020/3/1 21:00:14 
-
-持续更新中.。。.电脑用户请在右侧本文目录进行索引手机用户请在右上方点开目录(三点三横)按钮进行索引推荐大家编程时使用PyCharm，检查错误非常方便
-
-
-inconsistent use of tabs and spaces in indentation
-
-
-
-
-问题原因：空格（spaces）和缩进（tab）混用。
-解决方法：检查代码适当删除。
-
-
-
+‘xxx,你怎么没打卡，你是不是睡过头了？哈哈哈’‘你还没打卡，快去打卡啊，在线等，急！’‘………….’
 " target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
@@ -644,40 +501,21 @@ inconsistent use of tabs and spaces in indentation
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/archives/798b9e52.html" rel="prev" title="Python入门 数值操作及math库">
-                                  
-                                      Python入门 数值操作及math库
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/Python/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Python</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/archives/a10688bd.html" rel="prev" title="人生苦短 我用Python">
+                                <a href="/archives/d53cb876.html" rel="prev" title="DNS解析翻车记">
                                     
-                                        人生苦短 我用Python
+                                        DNS解析翻车记
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/Python/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Python</a>
+                                    <a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 随笔</a> <a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 干货</a>
                                 </h6>
                             
                         </span>
@@ -722,7 +560,7 @@ inconsistent use of tabs and spaces in indentation
 
   <script>
     window.subData = {
-      title: 'Python常见报错',
+      title: '使用Python一键完成健康打卡',
       tools: true
     }
   </script>
@@ -748,21 +586,7 @@ inconsistent use of tabs and spaces in indentation
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#TabSpaces"><span class="toc-number">1.</span> <span class="toc-text">
-inconsistent use of tabs and spaces in indentation
-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tab"><span class="toc-number">2.</span> <span class="toc-text">
-expected an indented block
-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#InvalidS"><span class="toc-number">3.</span> <span class="toc-text">
-invalid syntax
-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EOL"><span class="toc-number">4.</span> <span class="toc-text">
-EOL while scanning string literal
-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EOF"><span class="toc-number">5.</span> <span class="toc-text">
-unexpected EOF while parsing
-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#character"><span class="toc-number">6.</span> <span class="toc-text">
- invalid character in identifier
-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unsupported"><span class="toc-number">7.</span> <span class="toc-text">
-unsupported operand type(s) for ....
-</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#thought"><span class="toc-number">1.</span> <span class="toc-text">萌生想法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#problems"><span class="toc-number">2.</span> <span class="toc-text">发现问题</span></a></li></ol>
     </div>
   </section>
 
