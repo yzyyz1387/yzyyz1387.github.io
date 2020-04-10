@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>DNS解析翻车记</title>
+      <link href="/archives/d53cb876.html"/>
+      <url>/archives/d53cb876.html</url>
+      
+        <content type="html"><![CDATA[<p>博客基本稳定了，想再做一下优化，听传言可以将DNS解析到<code>ClouldFlare</code><br>刚开始我在网上看到的是这样的</p><blockquote><p>Cloudflare 不提供中文服务, 中国客户应该使用百度云加速。 百度云加速是第一个在中国和海外为网络性能提供加速，安全和智能服务的中文服务。 云加速提供与 Cloudflare同样的功能 (CDN、 DNS、 DDOS、 Web安全防护等)， 并且专门为中国网络和市场需求进行了优化。</p></blockquote><p>然后，傻傻地，我就把我的域名解析过去了，后来发现打开网站好像变慢了，我就去看了一下我的DNS解析，发现ip在美国，<code>我：what??????</code>这就翻车了呀<br>而后我看到：</p><blockquote><p><img src="https://blog-1255979927.cos.ap-chengdu.myqcloud.com/cloudflare.png" alt></p></blockquote><p>原来免费的服务不能挂在中国，要想快，<code>买！套！餐1</code><br>那就…还是换回去吧<br>换来换去等DNS缓存刷新都等了十几个小时，期间网站一直不正常[手动流汗]</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+            <tag> 干货 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>4月4日全国哀悼</title>
       <link href="/archives/e62e64c4.html"/>
       <url>/archives/e62e64c4.html</url>
