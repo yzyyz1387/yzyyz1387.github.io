@@ -408,43 +408,47 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 <a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsb.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsb.png"></a></p>
 
 <hr>
+<br>
+<br>
+<h3 id="spb">简单解决</h3>
+解决方法如下：
+`Win+R` 打开运行 输入`gpedit.msc`
 
-<p>解决方法如下：<br><code>Win+R</code> 打开运行 输入<code>gpedit.msc</code></p>
 <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgm.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgm.png"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgm.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgm.png"></a></p><br>
 
 
 <p>依次找到<code>计算机配置</code>→<code>管理模板</code>→<code>系统</code>→<code>Device Guard</code>,双击<code>打开基于虚拟化的安全</code></p>
 <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmdg.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmdg.png"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmdg.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmdg.png"></a></p><br>
 
 
 <p>选择<code>禁用</code>，再点击<code>应用</code>→<code>确定</code></p>
 <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgd.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgd.png"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgd.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgd.png"></a></p><br>
 
 
 <p><code>Win+R</code> 打开运行 输入<code>services.msc</code></p>
 <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm"></a></p><br>
 
 <p>找到并双击<code>HV主机服务</code></p>
 <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm1" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm1"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm1" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm1"></a></p><br>
 
 <p>设置为禁用</p>
 <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm2" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm2"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm2" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm2"></a></p><br>
 
 <p>按照图示取消勾选<code>Hyper-v</code></p>
 <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmkzmb.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmkzmb.png"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmkzmb.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmkzmb.png"></a></p><br>
 
 <p>重启电脑，大功告成</p>
 <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsmubt.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsmubt.png"></a></p>
-<p style="text-align:center;">
-</p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsmubt.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsmubt.png"></a></p><br>
+
+
           
         </div>
         
@@ -606,7 +610,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#pb"><span class="toc-number">1.</span> <span class="toc-text">出现问题</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#pb"><span class="toc-number">1.</span> <span class="toc-text">出现问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spb"><span class="toc-number">2.</span> <span class="toc-text">简单解决</span></a></li></ol>
     </div>
   </section>
 
