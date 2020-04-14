@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yzyyz.top/"/>
-  <updated>2020-04-14T03:28:33.963Z</updated>
+  <updated>2020-04-14T12:07:04.430Z</updated>
   <id>https://yzyyz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VM安装CentOS 踩坑记|VMware Workstation 与 Device/Credential Guard 不兼容</title>
+    <link href="https://yzyyz.top/archives/264ae2ef.html"/>
+    <id>https://yzyyz.top/archives/264ae2ef.html</id>
+    <published>2020-04-14T11:27:18.000Z</published>
+    <updated>2020-04-14T12:07:04.430Z</updated>
+    
+    <content type="html"><![CDATA[<p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/centos.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/centos.jpg"></a></p><p>今天需要用到CentOS,就准备在虚拟机上安装从阿里云下载的镜像，记录一下踩坑过程</p><a id="more"></a><p><br><br></p><h3 id="pb">出现问题</h3><p>安装的时候出现了以下问题：</p><blockquote><p>VmWare安装centos7提示：VMware Workstation 与 Device/Credential Guard 不兼容。在禁用 Device/Credenti</p></blockquote><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsb.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsb.png"></a></p><hr><p>解决方法如下：<br><code>Win+R</code> 打开运行 输入<code>gpedit.msc</code></p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgm.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgm.png"></a></p><p>依次找到<code>计算机配置</code>→<code>管理模板</code>→<code>系统</code>→<code>Device Guard</code>,双击<code>打开基于虚拟化的安全</code></p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmdg.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmdg.png"></a></p><p>选择<code>禁用</code>，再点击<code>应用</code>→<code>确定</code></p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgd.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgd.png"></a></p><p><code>Win+R</code> 打开运行 输入<code>services.msc</code></p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm"></a></p><p>找到并双击<code>HV主机服务</code></p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm1" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm1"></a></p><p>设置为禁用</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm2" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm2"></a></p><p>按照图示取消勾选<code>Hyper-v</code></p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmkzmb.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmkzmb.png"></a></p><p>重启电脑，大功告成</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsmubt.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsmubt.png"></a></p><p style="text-align:center;"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p style=&quot;text-align:center;&quot;&gt;
+&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/centos.jpg&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;cent&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/centos.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今天需要用到CentOS,就准备在虚拟机上安装从阿里云下载的镜像，记录一下踩坑过程&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="https://yzyyz.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="干货" scheme="https://yzyyz.top/tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>RSS源推荐|使用RSS|高效阅读</title>
