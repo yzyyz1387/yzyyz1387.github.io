@@ -442,7 +442,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 </table>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注:  ①大小写字母的Unicode编码都是按顺序排列的</span><br><span class="line">     ②小写字母的编码整体大于大写字母的编码，大写字母的编码大于数字的编码</span><br></pre></td></tr></table></figure>
 <h4 id="bulidin">内置字符串处理方法</h4>
-<h5 id="StrFind">字符串的**查找**</h5>
+<h5 id="StrFind">字符串的查找</h5>
  - **find()**和**rfind()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会返回-1
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Thisisyz'sblog,bolgiscool"</span></span><br><span class="line">print(s.find(<span class="string">"blog"</span>))  <span class="comment">#"bolg"在字符串s中第一次出现的位置</span></span><br><span class="line">print(s.rfind(<span class="string">"is"</span>))   <span class="comment">#"is"在字符串是中最后一次出现的位置</span></span><br><span class="line">print(s.find(<span class="string">"666"</span>))</span><br></pre></td></tr></table></figure>
 
@@ -464,9 +464,11 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 <p>6<br>2<br>0</p>
 </blockquote>
 <hr><br>
-<h5 id="StrSplit">字符串的**分割**</h5>
- - **split()**和 **rsplit()**方法分别用来以指定字符为分隔符，从原字符串<font color="red">左端</font>和<font color="red">右端</font>开始将其分隔成多个字符串
+<h5 id="StrSplit">字符串的分割</h5>
 
+<ul>
+<li><strong>split()</strong>和 <strong>rsplit()</strong>方法分别用来以指定字符为分隔符，从原字符串<font color="red">左端</font>和<font color="red">右端</font>开始将其分隔成多个字符串</li>
+</ul>
 <p>用法：<code>变量.resplit(&#39;分割符&#39;,maxsplit=最大分割次数)</code>maxsplit可缺省</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="string">"一,二,三,四,五,六"</span></span><br><span class="line">print(a.split(<span class="string">','</span>,maxsplit=<span class="number">2</span>))   <span class="comment">#按','分割,分两次</span></span><br><span class="line">print(a.rsplit(<span class="string">','</span>,maxsplit=<span class="number">2</span>))  <span class="comment">#按','分割,分两次</span></span><br><span class="line"></span><br><span class="line">b=<span class="string">'H E L L O'</span></span><br><span class="line">print(b.split()) <span class="comment">#按照默认分割</span></span><br><span class="line">print(b.split(maxsplit=<span class="number">3</span>))<span class="comment">#按照默认从右分割三次</span></span><br></pre></td></tr></table></figure>
 
@@ -483,7 +485,202 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 <blockquote>
 <p>(‘一,二,’, <font color="red">‘三’</font>, ‘,四,三,二,一’)<br>(‘一,二,三,四,’, <font color="red">‘三’</font>, ‘,二,一’)</p>
 </blockquote>
+<hr><br>
+<h5 id="StrJoin">字符串的连接</h5>
 
+<ul>
+<li><strong>join()</strong><br>用法：<code>&#39;连接符.join（字符串）&#39;</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s&#x3D;[&quot;2020&quot;,&quot;04&quot;,&quot;14&quot;]</span><br><span class="line">print(&#39;-&#39;.join(s))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>2020-04-14</p>
+</blockquote>
+<hr><br>
+<h5 id="StrUpandLow">字符串转换大小写</h5>
+
+<p><code>s = &#39;This is my blog.&#39;</code></p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s.lower()</td>
+<td>小写</td>
+</tr>
+<tr>
+<td>s.upper()</td>
+<td>大写</td>
+</tr>
+<tr>
+<td>s.capitalize()</td>
+<td>首字母大写</td>
+</tr>
+<tr>
+<td>s.title()</td>
+<td>所有首字母大写</td>
+</tr>
+<tr>
+<td>s.swapcase()</td>
+<td>互换大小写</td>
+</tr>
+</tbody></table>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(s.swapcase())</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>tHIS IS MY BLOG.</p>
+</blockquote>
+<hr><br>
+<h5 id="StrReplace">字符串替换</h5>
+
+<ul>
+<li><strong>replace()</strong><br>用法：<code>字符串.replace(&quot;被替换内容&quot;，&quot;替换内容&quot;)</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'This is my blog.'</span></span><br><span class="line">print(s.replace(<span class="string">"my"</span>,<span class="string">"我的"</span>))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>This is 我的 blog.</p>
+</blockquote>
+<hr><br>
+<h5 id="StrDel">字符串删除</h5>
+
+<p>用法：<code>字符串.strip(&#39;删除类容&#39;)</code></p>
+<ul>
+<li><strong>strip()&nbsp;</strong>删除字符串两端字符</li>
+<li><strong>rstrip()</strong>删除字符串右端字符</li>
+<li><strong>lstrip()</strong>删除字符串左端字符</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'+++++++WORLD+++++++'</span></span><br><span class="line">print(s.strip(<span class="string">"+"</span>))</span><br><span class="line">print(s.rstrip(<span class="string">'+'</span>))</span><br><span class="line">print(s.lstrip(<span class="string">'+'</span>))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>WORLD<br>+++++++WORLD<br>WORLD+++++++</p>
+</blockquote>
+<hr><br>
+<h5 id="StrDel">字符串判断</h5>
+
+<br>
+
+ <h6 id="StrWith">是否以指定字符开始或结束</h6>
+
+<p>用法：<code>字符串.endwith(&#39;XXX&#39;)</code> 返回 True 或 False</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>startswith()</td>
+<td>开始</td>
+</tr>
+<tr>
+<td>endswith()</td>
+<td>结束</td>
+</tr>
+</tbody></table>
+<br>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'2019010088'</span></span><br><span class="line">print(s.startswith(<span class="string">"2019"</span>))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>True</p>
+</blockquote>
+ <h6 id="StrIs">字符串类型判断</h6>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>isupper()</td>
+<td>是否全为大写</td>
+</tr>
+<tr>
+<td>islower()</td>
+<td>是否全为小写</td>
+</tr>
+<tr>
+<td>isdigit()</td>
+<td>是否全为数字</td>
+</tr>
+<tr>
+<td>isalnum()</td>
+<td>是否为数字或字母</td>
+</tr>
+<tr>
+<td>isalpha()</td>
+<td>是否全为字母</td>
+</tr>
+</tbody></table>
+<hr><br>
+<h5 id="StrAlign">字符串排版</h5>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Hello World"</span></span><br><span class="line"></span><br><span class="line">print(s.center(<span class="number">30</span>, <span class="string">"="</span>))   <span class="comment">#字符串居中对齐，输出宽度为 30，不足的以“=”填充</span></span><br><span class="line"></span><br><span class="line">print(s.ljust(<span class="number">20</span>, <span class="string">"*"</span>))  <span class="comment">#字符串居左对齐，输出宽度为 20，不足的以“*”填充 </span></span><br><span class="line"></span><br><span class="line">print(s.rjust(<span class="number">20</span>, <span class="string">"*"</span>))  <span class="comment">#字符串居右对齐，输出宽度为 20，不足的以“*”填充 </span></span><br><span class="line"></span><br><span class="line">print(s.zfill(<span class="number">20</span>)) <span class="comment">#输出宽度为 20，在字符串左侧以字符“0”填充</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>=========Hello World==========<br>Hello World<strong>*****</strong><br><strong>*****</strong>Hello World<br>000000000Hello World</p>
+</blockquote>
+<p><br><hr></p>
+<h4 id="format">format()格式化法</h4>
+ - -
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"我是&#123;&#125;,我的网站地址是&#123;&#125;"</span>.format(<span class="string">'园长'</span>,<span class="string">'https://yzyyz.top'</span>))  <span class="comment">#默认顺序</span></span><br><span class="line"><span class="comment">#print("我是&#123;0&#125;,我的网站地址是&#123;1&#125;".format('园长','https://yzyyz.top'))  #指定顺序</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>我是园长,我的网站地址是<a href="https://yzyyz.top">https://yzyyz.top</a></p>
+</blockquote>
+<br>
+ - -
+使用 format()方法格式化字符串的时候，首先需要在“{}”中输入“：”，在“：”之后分别设置<填充字符> <对齐方式> <宽度>
+
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;填充字符&gt;</td>
+<td>“*”，“=”，“ -”等，但只能是一个字符，默认为空格</td>
+</tr>
+<tr>
+<td>&lt;对齐方式&gt;</td>
+<td>^(居中)、 &lt;(左对齐)、 &gt;(右对齐)</td>
+</tr>
+<tr>
+<td>&lt;宽度&gt;</td>
+<td>一个整数，指格式化后整个字符串的字符个数</td>
+</tr>
+</tbody></table>
+<ul>
+<li>-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"&#123;:.2f&#125;"</span>.format(<span class="number">3.1415926</span>)) <span class="comment"># 结果保留 2 位小数 </span></span><br><span class="line">print(<span class="string">"&#123;:=^30.4f&#125;"</span>.format(<span class="number">3.1415926</span>)) <span class="comment"># 宽度 30，居中对齐，“=”填充，保留 4 位小数 </span></span><br><span class="line">print(<span class="string">'&#123;:5d&#125;'</span>.format(<span class="number">24</span>)) <span class="comment"># 宽度 5，右对齐，空格填充，整数形式输出</span></span><br></pre></td></tr></table></figure>
+<code>可知默认填充符是空格，默认对齐方式是右对齐</code></li>
+</ul>
+<blockquote>
+<p>3.14<br>============3.1416============<br>   24</p>
+</blockquote>
+<p><br><hr><br></p>
+<h3 id="hhys">混合运算和类型转换 </h3>
+
+<p>这里记录下*<em>混合运算和类型转换 *</em></p>
+<h4 id="zdzh"> 类型自动转换 </h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="number">24</span> + <span class="number">24.0</span>      <span class="comment"># 输出 48.0</span></span><br><span class="line">type(f)             <span class="comment"># 输出&lt;class 'float'&gt; </span></span><br><span class="line"><span class="number">56</span> + <span class="literal">True</span>           <span class="comment"># 将 True 转换成 1，输出 57，True 为布尔类型</span></span><br><span class="line"><span class="number">44</span> + <span class="literal">False</span>          <span class="comment"># 将 False 转换成 0，输出 44，False 为布尔类型 </span></span><br><span class="line"><span class="number">56</span> + <span class="string">'4'</span>            <span class="comment"># 报错，数值型数据和字符串无法做“+”运算</span></span><br></pre></td></tr></table></figure>
+`注意，在混合运算中，布尔类型(bool)True 将自动转换成 1，False 将自动转换成 0 参与运算`
+
+
+<h4 id="qzzh">混合运算和类型转换 </h4>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int(<span class="number">2.32</span>)   <span class="comment"># 转换为整数类型，输出 2</span></span><br><span class="line">float(<span class="number">5</span>)    <span class="comment"># 转换为浮点数类型，输出 5.0</span></span><br><span class="line">int(<span class="string">"abc"</span>)  <span class="comment"># 无法转换，报错 invalid literal for int() with base 10: 'abc'</span></span><br></pre></td></tr></table></figure>
+<p>2020/4/1 0:30:40 </p>
+</宽度></对齐方式></填充字符>
           
         </div>
         
@@ -670,7 +867,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#StrS"><span class="toc-number">1.</span> <span class="toc-text">字符串的索引与切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StrJandC"><span class="toc-number">2.</span> <span class="toc-text">字符串处理与操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jsuan"><span class="toc-number">2.1.</span> <span class="toc-text">字符串基本运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hanshu"><span class="toc-number">2.2.</span> <span class="toc-text">字符串处理函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bulidin"><span class="toc-number">2.3.</span> <span class="toc-text">内置字符串处理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#StrFind"><span class="toc-number">2.3.1.</span> <span class="toc-text">字符串的**查找**</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrSplit"><span class="toc-number">2.3.2.</span> <span class="toc-text">字符串的**分割**</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#StrS"><span class="toc-number">1.</span> <span class="toc-text">字符串的索引与切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StrJandC"><span class="toc-number">2.</span> <span class="toc-text">字符串处理与操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jsuan"><span class="toc-number">2.1.</span> <span class="toc-text">字符串基本运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hanshu"><span class="toc-number">2.2.</span> <span class="toc-text">字符串处理函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bulidin"><span class="toc-number">2.3.</span> <span class="toc-text">内置字符串处理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#StrFind"><span class="toc-number">2.3.1.</span> <span class="toc-text">字符串的查找</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrSplit"><span class="toc-number">2.3.2.</span> <span class="toc-text">字符串的分割</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrJoin"><span class="toc-number">2.3.3.</span> <span class="toc-text">字符串的连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrUpandLow"><span class="toc-number">2.3.4.</span> <span class="toc-text">字符串转换大小写</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrReplace"><span class="toc-number">2.3.5.</span> <span class="toc-text">字符串替换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrDel"><span class="toc-number">2.3.6.</span> <span class="toc-text">字符串删除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrDel"><span class="toc-number">2.3.7.</span> <span class="toc-text">字符串判断</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StrAlign"><span class="toc-number">2.3.8.</span> <span class="toc-text">字符串排版</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#format"><span class="toc-number">2.4.</span> <span class="toc-text">format()格式化法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hhys"><span class="toc-number">3.</span> <span class="toc-text">混合运算和类型转换 </span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#zdzh"><span class="toc-number">3.1.</span> <span class="toc-text"> 类型自动转换 </span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#qzzh"><span class="toc-number">3.2.</span> <span class="toc-text">混合运算和类型转换 </span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1001,7 +1198,7 @@ setInterval("createtime()",250);
    
 <!---字数统计----->
 <i class="fas fa-chart-area"></i>
-<span class="post-count">字数统计：8.4k</span>
+<span class="post-count">字数统计：9.3k</span>
 <br>
 <!----ip签名图---->
   <!--  <img src="https://39.98.144.53/ip" >-->
