@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>VM安装CentOS 踩坑记|VMware Workstation 与 Device/Credential Guard 不兼容 | 稚昂长</title>
+  <title>大多数人不知道的Python骚操作 | 稚昂长</title>
   
   <meta name="keywords" content="幼稚园园长,博客,blog,园长博客,稚昂长,幼稚园园长博客">
   
@@ -320,8 +320,8 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         
   
     <h1 class="title">
-      <a href="/archives/264ae2ef.html">
-        VM安装CentOS 踩坑记|VMware Workstation 与 Device/Credential Guard 不兼容
+      <a href="/archives/b0c3ca81.html">
+        大多数人不知道的Python骚操作
       </a>
     </h1>
   
@@ -357,7 +357,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>消息发布于：2020年4月14日</p>
+    <p>消息发布于：2020年4月18日</p>
   </a>
 </div>
 
@@ -392,63 +392,63 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         <div class="article-entry" itemprop="articleBody">
           
           <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/centos.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/centos.jpg"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/python.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="py"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/python.jpg"></a></p>
 
-<p>今天需要用到CentOS,就准备在虚拟机上安装从阿里云下载的镜像，记录一下踩坑过程</p>
 <a id="more"></a>
+<p>Python爱好者非常喜欢Python语言中的许多（越来越多）高级功能。在这些人的眼中，可以编写普通开发人员无法理解的高级功能。</p>
+<p>何出此言？</p>
+<ol>
+<li>代码越简洁，逻辑越清晰，出错的可能性就越小。</li>
+</ol>
+<ol start="2">
+<li>在团队合作中，您的代码不仅由您自己维护，而且是减少他人阅读/理解代码逻辑的成本的一个很好的优点。</li>
+<li>简单的代码将只使用最基本的语法糖，复杂的高级功能将具有更多的依赖项（例如语言版本）<br>在本文，我将列出我所看到的令人眼花缭乱乱的操作。如果您是Python爱好者，则可以学习一些很酷的代码编写技能，但要学习，希望您能区分两种情况。<br>注意：无论您是寻找工作还是Python爱好，请记住：项目开发经验将永远是核心。所以需要广泛学习、实践。</li>
+</ol>
+<p>原代码<br>这是一段非常简单的通过年龄判断一个人是否成年的代码，由于代码行数过多，有些人就不太愿意这样写，因为这体现不出自己多年的 Python 功力。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if age &gt; 18:</span><br><span class="line">    return &quot;已成年&quot;</span><br><span class="line">else:</span><br><span class="line">    return &quot;未成年&quot;</span><br></pre></td></tr></table></figure>
 
-<p><br><br></p>
-<h3 id="pb">出现问题</h3>
+<p>下面列举了六种这段代码的变异写法，种种都精简 ，单独拿出来比较好理解，放在工程代码里，没用过这些学法的人，一定会看得一脸懵，理解了之后，又不经意大呼：wow，还可以这样写？，而后就要开始骂街了：这是给人看的代码？ （除了第一种之外）</p>
+<h3 id="noo">第一种</h3>
+语法：
 
-<p>安装的时候出现了以下问题：</p>
-<blockquote>
-<p>VmWare安装centos7提示：VMware Workstation 与 Device/Credential Guard 不兼容。在禁用 Device/Credenti</p>
-</blockquote>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsb.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsb.png"></a></p>
+<p><code>&lt;on_true&gt; if &lt;condition&gt; else &lt;on_false&gt;</code> </p>
+<p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; age1 &#x3D; 20</span><br><span class="line">&gt;&gt;&gt; age2 &#x3D; 17</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg1 &#x3D; &quot;已成年&quot; if age1 &gt; 18 else &quot;未成年&quot;</span><br><span class="line">&gt;&gt;&gt; print msg1</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; &quot;已成年&quot; if age2 &gt; 18 else &quot;未成年&quot;</span><br><span class="line">&gt;&gt;&gt; print msg2</span><br><span class="line">未成年</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
 
-<hr>
-<br>
-<br>
-<h3 id="spb">简单解决</h3>
-解决方法如下：
-`Win+R` 打开运行 输入`gpedit.msc`
+<h3 id="not">第二种</h3>
+语法
 
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgm.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgm.png"></a></p><br>
+<p><code>&lt;condition&gt; and &lt;on_true&gt; or &lt;on_false&gt;</code></p>
+<p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; age1 &gt; 18 and &quot;已成年&quot; or &quot;未成年&quot;</span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; &quot;已成年&quot; if age2 &gt; 18 else &quot;未成年&quot;</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
 
+<h3 id="notr">第三种</h3>
+语法
 
-<p>依次找到<code>计算机配置</code>→<code>管理模板</code>→<code>系统</code>→<code>Device Guard</code>,双击<code>打开基于虚拟化的安全</code></p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmdg.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmdg.png"></a></p><br>
+<p><code>(&lt;on_true&gt;, &lt;on_false&gt;)[condition]</code></p>
+<p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; (&quot;未成年&quot;, &quot;已成年&quot;)[age1 &gt; 18]</span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; (&quot;未成年&quot;, &quot;已成年&quot;)[age2 &gt; 18]</span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
 
+<h3 id="nof">第四种</h3>
+语法
 
-<p>选择<code>禁用</code>，再点击<code>应用</code>→<code>确定</code></p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgd.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmgd.png"></a></p><br>
+<p><code>(lambda: &lt;on_false&gt;, lambda:&lt;on_true&gt;)[&lt;condition&gt;]()</code></p>
+<p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; (lambda:&quot;未成年&quot;, lambda:&quot;已成年&quot;)[age1 &gt; 18]()</span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; (lambda:&quot;未成年&quot;, lambda:&quot;已成年&quot;)[age2 &gt; 18]()</span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
 
+<h3 id="nofi">第五种</h3>
+语法：
 
-<p><code>Win+R</code> 打开运行 输入<code>services.msc</code></p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm.png"></a></p><br>
+<p><code>{True: &lt;on_true&gt;, False: &lt;on_false&gt;}[&lt;condition&gt;]</code></p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; &#123;True: &quot;已成年&quot;, False: &quot;未成年&quot;&#125;[age1 &gt; 18]</span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; &#123;True: &quot;已成年&quot;, False: &quot;未成年&quot;&#125;[age2 &gt; 18]</span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
 
-<p>找到并双击<code>HV主机服务</code></p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm1.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm1.png"></a></p><br>
+<h3 id="nos">第六种</h3>
+语法
 
-<p>设置为禁用</p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmsm2.png"></a></p><br>
-
-<p>按照图示取消勾选<code>Hyper-v</code></p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmkzmb.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmkzmb.png"></a></p><br>
-
-<p>重启电脑，大功告成</p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmubt.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="cent"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/vmubt.png"></a></p><br>
-
-
+<p><code>((&lt;condition&gt;) and (&lt;on_true&gt;,) or (&lt;on_false&gt;,))[0]</code></p>
+<p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; ((age1 &gt; 18) and (&quot;已成年&quot;,) or (&quot;未成年&quot;,))[0]</span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; ((age2 &gt; 18) and (&quot;已成年&quot;,) or (&quot;未成年&quot;,))[0]</span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
           
         </div>
         
@@ -467,7 +467,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>随笔</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>干货</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>干货</p></a></div>
 
 
         
@@ -478,10 +478,8 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/264ae2ef.html&title=VM安装CentOS 踩坑记|VMware Workstation 与 Device/Credential Guard 不兼容 | 稚昂长&summary=
-
-
-今天需要用到CentOS,就准备在虚拟机上安装从阿里云下载的镜像，记录一下踩坑过程" target="_blank">
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/b0c3ca81.html&title=大多数人不知道的Python骚操作 | 稚昂长&summary=
+" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
           
@@ -489,10 +487,8 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/264ae2ef.html&title=VM安装CentOS 踩坑记|VMware Workstation 与 Device/Credential Guard 不兼容 | 稚昂长&summary=
-
-
-今天需要用到CentOS,就准备在虚拟机上安装从阿里云下载的镜像，记录一下踩坑过程" target="_blank">
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/b0c3ca81.html&title=大多数人不知道的Python骚操作 | 稚昂长&summary=
+" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
           
@@ -500,10 +496,8 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/264ae2ef.html&title=VM安装CentOS 踩坑记|VMware Workstation 与 Device/Credential Guard 不兼容 | 稚昂长&summary=
-
-
-今天需要用到CentOS,就准备在虚拟机上安装从阿里云下载的镜像，记录一下踩坑过程" target="_blank">
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/b0c3ca81.html&title=大多数人不知道的Python骚操作 | 稚昂长&summary=
+" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
           
@@ -525,40 +519,21 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/archives/e6561d4d.html" rel="prev" title="浅谈Pandownload被查">
-                                  
-                                      浅谈Pandownload被查
-                                  
+                                <a href="/archives/9c660fa6.html" rel="prev" title="给「杠精」一个微信式微笑">
+                                    
+                                        给「杠精」一个微信式微笑
+                                    
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
                                     <a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 随笔</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/archives/99d3e1c2.html" rel="prev" title="RSS源推荐|使用RSS|高效阅读">
-                                    
-                                        RSS源推荐|使用RSS|高效阅读
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 干货</a>
                                 </h6>
                             
                         </span>
@@ -603,7 +578,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 
   <script>
     window.subData = {
-      title: 'VM安装CentOS 踩坑记|VMware Workstation 与 Device/Credential Guard 不兼容',
+      title: '大多数人不知道的Python骚操作',
       tools: true
     }
   </script>
@@ -629,7 +604,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#pb"><span class="toc-number">1.</span> <span class="toc-text">出现问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spb"><span class="toc-number">2.</span> <span class="toc-text">简单解决</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#noo"><span class="toc-number">1.</span> <span class="toc-text">第一种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#not"><span class="toc-number">2.</span> <span class="toc-text">第二种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#notr"><span class="toc-number">3.</span> <span class="toc-text">第三种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nof"><span class="toc-number">4.</span> <span class="toc-text">第四种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nofi"><span class="toc-number">5.</span> <span class="toc-text">第五种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nos"><span class="toc-number">6.</span> <span class="toc-text">第六种</span></a></li></ol>
     </div>
   </section>
 
