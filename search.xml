@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>万恶的P2P下载器|稚昂长</title>
+      <link href="/archives/1f37f541.html"/>
+      <url>/archives/1f37f541.html</url>
+      
+        <content type="html"><![CDATA[<p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/p2p1.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="p2p"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/p2p1.png"></a></p><p>当我在百度敲下这段内容后，我看到了这样的候选项<br>我觉得这仇恨仅次于吃蝙蝠了</p><a id="more"></a><p>记录一下，昨天由于自身需要，我就在某某网站下载软件。普通下载都打不开，只好冒死试了一下高速下载–就是大家所熟知的<code>p2p下载器</code>,什么？不知道，那请看下图：</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/p2p2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="p2p"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/p2p2.png"></a></p><p>有印象了吧！对就是他</p><p>下载后我就后悔了，当我桌面上的图标刷新的那一刻，我知道，凉了<br>随人没有那么严重，也就：</p><ol><li>浏览器主页被篡改</li><li>任务栏弹出超过3条广告</li><li>下载完是我的火绒就报毒了，及时我选择了组织，主页还是被篡改了</li></ol><p>而！已！</p><p>这是它的用协议：<a href="http://down.ahsbk.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://down.ahsbk.cn/</a>  （话说谁会去读）</p><p>p2p下载器作为一个工具，被黑心商家利用，在这里我想表达我玩对这些黑心商家全家的问候：</p><blockquote><p>您们还好吗？</p></blockquote><p>为推广软件，把流氓软件全家桶附加在p2p下载器上。之前使用还可以通过勾选取消流氓软件的安装，现在无良商家更加过火，只要打开了p2p下载器，即使结束进程，在后台全家桶依然静默安装，没有提示信息。之后，流氓软件可能在桌面上会有图标，也可能没有图标，系统会增加很多启动项和后台服务。如果找得到流氓软件的存储位置能删除还好，有的存储位置隐蔽甚至容易和系统关键文件混淆。实在是令人崩溃的！！！</p><p>万恶的p2p下载器（好吧其实是万恶的捆绑下载和主页篡改），我决定立个flag：再也不用这个高速下载（排除不可抗力，以免真香警告）</p><p>也建议大家尽量少的使用，有些时候把<code>√</code>取消掉也存在捆绑下载（园长已经哭晕在厕所）</p><p>就这么多吧</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>大多数人不知道的Python骚操作</title>
       <link href="/archives/b0c3ca81.html"/>
       <url>/archives/b0c3ca81.html</url>
