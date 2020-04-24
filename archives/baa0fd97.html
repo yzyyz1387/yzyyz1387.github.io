@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>大多数人不知道的Python骚操作 | 稚昂长</title>
+  <title>重温-阿甘正传 | 稚昂长</title>
   
   <meta name="keywords" content="幼稚园园长,博客,blog,园长博客,稚昂长,幼稚园园长博客">
   
@@ -320,8 +320,8 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         
   
     <h1 class="title">
-      <a href="/archives/b0c3ca81.html">
-        大多数人不知道的Python骚操作
+      <a href="/archives/baa0fd97.html">
+        重温-阿甘正传
       </a>
     </h1>
   
@@ -357,7 +357,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>消息发布于：2020年4月18日</p>
+    <p>消息发布于：2020年4月24日</p>
   </a>
 </div>
 
@@ -392,63 +392,82 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         <div class="article-entry" itemprop="articleBody">
           
           <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/python.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="py"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/python.jpg"></a></p>
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump0.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="gump"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump0.jpg"></a></p>
 
+
+
+<p>1994年的电影了，之前也马马虎虎看过，说是看过，也就是瞟了几眼，记得当时的心思没在电视上。最近忙里偷闲看了一遍，决定堆段文字。</p>
 <a id="more"></a>
-<p>Python爱好者非常喜欢Python语言中的许多（越来越多）高级功能。在这些人的眼中，可以编写普通开发人员无法理解的高级功能。</p>
-<p>何出此言？</p>
-<ol>
-<li>代码越简洁，逻辑越清晰，出错的可能性就越小。</li>
-</ol>
-<ol start="2">
-<li>在团队合作中，您的代码不仅由您自己维护，而且是减少他人阅读/理解代码逻辑的成本的一个很好的优点。</li>
-<li>简单的代码将只使用最基本的语法糖，复杂的高级功能将具有更多的依赖项（例如语言版本）<br>在本文，我将列出我所看到的令人眼花缭乱乱的操作。如果您是Python爱好者，则可以学习一些很酷的代码编写技能，但要学习，希望您能区分两种情况。<br>注意：无论您是寻找工作还是Python爱好，请记住：项目开发经验将永远是核心。所以需要广泛学习、实践。</li>
-</ol>
-<p>原代码<br>这是一段非常简单的通过年龄判断一个人是否成年的代码，由于代码行数过多，有些人就不太愿意这样写，因为这体现不出自己多年的 Python 功力。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if age &gt; 18:</span><br><span class="line">    return &quot;已成年&quot;</span><br><span class="line">else:</span><br><span class="line">    return &quot;未成年&quot;</span><br></pre></td></tr></table></figure>
 
-<p>下面列举了六种这段代码的变异写法，种种都精简 ，单独拿出来比较好理解，放在工程代码里，没用过这些学法的人，一定会看得一脸懵，理解了之后，又不经意大呼：wow，还可以这样写？，而后就要开始骂街了：这是给人看的代码？ （除了第一种之外）</p>
-<h3 id="noo">第一种</h3>
-语法：
+<h3 id="love">爱情</h3>
 
-<p><code>&lt;on_true&gt; if &lt;condition&gt; else &lt;on_false&gt;</code> </p>
-<p>例子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; age1 &#x3D; 20</span><br><span class="line">&gt;&gt;&gt; age2 &#x3D; 17</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg1 &#x3D; &quot;已成年&quot; if age1 &gt; 18 else &quot;未成年&quot;</span><br><span class="line">&gt;&gt;&gt; print msg1</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; &quot;已成年&quot; if age2 &gt; 18 else &quot;未成年&quot;</span><br><span class="line">&gt;&gt;&gt; print msg2</span><br><span class="line">未成年</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;一个阿拉巴马的傻子阿甘,从影片开头至结尾，始终喜欢的就是珍妮。</p>
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump2.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="gump"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump2.jpg"></a></p>
 
-<h3 id="not">第二种</h3>
-语法
 
-<p><code>&lt;condition&gt; and &lt;on_true&gt; or &lt;on_false&gt;</code></p>
-<p>例子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; age1 &gt; 18 and &quot;已成年&quot; or &quot;未成年&quot;</span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; &quot;已成年&quot; if age2 &gt; 18 else &quot;未成年&quot;</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>I had never seen anything so beautiful in my life,She was like an angel.</p>
+</blockquote>
+<p>&nbsp;&nbsp;自那次在校车上见面后，便与珍妮有了不解之缘，他们一起上学，一起坐在树干上待到很晚，一起长大。无论珍是否离开，无论珍妮做过什么，阿甘总是会一直思念着他深爱的珍妮。我也曾想过如此一般的去爱一个人，可…</p>
+<p>&nbsp;&nbsp;阿甘最终娶了珍妮，生了一个小阿甘。他们快乐的生活在一起。在影片最后，当阿甘站在珍妮墓前，说：</p>
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump5.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="gump"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump5.png"></a></p>
+>But I miss you, Jenny. If there's anything you need... I won't be far away.
 
-<h3 id="notr">第三种</h3>
-语法
+<p>&nbsp;&nbsp;哦~ 这该死的爱情，让人湿了眼眶，却无法让我抹去自己心中的迷茫</p>
+<hr><br>
 
-<p><code>(&lt;on_true&gt;, &lt;on_false&gt;)[condition]</code></p>
-<p>例子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; (&quot;未成年&quot;, &quot;已成年&quot;)[age1 &gt; 18]</span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; (&quot;未成年&quot;, &quot;已成年&quot;)[age2 &gt; 18]</span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
+<h3 id="life">人生</h3>
 
-<h3 id="nof">第四种</h3>
-语法
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump1.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="gump"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump1.jpg"></a></p>
 
-<p><code>(lambda: &lt;on_false&gt;, lambda:&lt;on_true&gt;)[&lt;condition&gt;]()</code></p>
-<p>例子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; (lambda:&quot;未成年&quot;, lambda:&quot;已成年&quot;)[age1 &gt; 18]()</span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; (lambda:&quot;未成年&quot;, lambda:&quot;已成年&quot;)[age2 &gt; 18]()</span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Life was like a box o’chocolates. You never know what you gonna get ！</p>
+</blockquote>
+<p>&nbsp;&nbsp;幼年的他腿上有残疾，只能靠着母亲为他订做的一个铁架子来帮助他自己像正常人那般行走，但是同学们放学后在路上嘲笑他，甚至朝他扔石头，但珍妮在守护着他，鼓励着他，他终于挣脱了铁架，奔跑起来。</p>
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump6.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="gump"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump6.jpg"></a></p>
 
-<h3 id="nofi">第五种</h3>
-语法：
+<blockquote>
+<p>I could run like the wind blows.</p>
+</blockquote>
+<p>&nbsp;&nbsp;也因为这个天赋，偶然地，’傻子’也加入橄榄球队、进了大学。他总是跑的像风一样，最后拿下球赛，阿甘的大学生活除了打球，一有空就去珍妮就读的女子大学找她。大学毕业后，阿甘入伍，参加了越南战争（影片插入政治因素，不再论述）。</p>
+<p>&nbsp;&nbsp;阿甘为了对巴布许下的诺言，退伍后接了广告，用这些钱买了一艘 ‘全新’ 的渔船,丹中尉成了大幅，风暴过后他们的捕虾业让他们成了百万富翁，这时他的妈妈离开了,妈妈告诉他：</p>
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump3.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="gump"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump3.jpg"></a></p>
 
-<p><code>{True: &lt;on_true&gt;, False: &lt;on_false&gt;}[&lt;condition&gt;]</code></p>
-<p>例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; &#123;True: &quot;已成年&quot;, False: &quot;未成年&quot;&#125;[age1 &gt; 18]</span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; &#123;True: &quot;已成年&quot;, False: &quot;未成年&quot;&#125;[age2 &gt; 18]</span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Death is just a part of life.</p>
+</blockquote>
+<p>&nbsp;&nbsp;死亡只是生命的一部分。<br>&nbsp;&nbsp;这让我想起了我的奶奶，小时候爸妈在外打工，我后来去了爷爷奶奶那儿，奶奶很和蔼，也很疼我，每天我一放学回家，身体不便的她还是会立马去厨房里做饭，记得最清楚的一次，她给我炒了一大碗蛋炒饭，是那种打的洋瓷碗，那碗饭很香，但是吃的差不多了我跟奶奶说 <code>饭里油太多了</code>（油确实有点多，我觉得我也是吃不完），奶奶就说 <code>油太多了就剩下嘛</code>，我也记不起剩下的饭怎么处理了。</p>
+<p>&nbsp;&nbsp;有一次我在房顶玩，看见远处公路上有一辆挖掘机在施工,(我小时候叫的’挖挖机’，很小的时候在山里，看见挖掘机也觉得新奇)，我就赶紧下楼去叫奶奶来看，我窜下去又窜上来，不停的让奶奶快点上来，奶奶老了，腿脚不好，我却还让她快点，现在想起来真的是… 我给她指着挖掘机让她看，我知道奶奶眼睛看不清，下楼的时候还确认了几遍，问奶奶看见挖掘机了没有。</p>
+<p> <code>我想努力多回忆几件事，却始终无法想起了,改天吧，好好想</code></p>
+<p>&nbsp;&nbsp;后来珍妮回来了，那段日子他们又像小时候一样。珍妮又离开了。许多年，在阿甘跑遍美国后，阿甘收到珍妮的信，影片回到现实，阿甘找到了珍妮，见到了小阿甘，两人结婚了…</p>
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump4.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="gump"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump4.jpg"></a></p>
 
-<h3 id="nos">第六种</h3>
-语法
+<p>影片的最后，羽毛又飘起</p>
+<blockquote>
+<p>人生就如同一片轻盈的羽毛，有落下的时候，但你应该鼓舞自己让它不断飘扬而上，向着新的高度超越自我。</p>
+</blockquote>
+<p>我想，阿甘的人生算是很成功了，那天晚上他说：</p>
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump7.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="gump"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/gump7.jpg"></a></p>
 
-<p><code>((&lt;condition&gt;) and (&lt;on_true&gt;,) or (&lt;on_false&gt;,))[0]</code></p>
-<p>例子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; msg1 &#x3D; ((age1 &gt; 18) and (&quot;已成年&quot;,) or (&quot;未成年&quot;,))[0]</span><br><span class="line">&gt;&gt;&gt; print(msg1)</span><br><span class="line">已成年</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt; msg2 &#x3D; ((age2 &gt; 18) and (&quot;已成年&quot;,) or (&quot;未成年&quot;,))[0]</span><br><span class="line">&gt;&gt;&gt; print(msg2)</span><br><span class="line">未成年</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Arent’t I going to be me?</p>
+</blockquote>
+<p>我的理解是：’不忘初心’，我们不要因为思考而虚度光阴，更不要在现实中丢失了我们的本性，无论你受到了什么样质疑，希望你不要放弃，不要抱怨，坚持做自己，生活一定会给你想要的惊喜。</p>
+<p><code>2020/4/24 13:06:37</code></p>
+<blockquote>
+<p>北北：就(被影片)启发了当时一会儿，第二天照样该咋地咋地，我都被启发好多回了</p>
+</blockquote>
+<blockquote>
+<p>真实！</p>
+</blockquote>
+
           
         </div>
         
@@ -467,7 +486,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>干货</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>随笔</p></a></div>
 
 
         
@@ -478,8 +497,12 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/b0c3ca81.html&title=大多数人不知道的Python骚操作 | 稚昂长&summary=
-" target="_blank">
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/baa0fd97.html&title=重温-阿甘正传 | 稚昂长&summary=
+
+
+
+
+1994年的电影了，之前也马马虎虎看过，说是看过，也就是瞟了几眼，记得当时的心思没在电视上。最近忙里偷闲看了一遍，决定堆段文字。" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
           
@@ -487,8 +510,12 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/b0c3ca81.html&title=大多数人不知道的Python骚操作 | 稚昂长&summary=
-" target="_blank">
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/baa0fd97.html&title=重温-阿甘正传 | 稚昂长&summary=
+
+
+
+
+1994年的电影了，之前也马马虎虎看过，说是看过，也就是瞟了几眼，记得当时的心思没在电视上。最近忙里偷闲看了一遍，决定堆段文字。" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
           
@@ -496,8 +523,12 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/b0c3ca81.html&title=大多数人不知道的Python骚操作 | 稚昂长&summary=
-" target="_blank">
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/baa0fd97.html&title=重温-阿甘正传 | 稚昂长&summary=
+
+
+
+
+1994年的电影了，之前也马马虎虎看过，说是看过，也就是瞟了几眼，记得当时的心思没在电视上。最近忙里偷闲看了一遍，决定堆段文字。" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
           
@@ -519,33 +550,14 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/archives/1f37f541.html" rel="prev" title="万恶的P2P下载器|稚昂长">
-                                  
-                                      万恶的P2P下载器|稚昂长
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 随笔</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/archives/9c660fa6.html" rel="prev" title="给「杠精」一个微信式微笑">
+                                <a href="/archives/1f37f541.html" rel="prev" title="万恶的P2P下载器|稚昂长">
                                     
-                                        给「杠精」一个微信式微笑
+                                        万恶的P2P下载器|稚昂长
                                     
                                 </a>
                             </h4>
@@ -597,7 +609,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 
   <script>
     window.subData = {
-      title: '大多数人不知道的Python骚操作',
+      title: '重温-阿甘正传',
       tools: true
     }
   </script>
@@ -623,7 +635,7 @@ html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#noo"><span class="toc-number">1.</span> <span class="toc-text">第一种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#not"><span class="toc-number">2.</span> <span class="toc-text">第二种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#notr"><span class="toc-number">3.</span> <span class="toc-text">第三种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nof"><span class="toc-number">4.</span> <span class="toc-text">第四种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nofi"><span class="toc-number">5.</span> <span class="toc-text">第五种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nos"><span class="toc-number">6.</span> <span class="toc-text">第六种</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#love"><span class="toc-number">1.</span> <span class="toc-text">爱情</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#life"><span class="toc-number">2.</span> <span class="toc-text">人生</span></a></li></ol>
     </div>
   </section>
 
