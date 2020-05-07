@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yzyyz.top/"/>
-  <updated>2020-05-03T17:55:18.488Z</updated>
+  <updated>2020-05-07T13:29:59.982Z</updated>
   <id>https://yzyyz.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python-random库的基本应用</title>
+    <link href="https://yzyyz.top/archives/68b816f9.html"/>
+    <id>https://yzyyz.top/archives/68b816f9.html</id>
+    <published>2020-05-07T08:51:25.000Z</published>
+    <updated>2020-05-07T13:29:59.982Z</updated>
+    
+    <content type="html"><![CDATA[<p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/random.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="rss"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/random.png"></a></p>伪随机数：计算机中通过采用梅森旋转算法生成的（伪）随机序列元素，python中用于生成伪随机数的函数库是random<a id="more"></a><h3 id="random">概述</h3><p>这里放几个random库常用函数：</p><ul><li>random()</li><li>randrange()</li><li>randint()</li><li>choice()</li><li>uniform()</li><li>sample()</li><li>shuffle()</li><li>seed()</li></ul><hr><br><p>首先导入random</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># random常用函数</span></span><br><span class="line"><span class="comment"># https://yzyyz.top</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure><br><h4 id="random1">random()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(random()) <span class="comment"># 返回[0.0,1.0)中一个随机浮点数</span></span><br></pre></td></tr></table></figure><blockquote><p>0.647239093910809</p></blockquote><br><h4 id="randrange">randrange()</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(randrange(2))        #在0，1中选</span><br><span class="line">print(randrange(0,2))      #在0,1中选</span><br><span class="line">print(randrange(0,10,2))   #在0,9中选偶数 因为空了每个奇数</span><br></pre></td></tr></table></figure><blockquote><p>1<br>0<br>0</p></blockquote><br><h4 id="randint">randint()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(randint(<span class="number">0</span>,<span class="number">2</span>))      <span class="comment">#从0,1,2中随机选整数 相当于randrange(0,3)</span></span><br></pre></td></tr></table></figure><blockquote><p>2</p></blockquote><br><h4 id="choice">choice()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s=[<span class="string">"随"</span>,<span class="string">"机"</span>,<span class="string">"取"</span>]</span><br><span class="line">print(choice(s))      <span class="comment">#从s中随机取一个</span></span><br><span class="line"></span><br><span class="line">ss=<span class="string">"abcdefghigklmnopqrstuvwxyz&lt;&gt;?!@#$%^&amp;*"</span></span><br><span class="line">print(choice(ss))     <span class="comment">#从ss中随机取一个</span></span><br></pre></td></tr></table></figure><blockquote><p>随<br>b</p></blockquote><br><h4 id="uniform">uniform()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(uniform(<span class="number">1</span>,<span class="number">2</span>))    <span class="comment"># 1,2 范围随机小数</span></span><br></pre></td></tr></table></figure><blockquote><p>1.8666232147036852</p></blockquote><br><h4 id="sample">sample</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b=<span class="string">'ilovenwafu'</span></span><br><span class="line">print(sample(b,<span class="number">3</span>))  <span class="comment">#从b中随机取3个，返回列表</span></span><br></pre></td></tr></table></figure><blockquote><p>[‘a’, ‘f’, ‘l’]</p></blockquote><br><h4 id="shuffle">shuffle()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>] <span class="comment">#随机d中的元素</span></span><br><span class="line">shuffle(d)</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure><blockquote><p>[3, 4, 1, 2, 5, 6]</p></blockquote><br><h4 id="seed">seed()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'盲猜两次随机是一样的结果'</span>)</span><br><span class="line"><span class="comment">#随机数种子</span></span><br><span class="line">seed(<span class="number">2</span>)   <span class="comment">#重置随机数生成器</span></span><br><span class="line">print(random())</span><br><span class="line">seed(<span class="number">2</span>)</span><br><span class="line">print(random())</span><br></pre></td></tr></table></figure><blockquote><p>盲猜两次随机是一样的结果<br>0.9560342718892494<br>0.9560342718892494</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p style=&quot;text-align:center;&quot;&gt;
+&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/random.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;rss&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/random.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+伪随机数：计算机中通过采用梅森旋转算法生成的（伪）随机序列元素，python中用于生成伪随机数的函数库是random
+    
+    </summary>
+    
+    
+    
+      <category term="Python" scheme="https://yzyyz.top/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>五月初博客访问概况</title>
@@ -493,31 +516,6 @@ inconsistent use of tabs and spaces in indentation
     
     
       <category term="随笔" scheme="https://yzyyz.top/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Q &amp; A:Yz&#39;s Blog</title>
-    <link href="https://yzyyz.top/archives/aa07d386.html"/>
-    <id>https://yzyyz.top/archives/aa07d386.html</id>
-    <published>2020-02-27T08:57:36.000Z</published>
-    <updated>2020-04-13T14:13:46.863Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/heexo.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="hexo"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/heexo.png"></a></p>- **Q: 如何搭建Hexo博客**    **A:**工作量较大，本人搭建过程中没有做记录，故无法写一篇教程，请谷歌or百度“Hexo搭建博客”，很容易上手。<a id="more"></a><ul><li><p><strong>Q:博客搭建资费问题</strong><br>  <strong>A:</strong>使用Hexo搭建博客仅需支付域名费用，若不使用自己的域名，则无需付费。如“<a href="https://yzyyz.top">https://yzyyz.top</a>”是我的个人域名，我仅需支付它的费用，若不使用<a href="https://yzyyz.top">https://yzyyz.top</a>，还可以从<a href="https://yzyyz1387.github.io" target="_blank" rel="external nofollow noopener noreferrer">https://yzyyz1387.github.io</a>访问我的博客。</p></li><li><p><strong>Q:搭建Hexo需要具备什么条件</strong><br>  <strong>A：</strong>一台可联网的windos设备（mac、linux）即可完成。</p></li></ul><hr><ul><li><strong>本人搭建过程中参考的资料</strong><ul><li><a href="https://www.jianshu.com/p/c7397489757c" target="_blank" rel="external nofollow noopener noreferrer">hexo搭建个人博客</a></li><li><a href="https://blog.csdn.net/qq_27754983/article/details/76143478" target="_blank" rel="external nofollow noopener noreferrer">Windows下，Hexo+GitHub搭建博客</a></li><li><a href="https://segmentfault.com/a/1190000017986794" target="_blank" rel="external nofollow noopener noreferrer">超详细Hexo+Github Page搭建技术博客教程【持续更新】</a></li><li><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="external nofollow noopener noreferrer">使用hexo+github搭建免费个人博客详细教程</a></li><li><a href="https://blog.csdn.net/ShelleyLittlehero/article/details/83444703" target="_blank" rel="external nofollow noopener noreferrer">npm安装hexo报错</a></li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p style=&quot;text-align:center;&quot;&gt;
-&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/heexo.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;hexo&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/heexo.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-- **Q: 如何搭建Hexo博客**
-    **A:**工作量较大，本人搭建过程中没有做记录，故无法写一篇教程，请谷歌or百度“Hexo搭建博客”，很容易上手。
-    
-    </summary>
-    
-    
-    
-      <category term="Hexo" scheme="https://yzyyz.top/tags/Hexo/"/>
     
   </entry>
   
