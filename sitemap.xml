@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-<url>
-    <loc>https://yzyyz.top/about/index.html</loc>
+  <url>
+    <loc>https://yzyyz.top/friends/index.html</loc>
     
-    <lastmod>2020-02-17T12:51:23.410Z</lastmod>
+    <lastmod>2020-05-20T05:30:57.217Z</lastmod>
     
   </url>
+  
   <url>
     <loc>https://yzyyz.top/archives/783f3c83.html</loc>
     
@@ -172,13 +173,6 @@
     <loc>https://yzyyz.top/archives/4a17b156.html</loc>
     
     <lastmod>2020-05-14T08:35:39.704Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yzyyz.top/friends/index.html</loc>
-    
-    <lastmod>2020-05-08T06:07:46.673Z</lastmod>
     
   </url>
   
