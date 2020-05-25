@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yzyyz.top/"/>
-  <updated>2020-05-22T16:45:25.571Z</updated>
+  <updated>2020-05-25T19:08:37.438Z</updated>
   <id>https://yzyyz.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用esp8266搭建天气站【联网版】</title>
+    <link href="https://yzyyz.top/archives/19067f41.html"/>
+    <id>https://yzyyz.top/archives/19067f41.html</id>
+    <published>2020-05-25T17:06:33.000Z</published>
+    <updated>2020-05-25T19:08:37.438Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/weather.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/weather.png"></a></p><p>（真保姆级教程）本文讲述书如何使用ESP8266开发板搭建天气站联网版，即天气数据来源于网络，有机会的话会写(搬)一篇关于从传感器获取数据的。<br>使用手机的读者点击右上角的横条可查看文章章节。</p><a id="more"></a><p><br></p><h3 id="prepare">前期准备</h3><p></p><hr><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/goods.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/goods.png"></a></p><h4 id="buysth">购买所需品：</h4><p><code>如下是我购买的，共27.99元，四舍五入一下为一个亿</code></p><ul><li>esp8266 + OLED显示屏 + 数据线 <font color="red">26.5</font> 元</li><li>母对母杜邦线  <font color="red">1.49</font> 元</li></ul><h4 id="api">申请天气API</h4><ol><li>打开<a href="https://openweathermap.org/api" target="_blank" rel="external nofollow noopener noreferrer">openweather官网</a>并注册一个账号。</li><li>前往你的注册用的邮箱，打开openweather邮件中的验证链接，验证邮箱完成注册。</li><li>片刻后你会收到openweather发来的另一封邮件，你就得到了所需要的API:<p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wapi.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wapi.png"></a></p></li></ol><h4 id="downloadsth">下载所需文件</h4><p>下载所需文件：<a href="https://lanzous.com/id00hoj" target="_blank" rel="external nofollow noopener noreferrer">点击极速下载</a><br><br><br>下载后解压到桌面（方便操作）</p><ol><li>双击安装包安装Arduino</li><li>根据情况打开驱动文件夹安装驱动，比如我安装的CH341SER.EXE</li><li>关闭文件夹（暂时不用了）</li></ol><br><h3 id="start">开始操作</h3><hr><font color="red">打开Arduino</font><h4 id="config">配置</h4><p>点击 <code>文件</code>→<code>首选项</code>，在面板中找到 <code>附加开发板管理网址</code>,在其后输入：<code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code></p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino1.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino1.png"></a></p><h4 id="installboard">安装开发板</h4><p>点击<code>工具</code>→<code>开发板</code>→<code>开发板管理器</code> ，搜索8266 安装开发板</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino2.png"></a></p><h4 id="install">安装相关库</h4><p>点击 <code>项目</code>→<code>加载库</code>→<code>管理库</code> </p><ol><li>搜索安装 ESP8266 Weather Station</li><li>搜索安装 JSON Streaming Parser by Daniel Eichhorn</li><li>搜索安装 ESP8266 OLED Driver for SSD1306 display by Daniel Eichhorn. 3.0.0 版本以上<p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino3.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino3.png"></a></p></li></ol><p>安装完后关闭Arduino<br><br></p><h4 id="conect">连接开发板</h4><ol><li><p>将开发板用数据线连接至电脑，打开电脑的 <code>设备管理器</code> → <code>端口</code> 查看你开发板的端口（不一定跟我一样，如图我的是 COM3）。</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino8.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino8.png"></a></p></li><li><p>打开<code>城市列表.txt</code>用拼音搜索你的城市，得到城市id，复制备用。 </p></li><li><p>双击打开此前解压的文件夹，打开<code>WeatherStationDemodemo</code>文件夹中的<code>WeatherStationDemodemo.ino</code>。</p></li><li><p>更改汉字标注的地方：WIFI名及密码、城市id、 天气API </p></li></ol><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino10.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino10.png"></a></p><h4 id="oledconection">将屏幕与开发板连接</h4><p>使用母对母杜邦线按照以下规则接线</p><div style="text-align:center;color:#ff7600">&nbsp;G-->gnd</div><div style="text-align:center;color:#ffab00">3v-->vcc</div><div style="text-align:center;color:#123eab">d4-->scl</div><div style="text-align:center;color:#01939a">d3-->sda</div><h4 id="Ltesgo">开始烧录奔放</h4><ol><li>点击<code>项目</code>→<code>上传</code>， 开始等待其编译、上传。</li><li>上传成功时编辑器下方贵有提示。</li><li>这时按下开发板上 rst 键，等待配网、获取天气数据</li><li>进度条走完后将变成你所期待的样子</li></ol><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wrsp.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wrsp.jpg"></a></p><br> <h3 id="else">后续操作</h3><hr>可以给整个开发板+屏幕加装外壳达到美化的目的，如 - 积木 - 亚克力板 - 3D打印等<p>我手头有小积木，正在只做外壳中</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wjm.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wjm.jpg"></a></p><br><h3 id="problems">常见问题</h3><hr> > Q: 烧录成功但是显示了错误的时间，天气数据无法获取？ > A: 绝大多数情况下是网络问题，尝试按 rst 键重启，问题任然存在则多次重启。<blockquote><p>Q: 显示出了天气信息但时间是错的？<br>A: 绝大多数情况下是网络问题，尝试按 rst 键重启，问题任然存在则多次重启。</p></blockquote><blockquote><p>Q: 有温度信息但无天气预报或仅显示一天的预报？<br>A: 你们懂的。</p></blockquote><p>（这不是水，而是我确实遇到了这些问题，并自己捣腾解决）</p><blockquote><p>Q: 能不能修改文件中的内容让其显示中文？<br>A: 很遗憾不能，原因是不支持中文字库。</p></blockquote><blockquote><p>出现其他问题可在下方留言，我也不一定会</p></blockquote><p>2020/5/26 3:05:28 </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p style=&quot;text-align:center;&quot;&gt;
+&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/weather.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;WeatherStation&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/weather.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;（真保姆级教程）本文讲述书如何使用ESP8266开发板搭建天气站联网版，即天气数据来源于网络，有机会的话会写(搬)一篇关于从传感器获取数据的。&lt;br&gt;使用手机的读者点击右上角的横条可查看文章章节。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="干货" scheme="https://yzyyz.top/tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>他们眼里的地狱是我回不去的天堂</title>
@@ -475,47 +499,6 @@ RSS 全称Really Simple Syndication，意为简易信息聚合，本文为你推
 
 &lt;p&gt;缩进，即制表符（键盘上Tab键）用来决定代码之间的逻辑关系，所以在使用选择结构和循环结构，或者是编写函数的时候，务必注意缩进的使用，若使用不恰当，会造成程序&lt;font color=&quot;#ff0000&quot;&gt;报错&lt;/font&gt;,如：&lt;/p&gt;
 &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;True&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(&lt;span class=&quot;string&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Python" scheme="https://yzyyz.top/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python常见报错</title>
-    <link href="https://yzyyz.top/archives/82e008c9.html"/>
-    <id>https://yzyyz.top/archives/82e008c9.html</id>
-    <published>2020-03-01T12:02:19.000Z</published>
-    <updated>2020-05-14T08:35:39.704Z</updated>
-    
-    <content type="html"><![CDATA[<p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/se.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="py"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/se.png"></a></p><p><strong>Python常见报错索引</strong></p><blockquote><p>2020/3/1 21:00:14 </p></blockquote><p>持续更新中.。。.<br>电脑用户请在右侧本文目录进行索引<br>手机用户请在右上方点开目录(三点三横)按钮进行索引<br><font color="#ffbe76"><br>推荐大家编程时使用PyCharm，检查错误非常方便<br></font></p><font color="red"><h4 id="TabSpaces">inconsistent use of tabs and spaces in indentation</h4></font><blockquote><ul><li>问题原因：空格（spaces）和缩进（tab）混用。</li><li>解决方法：检查代码适当删除。</li></ul></blockquote><hr><br><a id="more"></a><font color="red"><h4 id="Tab">expected an indented block</h4></font><blockquote><ul><li>问题原因：缩进错误</li><li>解决方法：在箭头指示处改正缩进</li></ul></blockquote><hr><br><font color="red"><h4 id="InvalidS">invalid syntax</h4></font><blockquote><ul><li><p>问题原因：语法错误</p><ul><li>括号不完全（括号不成对）</li><li>缺少冒号</li><li>使用了中文符号 </li></ul></li><li><p>解决方法：</p><ul><li>使用IDLE的用户，看<span style="background:#ff7979;">红色标记</span>处，检查代码并修改；</li><li>使用PyCharm的用户输出框箭头<font color="red">^</font>处，检查代码并修改。</li></ul></li></ul></blockquote><hr><br><font color="red"><h4 id="EOL">EOL while scanning string literal</h4></font><blockquote><ul><li>问题原因：引号未成对出现</li><li>解决方法：<ul><li>使用IDLE的用户，查代码并修改；</li><li>使用PyCharm的用户输出框箭头<font color="red">^</font>处，检查代码并修改。</li></ul></li></ul></blockquote><hr><br><font color="red"><h4 id="EOF">unexpected EOF while parsing</h4></font><blockquote><p>问题原因：我仅在print缺引号时出现此报错<br>解决方法：那就检查代码看print的引号吧</p></blockquote><hr><br><font color="red"><h4 id="character"> invalid character in identifier</h4></font><blockquote><p>问题原因：使用了中文符号<br>解决方法：在报错出找到用错的符号并改正</p></blockquote><hr><br><font color="red"><h4 id="Unsupported">unsupported operand type(s) for ....</h4></font>请看下图：<p><img src="https://static.oneplus.cn/data/attachment/forum/202003/01/212958vqfh13i3zeo89ggq.jpg" alt></p><p>这是我的好友<a href="https://user.qzone.qq.com/2313631959?source=aiostar" target="_blank" rel="external nofollow noopener noreferrer" title="访问小余的Qzone">小余</a>遇到的问题，由图可见代码中：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = input(<span class="string">"请输入一个三位数"</span>)</span><br><span class="line">a = x//<span class="number">100</span></span><br><span class="line">......</span><br></pre></td></tr></table></figure><blockquote><p>报错是：<br><font color="red">unsupported operand type(s) for // ‘str’ and ‘int’</font><br>即不支持字符串（str）和整型（int）取余（//）的操作<br>那么我们调用<a href="https://www.runoob.com/python/python-func-eval.html" target="_blank" rel="external nofollow noopener noreferrer" title="Python内置函数eval">Python内置函数eval</a>即可。<br>（赋值类型参见这篇文章：<a href="https://yzyyz.top/2020/02/28/Python%E5%85%A5%E9%97%A8/" title="python入门">Python入门</a>）</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = eval(input(<span class="string">"请输入一个三位数"</span>))</span><br><span class="line">a = x//<span class="number">100</span></span><br><span class="line">......</span><br></pre></td></tr></table></figure><blockquote><p>待更，最后编辑与2020/3/1 22:01:39 </p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p style=&quot;text-align:center;&quot;&gt;
-&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/se.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;py&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/se.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Python常见报错索引&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;2020/3/1 21:00:14 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;持续更新中.。。.&lt;br&gt;电脑用户请在右侧本文目录进行索引&lt;br&gt;手机用户请在右上方点开目录(三点三横)按钮进行索引&lt;br&gt;&lt;font color=&quot;#ffbe76&quot;&gt;&lt;br&gt;推荐大家编程时使用PyCharm，检查错误非常方便&lt;br&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;font color=&quot;red&quot;&gt;
-&lt;h4 id=&quot;TabSpaces&quot;&gt;
-inconsistent use of tabs and spaces in indentation
-&lt;/h4&gt;&lt;/font&gt;
-
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;问题原因：空格（spaces）和缩进（tab）混用。&lt;/li&gt;
-&lt;li&gt;解决方法：检查代码适当删除。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;br&gt;
     
     </summary>
     
