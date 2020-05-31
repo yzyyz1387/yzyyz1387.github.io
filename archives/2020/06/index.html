@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>用esp8266搭建天气站【联网版】 | 稚昂长</title>
+  <title>Archives: 2020/6 | 稚昂长</title>
   
   <meta name="keywords" content="幼稚园园长,博客,blog,园长博客,稚昂长,幼稚园园长博客">
   
@@ -121,7 +121,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
 
   
   <div class="cover-wrapper">
-    <cover class="cover post half">
+    <cover class="cover  half">
       
         
   <p class="title ">稚昂长</p>
@@ -313,11 +313,22 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
       
 
 <div class="l_main">
-  
-
-  
-    <article id="post" class="post white-box card-shadow  article-type-post" itemscope itemprop="blogPost">
+	
+		
+  <section class="post-list ">
+    
       
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class="post-wrapper">
+            <article class="post white-box card-shadow  reveal ">
+  
 
 
   <section class="meta">
@@ -326,13 +337,11 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
     <div class="meta" id="header-meta">
       
         
-  
-    <h1 class="title">
-      <a href="/archives/19067f41.html">
-        用esp8266搭建天气站【联网版】
-      </a>
-    </h1>
-  
+  <h2 class="title">
+    <a href="/archives/72e6a2e7.html">
+      当代大学生使用网络储存的几种姿势
+    </a>
+  </h2>
 
 
       
@@ -357,15 +366,10 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
           
         
           
-            
-
-          
-        
-          
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>消息发布于：2020年5月26日</p>
+    <p>消息发布于：2020年6月1日</p>
   </a>
 </div>
 
@@ -383,8 +387,6 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
         
           
             
-  
-
 
           
         
@@ -396,345 +398,105 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
   </section>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          
-          <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/weather.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/weather.png"></a></p>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/studentdrive.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="clouddrive"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/studentdrive.png"></a></p>
 
-<p>（真保姆级教程）本文讲述书如何使用ESP8266开发板搭建天气站联网版，即天气数据来源于网络，有机会的话会写(搬)一篇关于从传感器获取数据的。<br>使用手机的读者点击右上角的横条可查看文章章节。</p>
-<a id="more"></a>
-<p><br></p><h3 id="prepare">前期准备</h3><p></p>
-<hr>
-
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/goods.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/goods.jpg"></a></p>
-
-<h4 id="buysth">购买所需品：</h4>
-
-<p><code>如下是我购买的，共27.99元，四舍五入一下为一个亿</code></p>
-<ul>
-<li>esp8266 + OLED显示屏 + 数据线 <font color="red">26.5</font> 元</li>
-<li>母对母杜邦线  <font color="red">1.49</font> 元</li>
-</ul>
-<h4 id="api">申请天气API</h4>
-
-<ol>
-<li>打开<a href="https://openweathermap.org/api" target="_blank" rel="external nofollow noopener noreferrer">openweather官网</a>并注册一个账号。</li>
-<li>前往你的注册用的邮箱，打开openweather邮件中的验证链接，验证邮箱完成注册。</li>
-<li>片刻后你会收到openweather发来的另一封邮件，你就得到了所需要的API:<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wapi.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wapi.png"></a></p>
-
-
-</li>
-</ol>
-<h4 id="downloadsth">下载所需文件</h4>
-
-<p>下载所需文件：<a href="https://lanzous.com/id00hoj" target="_blank" rel="external nofollow noopener noreferrer">点击极速下载</a><br><br><br>下载后解压到桌面（方便操作）</p>
-<ol>
-<li>双击安装包安装Arduino</li>
-<li>根据情况打开驱动文件夹安装驱动，比如我安装的CH341SER.EXE</li>
-<li>关闭文件夹（暂时不用了）</li>
-</ol>
-<br>
-<h3 id="start">开始操作</h3>
-<hr>
-<font color="red">打开Arduino</font>
-
-<h4 id="config">配置</h4>
-
-<p>点击 <code>文件</code>→<code>首选项</code>，在面板中找到 <code>附加开发板管理网址</code>,在其后输入：<code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code></p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino1.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino1.png"></a></p>
-
-
-<h4 id="installboard">安装开发板</h4>
-
-<p>点击<code>工具</code>→<code>开发板</code>→<code>开发板管理器</code> ，搜索8266 安装开发板</p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino2.png"></a></p>
-
-<h4 id="install">安装相关库</h4>
-
-<p>点击 <code>项目</code>→<code>加载库</code>→<code>管理库</code> </p>
-<ol>
-<li>搜索安装 ESP8266 Weather Station</li>
-<li>搜索安装 JSON Streaming Parser by Daniel Eichhorn</li>
-<li>搜索安装 ESP8266 OLED Driver for SSD1306 display by Daniel Eichhorn. 3.0.0 版本以上<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino3.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino3.png"></a></p>
-
-</li>
-</ol>
-<p>安装完后关闭Arduino<br><br></p>
-<h4 id="conect">连接开发板</h4>
-
-<ol>
-<li><p>将开发板用数据线连接至电脑，打开电脑的 <code>设备管理器</code> → <code>端口</code> 查看你开发板的端口（不一定跟我一样，如图我的是 COM3）。</p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino8.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino8.png"></a></p>
-</li>
-<li><p>打开<code>城市列表.txt</code>用拼音搜索你的城市，得到城市id，复制备用。 </p>
-</li>
-<li><p>双击打开此前解压的文件夹，打开<code>WeatherStationDemodemo</code>文件夹中的<code>WeatherStationDemodemo.ino</code>。</p>
-</li>
-<li><p>更改汉字标注的地方：WIFI名及密码、城市id、 天气API </p>
-</li>
-</ol>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino10.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/warduino10.png"></a></p>
-
-
-<h4 id="oledconection">将屏幕与开发板连接</h4>
-
-<p>使用母对母杜邦线按照以下规则接线</p>
-<div style="text-align:center;color:#ff7600">&nbsp;G-->gnd</div>
-<div style="text-align:center;color:#ffab00">3v-->vcc</div>
-<div style="text-align:center;color:#123eab">d4-->scl</div>
-<div style="text-align:center;color:#01939a">d3-->sda</div>
-
-<h4 id="Ltesgo">开始烧录奔放</h4>
-
-<ol>
-<li>点击<code>项目</code>→<code>上传</code>， 开始等待其编译、上传。</li>
-<li>上传成功时编辑器下方贵有提示。</li>
-<li>这时按下开发板上 rst 键，等待配网、获取天气数据</li>
-<li>进度条走完后将变成你所期待的样子</li>
-</ol>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wesp.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wesp.jpg"></a></p>
-
-<br> 
-<h3 id="else">后续操作</h3>
-<hr>
-可以给整个开发板+屏幕加装外壳达到美化的目的，如
- - 积木
- - 亚克力板
- - 3D打印等
-
-<p>我手头有小积木，正在只做外壳中</p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wjm.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="WeatherStation"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/wjm.jpg"></a></p>
-
-<br>
-<h3 id="problems">常见问题</h3>
-<hr>
- > Q: 烧录成功但是显示了错误的时间，天气数据无法获取？
- > A: 绝大多数情况下是网络问题，尝试按 rst 键重启，问题任然存在则多次重启。
-
-
-<blockquote>
-<p>Q: 显示出了天气信息但时间是错的？<br>A: 绝大多数情况下是网络问题，尝试按 rst 键重启，问题任然存在则多次重启。</p>
-</blockquote>
-<blockquote>
-<p>Q: 有温度信息但无天气预报或仅显示一天的预报？<br>A: 你们懂的。</p>
-</blockquote>
-<p>（这不是水，而是我确实遇到了这些问题，并自己捣腾解决）</p>
-<blockquote>
-<p>Q: 能不能修改文件中的内容让其显示中文？<br>A: 很遗憾不能，原因是不支持中文字库。</p>
-</blockquote>
-<blockquote>
-<p>出现其他问题可在下方留言，我也不一定会</p>
-</blockquote>
-<h3 id="refer">参考</h3>
-<hr>
-
-<p>参考文章: </p>
-<ul>
-<li><a href="https://github.com/ThingPulse/esp8266-weather-station" target="_blank" rel="external nofollow noopener noreferrer" title="原作者Github文档">原作者Github文档</a></li>
-<li><a href="https://blog.csdn.net/qq_18454025/article/details/84479453" target="_blank" rel="external nofollow noopener noreferrer" title="esp8266 weather station">esp8266 weather station</a></li>
-</ul>
-<p>参考作者文章：</p>
-<ul>
-<li>酷安<font color="00b945">@首席杨养猪人</font> <a href="https://www.coolapk.com/feed/11843801?shareKey=OGMwODNmMzc2NzQwNWVjYzFkYzg~&shareUid=775290&shareFrom=com.coolapk.market_10.2.1" target="_blank" rel="external nofollow noopener noreferrer" title="查看原文">点击前往</a></li>
-<li>酷安<font color="00b945">@伤神单身汪</font> <a href="https://www.coolapk.com/feed/15415328?shareKey=ODkyZGFhMTVlOWFjNWVjYmZhOGE~&shareUid=775290&shareFrom=com.coolapk.market_10.2.1" target="_blank" rel="external nofollow noopener noreferrer" title="查看原文">点击前往</a></li>
-</ul>
-<p>2020/5/26 3:05:28 </p>
-
-          
-        </div>
-        
-          <br>
-          
-
-
-  <section class="meta" id="footer-meta">
-    <div class="new-meta-box">
+<p>本来准备写这个月的访问情况，想想上次是三号，写也得等两天了，况且每个月写一篇的话感觉博客就没什么精华了，所以先暂时放下。今天要讲的是使用网络储存的几种姿势。</p>
       
         
-          
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>干货</p></a></div>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/19067f41.html&title=用esp8266搭建天气站【联网版】 | 稚昂长&summary=
-
-
-（真保姆级教程）本文讲述书如何使用ESP8266开发板搭建天气站联网版，即天气数据来源于网络，有机会的话会写(搬)一篇关于从传感器获取数据的。使用手机的读者点击右上角的横条可查看文章章节。" target="_blank">
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/19067f41.html&title=用esp8266搭建天气站【联网版】 | 稚昂长&summary=
-
-
-（真保姆级教程）本文讲述书如何使用ESP8266开发板搭建天气站联网版，即天气数据来源于网络，有机会的话会写(搬)一篇关于从传感器获取数据的。使用手机的读者点击右上角的横条可查看文章章节。" target="_blank">
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/19067f41.html&title=用esp8266搭建天气站【联网版】 | 稚昂长&summary=
-
-
-（真保姆级教程）本文讲述书如何使用ESP8266开发板搭建天气站联网版，即天气数据来源于网络，有机会的话会写(搬)一篇关于从传感器获取数据的。使用手机的读者点击右上角的横条可查看文章章节。" target="_blank">
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
+          <div class="button readmore">
+            <a href="/archives/72e6a2e7.html" class="flat-box">
+              <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+              阅读全文
+            </a>
+          </div>
         
       
     </div>
+    <!-- 
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 随笔</a>
+        
+          <a href="/tags/%E5%B9%B2%E8%B4%A7/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 干货</a>
+        
+      </div>
+     -->
   </section>
+</article>
 
 
-        
-        
-            <div class="prev-next">
-                
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/archives/72e6a2e7.html" rel="prev" title="当代大学生使用网络储存的几种姿势">
-                                  
-                                      当代大学生使用网络储存的几种姿势
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 随笔</a> <a class="tag" href="/tags/%E5%B9%B2%E8%B4%A7/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 干货</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/archives/23af20c1.html" rel="prev" title="他们眼里的地狱是我回不去的天堂">
-                                    
-                                        他们眼里的地狱是我回不去的天堂
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 随笔</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-            </div>
-        
-      </section>
-    </article>
-  
-
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  <article class="post white-box comments card-shadow ">
-    <section class="article typo">
-      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
-      
-      
-      
-      
-        <section id="comments">
-          <div id="valine_container" class="valine_thread">
-            <i class="fas fa-spinner fa-spin fa-fw"></i>
           </div>
-        </section>
+        
       
-    </section>
-  </article>
-
+    
+  </section>
+  
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
 
   
 
 
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-
-  <script>
-    window.subData = {
-      title: '用esp8266搭建天气站【联网版】',
-      tools: true
-    }
-  </script>
-
-
+	
 </div>
 <aside class="l_side">
   
     
       
-    
-      
         
 
-
-  <section class="widget toc-wrapper  card-shadow widget-blur desktop mobile">
+<section class="widget blogger  card-shadow widget-blur desktop">
+  <div class="content">
     
-  <header>
+      <div class="avatar">
+        <img class="avatar" src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/bloger.jpeg">
+      </div>
     
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
     
-  </header>
+      <div class="text">
+        
+        
+        
+          <p><span id="jinrishici-sentence">稚昂长</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:youzyyz1384@qq.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/yzyyz1387" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=445441609" class="social fas fa-headphones-alt flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
 
-
-    <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#prepare"><span class="toc-number">1.</span> <span class="toc-text">前期准备</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#buysth"><span class="toc-number">1.1.</span> <span class="toc-text">购买所需品：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#api"><span class="toc-number">1.2.</span> <span class="toc-text">申请天气API</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#downloadsth"><span class="toc-number">1.3.</span> <span class="toc-text">下载所需文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#start"><span class="toc-number">2.</span> <span class="toc-text">开始操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#config"><span class="toc-number">2.1.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#installboard"><span class="toc-number">2.2.</span> <span class="toc-text">安装开发板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#install"><span class="toc-number">2.3.</span> <span class="toc-text">安装相关库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#conect"><span class="toc-number">2.4.</span> <span class="toc-text">连接开发板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#oledconection"><span class="toc-number">2.5.</span> <span class="toc-text">将屏幕与开发板连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ltesgo"><span class="toc-number">2.6.</span> <span class="toc-text">开始烧录奔放</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#else"><span class="toc-number">3.</span> <span class="toc-text">后续操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#problems"><span class="toc-number">4.</span> <span class="toc-text">常见问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#refer"><span class="toc-number">5.</span> <span class="toc-text">参考</span></a></li></ol>
-    </div>
-  </section>
-
-
+      
+    
       
     
       
@@ -930,6 +692,29 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
       
     
       
+    
+      
+        
+
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
         
   
 
@@ -1042,6 +827,14 @@ setInterval("createtime()",250);
 	
 
 
+
+
+	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+	
+
+	
+
+
       <script>setLoadingBarProgress(60);</script>
     </div>
     <a class="s-top fas fa-arrow-up fa-fw" href="javascript:void(0)" rel="external nofollow noreferrer"></a>
@@ -1100,35 +893,6 @@ setInterval("createtime()",250);
 
 
 
-
-  
-    
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.39/js/valine.js"></script>
-
-  
-  <script>
-  var GUEST_INFO = ['nick','mail','link'];
-  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-    return GUEST_INFO.indexOf(item) > -1
-  });
-  var notify = 'true' == true;
-  var verify = 'true' == true;
-  var valine = new Valine();
-  valine.init({
-    el: '#valine_container',
-    notify: notify,
-    verify: verify,
-    guest_info: guest_info,
-    
-    appId: "Xvfbefuvq7nt19O3fViImxNS-gzGzoHsz",
-    appKey: "U8MDnvdjzCLwHXMugvO8PcUz",
-    placeholder: "(支持Markdown哦)快来评论吧~",
-    pageSize:'10',
-    avatar:'identicon',
-    lang:'zh-cn',
-    highlight:'true'
-  })
-  </script>
 
 
 
