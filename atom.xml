@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yzyyz.top/"/>
-  <updated>2020-06-12T22:57:23.330Z</updated>
+  <updated>2020-06-14T15:30:22.053Z</updated>
   <id>https://yzyyz.top/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python列表&amp;元组</title>
+    <link href="https://yzyyz.top/archives/1f63f504.html"/>
+    <id>https://yzyyz.top/archives/1f63f504.html</id>
+    <published>2020-06-14T01:10:16.000Z</published>
+    <updated>2020-06-14T15:30:22.053Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylist.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="python_list"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylist.png"></a></p><a id="more"></a>python中列表以及元组的内容较多，写成文章可能会有杂乱感，故我做了张思维导图。<p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylistxmind.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="python_list"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylistxmind.png"></a></p><p>2020/6/14 23:30:19 </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p style=&quot;text-align:center;&quot;&gt;
+&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylist.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;python_list&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylist.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Python" scheme="https://yzyyz.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我的老爸</title>
     <link href="https://yzyyz.top/archives/2721ca6b.html"/>
     <id>https://yzyyz.top/archives/2721ca6b.html</id>
     <published>2020-06-12T22:36:49.000Z</published>
-    <updated>2020-06-12T22:57:23.330Z</updated>
+    <updated>2020-06-14T15:30:36.538Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/by.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="mf"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/by.png"></a></p>2020年2月28日,早上被老爸打电话的声音吵醒。他情绪激动。<a id="more"></a>(这篇文章不局限于写我的父亲)`2020/2/28 16:59:27 `春播快到了，家里承包的地到了浇水的时候。疫情当前，出门去到乡下都很难，出门的事刚解决，他又遇到了难题...他与电话那头的人争吵，话语中带着无奈...<p>诶</p><p>第一学期回家的这段时间，我才特别真切地体会到，他们肩上的重量。</p><p><code>2020/6/13 6:36:49</code><br>&nbsp;&nbsp;&nbsp;&nbsp;我翻看我的回忆，这回忆没有具体时间，模模糊糊都是「垃圾人生」几个字。我横竖睡不着，仔细想了半夜….<br>&nbsp;&nbsp;&nbsp;&nbsp;人由于疫情原因，到现在我还在家，这期间与他有一次争吵，一部分原因确实是因为我又情绪，其他过于繁杂的东西就不赘述了，昨天又有了争吵的感觉，只不过我没说话。其实我认为，几十年以后，无论我的人生有多成功，或者说，在未知的时间里结束自己，他们的对我的教育都不算成功。我一直认为，他们眼里就没有「教育」二字，他们就只认为辛辛苦苦挣钱把我养这么大，就是「教育」了，诚然，这是一件非常了不起的事情，可我自始至终认为很容易就能做到的东西他们就没做过，也许是我活过的这十八年里接触了很多新事物让我的想的到一些理想化的东西，但不巧的是，这个世界很现实，我好迷茫。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/by.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="mf"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/by.png"></a></p>2020年2月28日,早上被老爸打电话的声音吵醒。他情绪激动。<a id="more"></a><p>(这篇文章不局限于写我的父亲)</p><p><code>2020/2/28 16:59:27</code></p><p>春播快到了，家里承包的地到了浇水的时候。疫情当前，出门去到乡下都很难，出门的事刚解决，他又遇到了难题…他与电话那头的人争吵，话语中带着无奈…</p><p>诶</p><p>第一学期回家的这段时间，我才特别真切地体会到，他们肩上的重量。</p><p><code>2020/6/13 6:36:49</code><br>&nbsp;&nbsp;&nbsp;&nbsp;我翻看我的回忆，这回忆没有具体时间，模模糊糊都是「垃圾人生」几个字。我横竖睡不着，仔细想了半夜….<br>&nbsp;&nbsp;&nbsp;&nbsp;人由于疫情原因，到现在我还在家，这期间与他有一次争吵，一部分原因确实是因为我又情绪，其他过于繁杂的东西就不赘述了，昨天又有了争吵的感觉，只不过我没说话。其实我认为，几十年以后，无论我的人生有多成功，或者说，在未知的时间里结束自己，他们的对我的教育都不算成功。我一直认为，他们眼里就没有「教育」二字，他们就只认为辛辛苦苦挣钱把我养这么大，就是「教育」了，诚然，这是一件非常了不起的事情，可我自始至终认为很容易就能做到的东西他们就没做过，也许是我活过的这十八年里接触了很多新事物让我的想的到一些理想化的东西，但不巧的是，这个世界很现实，我好迷茫。</p>]]></content>
     
     <summary type="html">
     
@@ -472,28 +494,6 @@ RSS 全称Really Simple Syndication，意为简易信息聚合，本文为你推
 &lt;h3 id=&quot;xaiog&quot;&gt;效果&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot;&gt;最后更新于2020/5/13 14:15:37 &lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="干货" scheme="https://yzyyz.top/tags/%E5%B9%B2%E8%B4%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ip签名图php源码</title>
-    <link href="https://yzyyz.top/archives/24a74b09.html"/>
-    <id>https://yzyyz.top/archives/24a74b09.html</id>
-    <published>2020-03-22T15:28:11.000Z</published>
-    <updated>2020-05-14T08:35:39.704Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/ip.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="ip"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/ip.png"></a></p><a id="more"></a>这里我放上源码<br>```来源于网络```<br>源码是**php**的喜欢的话，自己在美化一下，更换图片等直接上传到支持php的空间,再调用即可<hr><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在html中插入：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://39.98.144.53/ip"</span>&gt;</span></span><br><span class="line">"<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://39.98.144.53/ip"</span>&gt;</span>"</span><br><span class="line">这是是放在我的服务器里的，你可以直接调用</span><br><span class="line">（2020年11月上方的图片将无法正常调用，届时会更新此文）</span><br></pre></td></tr></table></figure><hr><br>预览图：<br><img src="http://39.98.144.53/ip" title="点击下载"><hr><br>源码下载地址（蓝奏云）<br><a href="https://www.lanzous.com/iajmfvc" target="_blank" rel="external nofollow noopener noreferrer">https://www.lanzous.com/iajmfvc</a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p style=&quot;text-align:center;&quot;&gt;
-&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/ip.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;ip&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/ip.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
