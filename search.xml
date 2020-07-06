@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>【200%回头率】定义你的专属U盘图标</title>
+      <link href="/archives/d7540a44.html"/>
+      <url>/archives/d7540a44.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="upan"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico.png"></a></p><a id="more"></a><p>距离上次更文已经…….好多天了，这期间确实想写点什么，但是加上学车啊，预习啊，就鸽了很久。上次买的U盘到了，就写一篇简单的”文章”吧————自定义U盘在资源管理器（我的电脑）显示的图标。效果如下：</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico1.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="upan"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico1.png"></a></p><hr><p><strong>①</strong>  进入<a href="http://www.ico51.cn/" target="_blank" rel="external nofollow noopener noreferrer" title="在线制作ico图标">http://www.ico51.cn/</a>，上传你喜欢的图片，制作一个ico图标文件。</p><p><strong>②</strong>  打开U盘,将制作好的ico文件放入U盘</p><p><strong>③</strong>  创建一个文本文件，写入以下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[autorun]</span><br><span class="line"></span><br><span class="line">ICON&#x3D;\图标名.ico,0</span><br></pre></td></tr></table></figure><p><strong>④</strong> 重命名文本文件为 <strong>autorun.inf</strong><br>到这里已经大功告成，但为了防止文件误删，可右键文件→属性，将这两个文件设为只读和隐藏。</p><p><code>2020/7/6 15:17:30</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 干货 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python列表&amp;元组</title>
       <link href="/archives/1f63f504.html"/>
       <url>/archives/1f63f504.html</url>

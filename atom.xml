@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yzyyz.top/"/>
-  <updated>2020-06-14T15:30:22.053Z</updated>
+  <updated>2020-07-06T07:27:58.307Z</updated>
   <id>https://yzyyz.top/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【200%回头率】定义你的专属U盘图标</title>
+    <link href="https://yzyyz.top/archives/d7540a44.html"/>
+    <id>https://yzyyz.top/archives/d7540a44.html</id>
+    <published>2020-07-06T06:58:43.000Z</published>
+    <updated>2020-07-06T07:27:58.307Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="upan"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico.png"></a></p><a id="more"></a><p>距离上次更文已经…….好多天了，这期间确实想写点什么，但是加上学车啊，预习啊，就鸽了很久。上次买的U盘到了，就写一篇简单的”文章”吧————自定义U盘在资源管理器（我的电脑）显示的图标。效果如下：</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico1.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="upan"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico1.png"></a></p><hr><p><strong>①</strong>  进入<a href="http://www.ico51.cn/" target="_blank" rel="external nofollow noopener noreferrer" title="在线制作ico图标">http://www.ico51.cn/</a>，上传你喜欢的图片，制作一个ico图标文件。</p><p><strong>②</strong>  打开U盘,将制作好的ico文件放入U盘</p><p><strong>③</strong>  创建一个文本文件，写入以下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[autorun]</span><br><span class="line"></span><br><span class="line">ICON&#x3D;\图标名.ico,0</span><br></pre></td></tr></table></figure><p><strong>④</strong> 重命名文本文件为 <strong>autorun.inf</strong><br>到这里已经大功告成，但为了防止文件误删，可右键文件→属性，将这两个文件设为只读和隐藏。</p><p><code>2020/7/6 15:17:30</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p style=&quot;text-align:center;&quot;&gt;
+&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;upan&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/upanico.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="干货" scheme="https://yzyyz.top/tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python列表&amp;元组</title>
     <link href="https://yzyyz.top/archives/1f63f504.html"/>
     <id>https://yzyyz.top/archives/1f63f504.html</id>
     <published>2020-06-14T01:10:16.000Z</published>
-    <updated>2020-06-14T15:30:22.053Z</updated>
+    <updated>2020-06-14T15:30:47.878Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylist.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="python_list"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylist.png"></a></p><a id="more"></a>python中列表以及元组的内容较多，写成文章可能会有杂乱感，故我做了张思维导图。<p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylistxmind.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="python_list"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/pylistxmind.png"></a></p><p>2020/6/14 23:30:19 </p>]]></content>
     
@@ -475,31 +497,6 @@ RSS 全称Really Simple Syndication，意为简易信息聚合，本文为你推
     
     
       <category term="随笔" scheme="https://yzyyz.top/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>U校园脚本</title>
-    <link href="https://yzyyz.top/archives/ecde6958.html"/>
-    <id>https://yzyyz.top/archives/ecde6958.html</id>
-    <published>2020-03-27T11:41:01.000Z</published>
-    <updated>2020-05-31T16:24:57.361Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Unipus.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="unipus"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Unipus.png"></a></p><h3 id="xaiog">效果</h3><p><strong><font color="red">最后更新于2020/5/13 14:15:37 </font></strong></p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件来源于网络</span><br></pre></td></tr></table></figure><br>可以看到答案以黄色字体在页面显示脚本可在电脑浏览器使用U校园答题时<font color="red">显示题目答案</font><br><hr><h3 id="fangf">方法：</h3>推荐用chorme（谷歌浏览器）<hr><h4 id="downl">下载</h4><p>首先下载油猴并解压<br></p><p>(油猴插件可以让用户安装一些各（xi）种（qi）各（gu）样（guai）的脚本，以达到让自己更<strong>快乐</strong>的目的。)<br></p><p><a href="https://www.lanzous.com/iarzsch" target="_blank" rel="external nofollow noopener noreferrer" title="油猴">蓝奏云下载</a><br><br>请直接跳到下一步</p><p><del>其次下载我们的u校园脚本(不用解压)</del><br></p><p><del>旧的：<a href="https://www.lanzous.com/iarzw4d" target="_blank" rel="external nofollow noopener noreferrer" title="u校园脚本">蓝奏云下载</a></del></p><hr><h4 id="google">打开谷歌浏览器</h4><br>1.打开谷歌浏览器，在地址栏输入 chrome://extensions/<br><br>2.进入扩展程序，打开右上角开发者模式（如图）<br><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/GOOGLE.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="unipus"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/GOOGLE.png"></a></p>3.再点击"加载已解压的扩展程序"，选择<font color="red">上一步</font>解压的油猴插件即可<br>安装成功后浏览器右上角会出现如图所示的图标：<br><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="unipus"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey.png"></a></p><del>点击这个图标，进入如图界面</del><br><p>2020/5/13 14:23:14 :<strong><font color="red">这个时候打开以下链接 ，选择安装即可</font></strong><br></p><p>新的：<strong><font color="red">2020/5/13 14:17:21 自动填写答案：<a href="https://greasyfork.org/zh-CN/scripts/397517-uer-u%E6%A0%A1%E5%9B%AD-utalk-%E7%BD%91%E8%AF%BE%E7%AD%94%E6%A1%88%E6%98%BE%E7%A4%BA-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%A5" target="_blank" rel="external nofollow noopener noreferrer" title="脚本下载">自动填写答案</a></font></strong><br></p><p><br>2020/5/13 14:23:14 :<strong><font color="red">安装完就打开U校园官网使用即可，不用往下看了</font></strong><br><hr><br><br>以下是旧内容<br></p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="unipus"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey2.png"></a></p>点击实用工具<br><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey3.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="unipus"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey3.png"></a></p>在此点击压缩包的导入按钮<br><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey4.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="unipus"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey4.png"></a></p>导入下载的u校园脚本就大功告成啦<br>快打开u校园试试吧<br><p><code>2020/5/13 14:17:37</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p style=&quot;text-align:center;&quot;&gt;
-&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Unipus.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;unipus&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Unipus.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;xaiog&quot;&gt;效果&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot;&gt;最后更新于2020/5/13 14:15:37 &lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="干货" scheme="https://yzyyz.top/tags/%E5%B9%B2%E8%B4%A7/"/>
     
   </entry>
   
