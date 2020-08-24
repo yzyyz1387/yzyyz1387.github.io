@@ -4,13 +4,36 @@
 	box-sizing: border-box;
 }
 
+*{
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
+.conten:hover{
+	box-shadow: 2px 2px 10px #909090;
+}
+.reviews-container:hover{
+	box-shadow: 2px 2px 10px #909090;
+}
+@font-face {
+	font-family: '03';
+	src:url('https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/hhh/03.ttf');
+}
 
 .reviews-container {
 	background-color: #fff;
 	border-radius: 5px;
-	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 0.3);
+	margin-left: 150px;
+	margin-right: 150px;
 	padding: 20px;
+}
+li:hover{
+	font-size: 25px;
 }
 
 .review {
@@ -73,7 +96,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Muli';
+	font-family: '03';
 	position: relative;
 	height: 169px;	
 	width: 370px;
@@ -186,7 +209,7 @@
 	background-color: #001F61;
 	border-radius: 10px 10px 0 0;
 	color: #fff;
-	font-family: 'Muli';
+	font-family: '03';
 	padding: 7px 15px;
 	position: fixed;
 	bottom: 0;
@@ -212,3 +235,85 @@
 	}
 }
 
+.connect{
+	text-align: center;
+	height: 150px;
+}
+.connect a{
+	text-decoration: none;
+}
+.connect img{
+	width: 85px;
+	height: auto;
+}
+.connect img:hover{
+	width:100px ;
+}
+
+.secret{
+	height: 50px;
+	background: #ff7578;
+	border-radius: 10px;
+	border: 5px;
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.stext{
+	height: 50px;
+	background: #FFB7A9;
+	margin-left: 15px;
+	border-radius: 0 12px 12px 0;
+	border: 5px;
+}
+.fdesire{
+	height: 50px;
+	background: #14ff71;
+	border-radius: 10px;
+	border: 5px;
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.ftext{
+	height: 50px;
+	background: #a4ecaa;
+	margin-left: 15px;
+	border-radius: 0 12px 12px 0;
+	border: 5px;
+}
+
+.desire{
+	height: 50px;
+	background: #111111;
+	border-radius: 10px;
+	border: 5px;
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.dtext{
+	height: 50px;
+	background: #6e6e6e;
+	margin-left: 15px;
+	border-radius: 0 12px 12px 0;
+	border: 5px;
+}
+.dep{
+	height: 50px;
+	color: #fff;
+	text-align: center;
+	font-family: '03';
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 50px;
+
+}
+.fdesire:hover,
+.desire:hover,
+.secret:hover{
+	box-shadow: 2px 2px 10px #909090
+}

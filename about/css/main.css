@@ -9,7 +9,7 @@
 }
 
 body {
-  width: 800px;
+  width: 100%;
   margin: 50px auto;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -26,6 +26,8 @@ body {
 
 h2{
   margin: 20px;
+  margin-bottom: 0;
   text-align: center;
   font-weight: 700;
+  font-family: '03';
 }
