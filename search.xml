@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>一加遇上猴</title>
+      <link href="/archives/9a041cf8.html"/>
+      <url>/archives/9a041cf8.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="monkey"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo.png"></a></p><a id="more"></a><p>&nbsp;&nbsp;&nbsp;&nbsp;今天吧自己苹果设备的铃声换成了 “开场”（iphoneSE）默认铃声 + dance monkey的混剪，然后灵光一闪，就把我的一加安排了。</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="monkey"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo2.png"></a></p><p>因为在复习，这只是被临时分了心（hhhhh）所以就瞎捣鼓了一下：<br>这是由一加默认铃声oneplus_tune和dance monkey两首曲目混剪而成</p>        <div id="aplayer-bBSFVqzB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-bBSFVqzB"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "plus_monkey",              author: "幼稚园园长",              url: "https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/plus_monkey.mp3",              pic: "https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/plus_monkey.png",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>可能是2020年最后一篇博文，年终总结应该会在2021年写…<br><code>2020/12/24 0:25:10</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>写在十九岁</title>
       <link href="/archives/13a3aaad.html"/>
       <url>/archives/13a3aaad.html</url>

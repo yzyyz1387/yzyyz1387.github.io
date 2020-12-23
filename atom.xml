@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yzyyz.top/"/>
-  <updated>2020-12-21T16:45:59.216Z</updated>
+  <updated>2020-12-23T16:25:55.363Z</updated>
   <id>https://yzyyz.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一加遇上猴</title>
+    <link href="https://yzyyz.top/archives/9a041cf8.html"/>
+    <id>https://yzyyz.top/archives/9a041cf8.html</id>
+    <published>2020-12-23T16:15:16.000Z</published>
+    <updated>2020-12-23T16:25:55.363Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="monkey"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo.png"></a></p><a id="more"></a><p>&nbsp;&nbsp;&nbsp;&nbsp;今天吧自己苹果设备的铃声换成了 “开场”（iphoneSE）默认铃声 + dance monkey的混剪，然后灵光一闪，就把我的一加安排了。</p><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="monkey"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo2.png"></a></p><p>因为在复习，这只是被临时分了心（hhhhh）所以就瞎捣鼓了一下：<br>这是由一加默认铃声oneplus_tune和dance monkey两首曲目混剪而成</p>        <div id="aplayer-bBSFVqzB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-bBSFVqzB"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "plus_monkey",              author: "幼稚园园长",              url: "https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/plus_monkey.mp3",              pic: "https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/plus_monkey.png",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>可能是2020年最后一篇博文，年终总结应该会在2021年写…<br><code>2020/12/24 0:25:10</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p style=&quot;text-align:center;&quot;&gt;
+&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;monkey&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/monkey/1+mo.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="https://yzyyz.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>写在十九岁</title>
@@ -515,29 +537,6 @@
       <category term="Hexo" scheme="https://yzyyz.top/tags/Hexo/"/>
     
       <category term="干货" scheme="https://yzyyz.top/tags/%E5%B9%B2%E8%B4%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python-random库的基本应用</title>
-    <link href="https://yzyyz.top/archives/68b816f9.html"/>
-    <id>https://yzyyz.top/archives/68b816f9.html</id>
-    <published>2020-05-07T08:51:25.000Z</published>
-    <updated>2020-05-14T08:35:39.704Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-align:center;"><a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/random.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="rss"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/random.png"></a></p>伪随机数：计算机中通过采用梅森旋转算法生成的（伪）随机序列元素，python中用于生成伪随机数的函数库是random<a id="more"></a><h3 id="random">概述</h3><p>这里放几个random库常用函数：</p><ul><li>random()</li><li>randrange()</li><li>randint()</li><li>choice()</li><li>uniform()</li><li>sample()</li><li>shuffle()</li><li>seed()</li></ul><hr><br><p>首先导入random</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># random常用函数</span></span><br><span class="line"><span class="comment"># https://yzyyz.top</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure><br><h4 id="random1">random()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(random()) <span class="comment"># 返回[0.0,1.0)中一个随机浮点数</span></span><br></pre></td></tr></table></figure><blockquote><p>0.647239093910809</p></blockquote><br><h4 id="randrange">randrange()</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(randrange(2))        #在0，1中选</span><br><span class="line">print(randrange(0,2))      #在0,1中选</span><br><span class="line">print(randrange(0,10,2))   #在0,9中选偶数 因为空了每个奇数</span><br></pre></td></tr></table></figure><blockquote><p>1<br>0<br>0</p></blockquote><br><h4 id="randint">randint()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(randint(<span class="number">0</span>,<span class="number">2</span>))      <span class="comment">#从0,1,2中随机选整数 相当于randrange(0,3)</span></span><br></pre></td></tr></table></figure><blockquote><p>2</p></blockquote><br><h4 id="choice">choice()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s=[<span class="string">"随"</span>,<span class="string">"机"</span>,<span class="string">"取"</span>]</span><br><span class="line">print(choice(s))      <span class="comment">#从s中随机取一个</span></span><br><span class="line"></span><br><span class="line">ss=<span class="string">"abcdefghigklmnopqrstuvwxyz&lt;&gt;?!@#$%^&amp;*"</span></span><br><span class="line">print(choice(ss))     <span class="comment">#从ss中随机取一个</span></span><br></pre></td></tr></table></figure><blockquote><p>随<br>b</p></blockquote><br><h4 id="uniform">uniform()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(uniform(<span class="number">1</span>,<span class="number">2</span>))    <span class="comment"># 1,2 范围随机小数</span></span><br></pre></td></tr></table></figure><blockquote><p>1.8666232147036852</p></blockquote><br><h4 id="sample">sample</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b=<span class="string">'ilovenwafu'</span></span><br><span class="line">print(sample(b,<span class="number">3</span>))  <span class="comment">#从b中随机取3个，返回列表</span></span><br></pre></td></tr></table></figure><blockquote><p>[‘a’, ‘f’, ‘l’]</p></blockquote><br><h4 id="shuffle">shuffle()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>] <span class="comment">#随机d中的元素</span></span><br><span class="line">shuffle(d)</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure><blockquote><p>[3, 4, 1, 2, 5, 6]</p></blockquote><br><h4 id="seed">seed()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'盲猜两次随机是一样的结果'</span>)</span><br><span class="line"><span class="comment">#随机数种子</span></span><br><span class="line">seed(<span class="number">2</span>)   <span class="comment">#重置随机数生成器</span></span><br><span class="line">print(random())</span><br><span class="line">seed(<span class="number">2</span>)</span><br><span class="line">print(random())</span><br></pre></td></tr></table></figure><blockquote><p>盲猜两次随机是一样的结果<br>0.9560342718892494<br>0.9560342718892494</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p style=&quot;text-align:center;&quot;&gt;
-&lt;a href=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/random.png&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; data-fancybox=&quot;images&quot; data-caption=&quot;rss&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/random.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-伪随机数：计算机中通过采用梅森旋转算法生成的（伪）随机序列元素，python中用于生成伪随机数的函数库是random
-    
-    </summary>
-    
-    
-    
-      <category term="Python" scheme="https://yzyyz.top/tags/Python/"/>
     
   </entry>
   
