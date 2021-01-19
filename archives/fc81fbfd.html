@@ -459,31 +459,34 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注:  ①大小写字母的Unicode编码都是按顺序排列的</span><br><span class="line">     ②小写字母的编码整体大于大写字母的编码，大写字母的编码大于数字的编码</span><br></pre></td></tr></table></figure>
 <h4 id="bulidin">内置字符串处理方法</h4>
 <h5 id="StrFind">字符串的查找</h5>
- - **find()**和**rfind()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会返回-1
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Thisisyz'sblog,bolgiscool"</span></span><br><span class="line">print(s.find(<span class="string">"blog"</span>))  <span class="comment">#"bolg"在字符串s中第一次出现的位置</span></span><br><span class="line">print(s.rfind(<span class="string">"is"</span>))   <span class="comment">#"is"在字符串是中最后一次出现的位置</span></span><br><span class="line">print(s.find(<span class="string">"666"</span>))</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><strong>find()</strong>和<strong>rfind()</strong>用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会返回-1<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Thisisyz'sblog,bolgiscool"</span></span><br><span class="line">print(s.find(<span class="string">"blog"</span>))  <span class="comment">#"bolg"在字符串s中第一次出现的位置</span></span><br><span class="line">print(s.rfind(<span class="string">"is"</span>))   <span class="comment">#"is"在字符串是中最后一次出现的位置</span></span><br><span class="line">print(s.find(<span class="string">"666"</span>))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 <blockquote>
 <p>10<br>19<br>-1
 </p></blockquote>
 <br>
- - **index()**和**rindex()**用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会抛出异常
- 用法：`字符串.index('要查找的字符')`
+
+<ul>
+<li><p><strong>index()</strong>和<strong>rindex()</strong>用于查找一个字符串在指定范围(默认为整个字符串)中首次和最后一次的位置，不存在会抛出异常<br>用法：<code>字符串.index(&#39;要查找的字符&#39;)</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"Thisisyz'sblog,bolgiscool"</span></span><br><span class="line">print(s.index(<span class="string">"blog"</span>))  <span class="comment">#"bolg"在字符串s中第一次出现的位置</span></span><br><span class="line">print(s.rindex(<span class="string">"is"</span>))   <span class="comment">#"is"在字符串是中最后一次出现的位置</span></span><br><span class="line">print(s.index(<span class="string">"666"</span>))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p> print(s.index("666"))<br>ValueError: substring not found<br>10<br>19</p>
 </blockquote>
-<br>
- - **count()**用来返回字符串在范围内出现的次数,不存在会返回0
- 用法：`字符串.count('要计数的字符')`
+<br></li>
+<li><p><strong>count()</strong>用来返回字符串在范围内出现的次数,不存在会返回0<br>用法：<code>字符串.count(&#39;要计数的字符&#39;)</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"python I love python pppp"</span></span><br><span class="line">print(s.count(<span class="string">"p"</span>))</span><br><span class="line">print(s.count(<span class="string">"python"</span>))</span><br><span class="line">print(s.count(<span class="string">"66"</span>))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>6<br>2<br>0</p>
 </blockquote>
 <hr><br>
 <h5 id="StrSplit">字符串的分割</h5>
-
-<ul>
-<li><strong>split()</strong>和 <strong>rsplit()</strong>方法分别用来以指定字符为分隔符，从原字符串<font color="red">左端</font>和<font color="red">右端</font>开始将其分隔成多个字符串</li>
+</li>
+<li><p><strong>split()</strong>和 <strong>rsplit()</strong>方法分别用来以指定字符为分隔符，从原字符串<font color="red">左端</font>和<font color="red">右端</font>开始将其分隔成多个字符串</p>
+</li>
 </ul>
 <p>用法：<code>变量.resplit(&#39;分割符&#39;,maxsplit=最大分割次数)</code>maxsplit可缺省</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="string">"一,二,三,四,五,六"</span></span><br><span class="line">print(a.split(<span class="string">','</span>,maxsplit=<span class="number">2</span>))   <span class="comment">#按','分割,分两次</span></span><br><span class="line">print(a.rsplit(<span class="string">','</span>,maxsplit=<span class="number">2</span>))  <span class="comment">#按','分割,分两次</span></span><br><span class="line"></span><br><span class="line">b=<span class="string">'H E L L O'</span></span><br><span class="line">print(b.split()) <span class="comment">#按照默认分割</span></span><br><span class="line">print(b.split(maxsplit=<span class="number">3</span>))<span class="comment">#按照默认从右分割三次</span></span><br></pre></td></tr></table></figure>
