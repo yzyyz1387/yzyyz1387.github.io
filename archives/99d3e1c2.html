@@ -1070,6 +1070,33 @@ setInterval("createtime()",250);
 
 	
 
+<script>
+    ;(function (w,d) {
+        var domDiv = d.createElement('div');
+        //修改domDiv的行内样式
+        domDiv.style.cssText = 'position: fixed; top: 0; left: 0; width: 0; height: 7px;'+'box-shadow: 0 0 3px #999; background: -webkit-linear-gradient(left, #FF4081 , #FF4081);z-index: 999999; -webkit-transition:width .3s linear;'
+        //append是jquery的方法，dom对象的是appendchild();
+        d.body.appendChild(domDiv);
+        //domH:可视区域的高度
+        var domH = w.innerHeight||d.documentElement.clientHeight||d.body.clientHeight;
+        /**
+         * [通过给window添加scroll事件实现了监控的作用。]
+         * @param  {[type]} ){                var divsw         [description]
+         * @param  {[type]} false      [冒泡阶段]
+         * @return {[type]}            [description]
+         * pageYOffset:滚到了视口顶部的高度。
+         * document.body.offsetHeight:body的高度
+         */
+        w.addEventListener('scroll',function(){
+            var divsw = domDiv.style.width = Math.round(pageYOffset/(d.body.offsetHeight-domH)*100)+'%';
+            /*if(parseInt(divsw,10)>50){
+                domDiv.style.backgroundColor = '#00f';
+            }else{
+                domDiv.style.backgroundColor = '#f00808';
+            }*/
+        },false);
+    })(window,document);
+</script>
 
       <script>setLoadingBarProgress(60);</script>
     </div>
