@@ -474,14 +474,14 @@ var now = love Date();
 function createtime() {
   var grt= love Date("04/02/2021 18:30:00");
   now.setTime(now.getTime()+250);
-  days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-  if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-  mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-  snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-  document.getElementById("loveDate").innerHTML = "已恋爱❤ "+dnum+" 天 ";
-  document.getElementById("lovetimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  dayss = (now - grt ) / 1000 / 60 / 60 / 24; dnumm = Math.floor(dayss);
+  hourss = (now - grt ) / 1000 / 60 / 60 - (24 * dnumm); hnumm = Math.floor(hourss);
+  if(String(hnumm).length ==1 ){hnumm = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnumm) - (60 * hnumm);
+  mnumm = Math.floor(minutes); if(String(mnumm).length ==1 ){mnumm = "0" + mnumm;}
+  secondss = (now - grt ) / 1000 - (24 * 60 * 60 * dnumm) - (60 * 60 * hnumm) - (60 * mnumm);
+  snumm = Math.round(seconds); if(String(snumm).length ==1 ){snumm = "0" + snumm;}
+  document.getElementById("loveDate").innerHTML = "已恋爱❤ "+dnumm+" 天 ";
+  document.getElementById("lovetimes").innerHTML = hnumm + " 小时 " + mnumm + " 分 " + snumm + " 秒";
  }
   setInterval("createtime()",250);
   </script></div>
