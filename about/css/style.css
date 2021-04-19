@@ -234,7 +234,10 @@ transition: 0.3s;
     width: auto;
 }
 
-
+.container{
+    text-align: center;
+    margin-top: 50px;
+}
 
 .copyright p{
 
