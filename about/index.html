@@ -21,6 +21,8 @@ window.location.href="phone.html"
         <link rel="icon" href="favicon.ico">
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+       <script src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/goto.js"></script>  <!-- 平滑锚点 -->
+        <script src="https://unpkg.com/scrollreveal"></script>  <!-- reveal效果 -->
     </head>
 
     <body>
@@ -29,10 +31,10 @@ window.location.href="phone.html"
             <img src="img/bloger.png" alt="x" class="inimg">
             <ul class="inul">
                 <a href="https://yzyyz.top"><li>博客首页</li></a>
-                <a href="#card4"><li>与我联系</li></a>
-                <a href="#card3"><li>愿望规划</li></a>
-                <a href="#card2"><li>兴趣爱好</li></a>
-                <a href="#card1"><li>背景资料</li></a>
+                <a  onclick="javascript:scroller('card4', 800);"><li>与我联系</li></a>
+                <a  onclick="javascript:scroller('card3', 800);"><li>愿望规划</li></a>
+                <a onclick="javascript:scroller('card2', 800);"><li>兴趣爱好</li></a>
+                <a onclick="javascript:scroller('card1', 800);"><li>背景资料</li></a>
 
 
             </ul>
@@ -40,7 +42,7 @@ window.location.href="phone.html"
 
         <div id="card">
             <div id="card1"></div>
-            <div class="card1" >
+            <div class="card1 rea" >
                 <h2>人物背景👨‍🎓</h2>
                 <hr>
                 <p class="c1txt">
@@ -53,7 +55,7 @@ window.location.href="phone.html"
             </div>
 
             <div id="card2"></div>
-            <div class="card1">
+            <div class="card1 rea">
                 <h2>兴趣爱好📕</h2>
                 <hr>
                 <ul class="like">
@@ -69,7 +71,7 @@ window.location.href="phone.html"
             </div>
 
             <div id="card3"></div>
-            <div class="card1">
+            <div class="card1 rea">
                 <h2>小小心愿🏃‍♂</h2>
                 <hr>
                 <div class="secret">
@@ -125,7 +127,7 @@ window.location.href="phone.html"
         </div>
 
             <div id="card4"></div>
-            <div class="card1">
+            <div class="card1 rea">
                 <h2>与我联系📟</h2>
                 <hr>
                 <div class="connect">
@@ -142,9 +144,37 @@ window.location.href="phone.html"
     </body>
 
 <fotter>
+ <!--运行时间
+  <div class="container">
+    <div class="copyright" title="我的某某">
 
-    <div class="copyright">
-        <div class="cgd"></div>
+     <strong>❤</strong>
+      <span id="timeDate" style="text-align: center">载入天数...</span><span id="times">载入时分秒...</span>
+    </div>
+    <br/>
+
+
+    恋爱时间-----
+
+    <script>
+      var now = new Date();
+      function createtime() {
+        var grt= new Date("04/12/2021 18:30:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已恋爱❤ "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+      }
+      setInterval("createtime()",250);
+    </script>
+-->
+    <div class="copyright rea">
+        <div class="cgd rea"></div>
         <p>
             ©2019-2020 Yzyyz. All rights reserved.
         </p>
@@ -153,7 +183,20 @@ window.location.href="phone.html"
 
         </p>
     </div>
-    <div class="cgd"></div>
+    <div class="cgd rea"></div>
+    <script>
+        ScrollReveal().reveal('.rea',{
+            reset:false,
+            duration:1500,
+            distance:'500px',
+            easing:'ease-out',
+            interval:50,
+            opacity:0,
+    
+    
+    
+        });
+    </script>
 </fotter>
 
 </html>
