@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>FreeWater--方便同学的小项目 | 稚昂长</title>
+  <title>接水自由--方便同学的小项目 | 稚昂长</title>
   
   <meta name="keywords" content="幼稚园园长,博客,blog,园长博客,稚昂长,幼稚园园长博客">
   
@@ -343,7 +343,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
   
     <h1 class="title">
       <a href="/archives/eae69302.html">
-        FreeWater--方便同学的小项目
+        接水自由--方便同学的小项目
       </a>
     </h1>
   
@@ -416,9 +416,13 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
           <p style="text-align:center;">
 <a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/freewater/freewt.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="freewater"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/freewater/freewt.jpg"></a></p>
 
+<p><code>更新：2021年6月18日</code></p>
 <hr>
 <a id="more"></a>
 <br>
+原题：FreeWater--方便同学的小项目
+2021年6月18日做出更改
+
 <h3 id="f">相关文章</h3>
 
 <ul>
@@ -434,13 +438,43 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
 <p>machineFunctionId是机器的id，token是每个支付宝用户登录企鹅共享生成的token，下一次登录时token会更新，抓到token后不再去登录企鹅共享则该token可一直使用。</p>
 <p>该项目后台主要是php提交post，此处感谢<strong>π</strong>的技术支持。起初只是为了自己方便，而现在<code>2021年6月9日17:19:52</code>该项目已经覆盖29*2台机器（冷热）</p>
 <p>该项目核心php文件：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$Data_Base_Path=<span class="string">"http://water.yzyyz.top/water/machinelist.txt"</span>;</span><br><span class="line">	$Url=<span class="string">"https://userapi.qiekj.com/machine/water/unlock"</span>;</span><br><span class="line">	$string=$_GET[<span class="string">'machine'</span>];</span><br><span class="line">	$ID=Get_Id($Data_Base_Path,$string);</span><br><span class="line">	<span class="keyword">if</span>($ID!=<span class="string">' '</span>)&#123;</span><br><span class="line">		$Fanhui=Send_Post($Url,$ID);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">Get_Id</span><span class="params">($path,$string)</span></span>&#123;</span><br><span class="line">		$file = fopen($path,<span class="string">"r"</span>);</span><br><span class="line">		$ID=<span class="string">" "</span>;</span><br><span class="line">		<span class="keyword">while</span>(!feof($file))&#123;</span><br><span class="line">			$Content=trim(fgets($file));</span><br><span class="line">			$Postion=Str_Match($Content,$string);</span><br><span class="line">			<span class="keyword">if</span>($Postion==<span class="number">-1</span>) <span class="keyword">continue</span>;</span><br><span class="line">			$Postion++;</span><br><span class="line">			$ID=<span class="string">""</span>;</span><br><span class="line">			<span class="keyword">for</span>($i=<span class="number">0</span>;$Postion&lt;strlen($Content);$Postion++)&#123;</span><br><span class="line">				<span class="keyword">if</span>($Content[$Postion]==<span class="string">' '</span>) <span class="keyword">continue</span>;</span><br><span class="line">				$ID=sprintf(<span class="string">"%s%s"</span>,$ID,$Content[$Postion]);</span><br><span class="line">				$i++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		fclose($file);</span><br><span class="line">		<span class="keyword">return</span>($ID);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">Str_Match</span><span class="params">($Str1,$Str2)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(strlen($Str1)&lt;strlen($Str2)) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span>($i=<span class="number">0</span>;$i&lt;strlen($Str2);$i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>($Str1[$i]!=$Str2[$i])&#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">if</span>($i==strlen($Str2)<span class="number">-1</span>)&#123;</span><br><span class="line">					<span class="keyword">if</span>($Str1[$i+<span class="number">1</span>]==<span class="string">' '</span>)&#123;</span><br><span class="line">						<span class="keyword">return</span> $i;</span><br><span class="line">					&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">						<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">Send_Post</span><span class="params">($Url,$Data)</span></span>&#123;</span><br><span class="line">		$Data_Tmp=<span class="keyword">array</span>(</span><br><span class="line">			<span class="string">'machineFunctionId'</span>=&gt;<span class="string">"$Data"</span>,</span><br><span class="line">			<span class="string">'token'</span>=&gt;<span class="string">'51c934f6ebc1d32f65ff92e0e859d2ea'</span>,</span><br><span class="line">		);</span><br><span class="line">		$Post_Data=http_build_query($Data_Tmp);</span><br><span class="line">		$Options=<span class="keyword">array</span>(</span><br><span class="line">			<span class="string">'http'</span>=&gt;<span class="keyword">array</span>(</span><br><span class="line">				<span class="string">'method'</span>=&gt;<span class="string">'POST'</span>,</span><br><span class="line">				<span class="string">'header'</span>=&gt;<span class="string">'Content-type:application/x-www-form-urlencoded'</span>,</span><br><span class="line">				<span class="string">'content'</span>=&gt;$Post_Data,</span><br><span class="line">				<span class="string">'timeout'</span>=&gt;<span class="number">120</span></span><br><span class="line">			)</span><br><span class="line">		);</span><br><span class="line">		$Content=stream_context_create($Options);</span><br><span class="line">		<span class="keyword">return</span>(file_get_contents($Url,<span class="keyword">false</span>,$Content));</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">echo</span> $Fanhui;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$Data_Base_Path=<span class="string">"http://water.yzyyz.top/water/machinelist.txt"</span>;</span><br><span class="line">	$Url=<span class="string">"https://userapi.qiekj.com/machine/water/unlock"</span>;</span><br><span class="line">	$string=$_GET[<span class="string">'machine'</span>];</span><br><span class="line">	$ID=Get_Id($Data_Base_Path,$string);</span><br><span class="line">	......</span><br><span class="line">	......</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>安卓用户通过app向water.php传入参数，传入的参数代表一台机器，后端通过检索机器找到机器id，再提交post请求，达到一键解锁效果</p>
 <p>ios用户可手动配置快捷指令，以达到语音解锁(Siri)，或一键解锁</p>
 <p>如传入<code>machine=4n1e-ice</code>（4北校1楼东侧冷水），php则在<code>machinelist.txt</code>中找到对应id为<code>202009041308369270000010955664458</code>,再将id和token一起向<code>https://userapi.qiekj.com/machine/water/unlock</code>提交post请求，返回值为：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"code"</span>: <span class="number">0</span>, </span><br><span class="line">    <span class="attr">"msg"</span>: <span class="string">"成功"</span>, </span><br><span class="line">    <span class="attr">"data"</span>: &#123;</span><br><span class="line">        <span class="attr">"msgId"</span>: <span class="string">"xxxxxx"</span></span><br><span class="line">    &#125;, </span><br><span class="line">    <span class="attr">"t"</span>: xxxxx</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>表示解锁成功，值得注意的是，该token代表我的支付宝账户(实现每个人都使用自己的token我不会。。。。)，故用户接水<strong>花的是我的钱</strong>，目前稳定在平均每天10元左右，项目得以继续并不是因为我是土豪，而是因为有各位用户的捐赠，但还是有白嫖用户，故预计后期将上线用户系统，限制白嫖用户的使用。</p>
+<h3 id="fo">项目新内容</h3>
+
+<p>飞鱼发现了企鹅共享的网页版： <a href="http://h5.qiekj.com" target="_blank" rel="external nofollow noopener noreferrer">https://h5.qiekj.com</a> 在该网页中可以使用手机号及验证码登录，随后我进行抓包内容如下：</p>
+<h4 id="sendcode">发送验证码</h4>
+请求地址：`https://useraoi.qiekj.com/common/sms/sendCode`
+post参数：`phone=手机号&template=reg`
+返回值：
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"msg"</span>: <span class="string">"成功"</span>,</span><br><span class="line">    <span class="attr">"data"</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">"t"</span>: xxxxxxx</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>表示验证码发送成功</p>
+<h4 id="login">登录</h4>
+请求地址：`https://useraoi.qiekj.com/user/reg`
+post参数：`channel=h5&phone=手机号&verify=验证码`
+返回值：
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"msg"</span>: <span class="string">"成功"</span>,</span><br><span class="line">    <span class="attr">"data"</span>: &#123;</span><br><span class="line">        <span class="attr">"token"</span>: <span class="string">"xxxxxxxxxxxx"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"t"</span>: xxxxx</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>表示登录成功，在这里我们就获取到了token，故重构了前面提到的php,新加传入参数<code>token</code><br>则用户可使用自己的账户接水</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$Token=$_GET[<span class="string">'token'</span>];</span><br></pre></td></tr></table></figure>
+
+<h4 id="infom">获取用户信息</h4>
+请求地址：`https://useraoi.qiekj.com/user/info`
+post参数：`token=xxxxxxxxxxxx`
+返回值：
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"msg"</span>: <span class="string">"成功"</span>,</span><br><span class="line">    <span class="attr">"data"</span>: &#123;</span><br><span class="line">        <span class="attr">"id"</span>: xxxxxxxxxx,</span><br><span class="line">        <span class="attr">"userName"</span>: 用户企鹅共享昵称,</span><br><span class="line">        <span class="attr">"sex"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">"birthday"</span>: <span class="literal">null</span>,</span><br><span class="line">        <span class="attr">"phone"</span>: 手机号,</span><br><span class="line">        <span class="attr">"headImageId"</span>: 头像链接（直链）,</span><br><span class="line">        <span class="attr">"balance"</span>: <span class="string">"0.00"</span>,</span><br><span class="line">        <span class="attr">"unCompleteOrders"</span>: <span class="literal">null</span>,</span><br><span class="line">        <span class="attr">"hasVip"</span>: <span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"t"</span>: xxxxx</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>标识获取成功，并返回相应信息</p>
+<h3 id="upload">更新</h3>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(2021-06-18 00:44)        2.1 beta 1.0.1修复上版冷水按钮的问题</span><br><span class="line">(2021-06-18 00:00)        2.1 beta 1.0支持自己的账户登录</span><br><span class="line">                          2.0.2-1 解决软件报毒的问题（采取自愿更新，可在官网下载，软件不提示更新）</span><br><span class="line">                          2.0.2 更新后端运行策略，（特别感谢π的技术支持)暂时修复侧滑中捐赠存在的问题，选择机器页增加加群按钮，预计同期更新官网部分UI</span><br><span class="line">                          2.0.1 修复按钮隐藏后不恢复可见性的问题</span><br><span class="line">(2021-05-24 21:34)        2.0 全新版本，支持多楼层使用，增加侧滑页面</span><br><span class="line">(2021-05-20 00:38)        1.0 首次发布，支持四号楼1楼东侧饮水机的使用</span><br></pre></td></tr></table></figure>
+<p><code>2021年6月18日</code>的更新实现了使用自己的账户登录，并新增了用户协议，协议地址：<a href="http://water.yzyyz.top/yhxy.html" target="_blank" rel="external nofollow noopener noreferrer">用户服务协议和隐私政策</a></p>
 <ul>
 <li><a href="http://water.yzyyz.top" target="_blank" rel="external nofollow noopener noreferrer">项目地址 http://water.yzyyz.top/</a></li>
 </ul>
@@ -474,9 +508,10 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/eae69302.html&title=FreeWater--方便同学的小项目 | 稚昂长&summary=
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/eae69302.html&title=接水自由--方便同学的小项目 | 稚昂长&summary=
 
 
+更新：2021年6月18日
 " target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
@@ -485,9 +520,10 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/eae69302.html&title=FreeWater--方便同学的小项目 | 稚昂长&summary=
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/eae69302.html&title=接水自由--方便同学的小项目 | 稚昂长&summary=
 
 
+更新：2021年6月18日
 " target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
@@ -496,9 +532,10 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/eae69302.html&title=FreeWater--方便同学的小项目 | 稚昂长&summary=
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/eae69302.html&title=接水自由--方便同学的小项目 | 稚昂长&summary=
 
 
+更新：2021年6月18日
 " target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
@@ -580,7 +617,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
 
   <script>
     window.subData = {
-      title: 'FreeWater--方便同学的小项目',
+      title: '接水自由--方便同学的小项目',
       tools: true
     }
   </script>
@@ -606,7 +643,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#f"><span class="toc-number">1.</span> <span class="toc-text">相关文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#s"><span class="toc-number">2.</span> <span class="toc-text">项目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#t"><span class="toc-number">3.</span> <span class="toc-text">项目内容</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#f"><span class="toc-number">1.</span> <span class="toc-text">相关文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#s"><span class="toc-number">2.</span> <span class="toc-text">项目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#t"><span class="toc-number">3.</span> <span class="toc-text">项目内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fo"><span class="toc-number">4.</span> <span class="toc-text">项目新内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sendcode"><span class="toc-number">4.1.</span> <span class="toc-text">发送验证码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#login"><span class="toc-number">4.2.</span> <span class="toc-text">登录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#infom"><span class="toc-number">4.3.</span> <span class="toc-text">获取用户信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#upload"><span class="toc-number">5.</span> <span class="toc-text">更新</span></a></li></ol>
     </div>
   </section>
 
@@ -901,7 +938,7 @@ setInterval("createtime()",250);
    
 <!---字数统计----->
 <i class="fas fa-chart-area"></i>
-<span class="post-count">字数统计：25.8k</span>
+<span class="post-count">字数统计：26.1k</span>
 <br>
 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/icp.png" alt="ICP"><span>陕ICP备2020016014号-1</span></a>
 
