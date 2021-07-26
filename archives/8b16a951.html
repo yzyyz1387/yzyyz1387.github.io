@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>中化现代农业实习记 | 稚昂长</title>
+  <title>Python爬虫（三） | 稚昂长</title>
   
   <meta name="keywords" content="幼稚园园长,博客,blog,园长博客,稚昂长,幼稚园园长博客">
   
@@ -330,8 +330,8 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
         
   
     <h1 class="title">
-      <a href="/archives/e4acfac9.html">
-        中化现代农业实习记
+      <a href="/archives/8b16a951.html">
+        Python爬虫（三）
       </a>
     </h1>
   
@@ -367,7 +367,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>消息发布于：2021年7月7日</p>
+    <p>消息发布于：2021年7月22日</p>
   </a>
 </div>
 
@@ -391,10 +391,10 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
           
         
           
-            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-07-26T08:57:05+08:00">
+            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-07-22T16:45:22+08:00">
   <a class="notlink">
     <i class="fas fa-save" aria-hidden="true"></i>
-    <p>本页文档最后更新于：2021年7月26日</p>
+    <p>本页文档最后更新于：2021年7月22日</p>
   </a>
 </div>
 
@@ -411,185 +411,62 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          <p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph0.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="MAP"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph0.jpg"></a></p>
+          <h3 id="sql">Flask框架基础</h3>
 
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/flask.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="py"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/flask.jpg"></a></p>
+
+<p>这篇文章给我写的很难受，以为文中提到的代码例子跟博客的渲染器有冲突，改了半天……</p>
 <a id="more"></a>
 
-<h3 id="bg">背景</h3>
+<h4 id="base">开始</h4>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flaskProject</span><br><span class="line">  ├─static</span><br><span class="line">  ├─templates</span><br><span class="line">  ├─app.py</span><br></pre></td></tr></table></figure>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;用 <strong>Pycharm</strong>  新建一个Flask项目，在生成的文件中，会自动生成如上目录和app.py文件，该文件内容默认为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask,render_template,request</span><br><span class="line"></span><br><span class="line"><span class="comment">#Flask接受一个__name__参数</span></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment">#@装饰器进行路由映射</span></span><br><span class="line"><span class="meta">@app.route('/')  #路由</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span>:</span> </span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;该文件就是最简单的Flask项目了，运行，默认在127.0.0.1:5000<br>/可进行访问</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;目录中templates用于存放需要渲染的网页，渲染网页需要导入 <code>render_template</code>，static用于存放css、js等资源文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#导入，render_template用于渲染网页，request用于请求</span></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask,render_template,request</span><br><span class="line"></span><br><span class="line"><span class="comment">#Flask接受一个__name__参数</span></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment">#@装饰器进行路由映射</span></span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span>:</span> </span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#run()方法启动WEB服务器</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+<h4 id="postget">传入参数</h4>
+
+<h5 id="str">传入字符串</h5>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;当我们有 用户访问127.0.0.1/user/xxx，服务器进行响应时：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@app.route('/user/&lt;text&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">welcome</span><span class="params">(name)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="string">'welcome%d'</span>%name</span><br></pre></td></tr></table></figure>
+
+<h5 id="int">传入整型</h5>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;当我们有 用户访问127.0.0.1/id/00001，服务器进行响应时：(当然也有浮点型：<code>&lt;float:xxx&gt;</code>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@app.route('/user/&lt;int:userid&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">welcome2</span><span class="params">(userid)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="string">'welcome%s'</span>%userid</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="bianliang">传入变量：普通变量、列表、字典</h5>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;通过flask向网页传递参数例子如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    title=<span class="string">'我是网页标题'</span></span><br><span class="line">    list=[<span class="string">'赵'</span>,<span class="string">'钱'</span>,<span class="string">'孙'</span>,<span class="string">'李'</span>]</span><br><span class="line">    <span class="keyword">return</span> render_template(<span class="string">"index.html"</span>,list=list,title=title)</span><br><span class="line">    <span class="comment">#上一行中render_template就是对index.html进行渲染</span></span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;这里我们传入了 <code>字符串 title</code> 和 <code>列表list</code>,那么在网页中：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh_CN"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;&#123; title &#125;&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Flask学习<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    成员：<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    &#123;% for name in list %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">可以看出，传入的内容在html中用&#123;&#123;  &#125;&#125; 包裹,flask就会对其进行渲染</span></span><br><span class="line"><span class="comment">for循环则用  &#123;% for xxxx in xxx%&#125;, 以&#123;% endfor %&#125;结束。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;还可传入字典<code>dic={&#39;username&#39;:&#39;admin&#39;,&#39;password&#39;:&#39;123456&#39;}</code></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在html中调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">......</span><br><span class="line">&#123; % for key,values in result.items() %&#125;</span><br><span class="line">&#123;&#123; user &#125;&#125;</span><br><span class="line">&#123;&#123; pass &#125;&#125;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&#123;%endfor%&#125;</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+<h5 id="form">表单提交</h5>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;POST或GET<br>假设访问登录：<br>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@app.route("/login")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> render_template(<span class="string">"/login.html"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>login.html:action中的<code>url_for(&#39;loginre&#39;)</code>是自动获取路径下的<strong>/loginre</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">......</span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">action</span>=<span class="string">"&#123;&#123; url_for('loginre') &#125;&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>账号：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"password"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
 
 <hr>
-<h4 id="bg1">专业</h4>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;西农是大类招生，农学在大二结束后分流，我选择了<strong>种子科学与工程</strong>专业，本专业的学生在大二暑假会被安排到不同的相关的公司实习，我被安排到了中化现代农业(陕西)有限公司  渭南经开技术服务中心。</p>
-<h4 id="bg2">集团 公司</h4>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;1950年3月10日，为统一全国国营贸易，完成国家进出口计划，领导国内市场，调节全国和地方的物资供求，促进国家生产事业的迅速恢复与发展，中央人民政府政务院决定在中央人民政府贸易部领导下，设立全国范围的对外贸易专业总公司。<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E4%B8%AD%E5%8C%96%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/22359980?fromtitle=%E4%B8%AD%E5%8C%96%E9%9B%86%E5%9B%A2&fromid=2680625&fr=aladdin" target="_blank" rel="external nofollow noopener noreferrer" title="中国中化集团有限公司-百科">中化集团</a>的前身——中国进口公司正式成立。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;目前，<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E4%B8%AD%E5%8C%96%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/22359980?fromtitle=%E4%B8%AD%E5%8C%96%E9%9B%86%E5%9B%A2&fromid=2680625&fr=aladdin" target="_blank" rel="external nofollow noopener noreferrer" title="中国中化集团有限公司-百科">中化集团</a>现有的五大业务板块分别为能源、化工、<strong>农业</strong>、地产和金融，这也是中化集团的主营业务。</p>
-<p>我们去的就属于农业板块（简单总结一下：中化是央企，是我们所去公司的爸爸），MAP(Modern Agriculture Platform)现代农业技术服务平台，是中化农业业务的一个战略，主要是在当前我国农业进入高质量发展新阶段的各项条件正在加速集聚的背景下进行的智慧农业、数字化农业。从种子到种植到销售，为农户<strong>提供服务</strong>，让农户增收，帮农户<strong>“种出好品质，卖出好价钱”</strong>。</p>
-<br>
-
-
-<h3 id="day1">Day 1</h3>
-
-<hr>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph01.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="MAP"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph01.jpg"></a></p>
-
-<p><code>2021年7月6日中午</code><br> &nbsp;&nbsp;&nbsp;&nbsp;一行四人到了渭南北站，鑫哥(公司负责我们的人)驱车将我们接到实习地点，将行李安放到Mapper之家(宿舍)，我们简单收拾后，鑫哥和小马哥(同事)带我们到附近随便吃了点面。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;午餐<strong>干拌面</strong>！wit小马哥&amp;鑫哥</p>
-<p>下午在公司会议室鑫哥和卢哥(同事)带我们了解了中化集团、中化农业以及MAP。最近一段时间公司不是很忙，所以下午我们又去了超市购置了部分生活用品，傍晚与鑫哥小马哥一起打球，第一天就这样过去了。小马哥球打的挺好，看得出他也很喜欢篮球。</p>
-<h3 id="day2">Day 2</h3>
-
-<hr>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph1.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="MAP"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph1.jpg"></a></p>
-
-<p><code>2021年7月7日</code><br>&nbsp;&nbsp;&nbsp;&nbsp;今天吃饭都是小马哥带我们去的，伙食很好哈哈哈，都是问我们想吃什么。图是早上在办公室拍的集体照（别找了照片里没我）。由于现在不是很忙，所以今天一直坐在办公室，只有干了什么，在这里我想省略掉。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;午餐<strong>水盆羊肉</strong>！with小马哥</p>
-<p><font style="color:#cecece">There’s something hidden here</font></p>
-<!--
-&nbsp;&nbsp;&nbsp;&nbsp;下午出去吃完晚饭，鑫哥让我们把办公室实验室卫生打扫一下，我们几个私底下还暗自觉得自己愚钝，没有主动去干卫生。打扫完卫生，我才反应过来，这似乎是种惩罚：
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;我在我们9人小组（4人在渭南5人在西安）的群里开玩笑说我们很闲，因为第一天确实没安排什么活，然后出于某种（某人）原因，这件事被负责我们实习的老师知道了，而后就被何姐（应该是鑫哥领导)知道了，再就被鑫哥知道了，所以我认为这应该是种惩罚。
-
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph2.3.jpg" target="_blank" rel="noopener external nofollow noreferrer" data-fancybox="images" data-caption="MAP"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph2.3.jpg" /></a></p>-->
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;我也明白了，话 真的不可以乱讲，今后的实习生活会积极找活做，多长点眼色，严格要求自己</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;麻了麻了，本来也确实是我的错，怪不得那某种原因，今天就这样吧</p>
-<h3 id="day3">Day 3</h3>
-
-<hr>
-<p><code>2021年7月8日</code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;今早在办公室完成了实习小组新闻稿的撰写，向学院那边投稿了，进程比较慢，在大学生网报也进行了投稿：<a href="http://www.dxswb.com/shijian/356609.html" target="_blank" rel="external nofollow noopener noreferrer">http://www.dxswb.com/shijian/356609.html</a><br>不过这小网站上传图片有点问题，就发了纯文字。<br>&nbsp;&nbsp;&nbsp;&nbsp;午餐<strong>臊子面</strong>！with卢哥</p>
-<h3 id="day4">Day 4</h3>
-
-<hr>
-<p><code>2021年7月9日</code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;前一日晚小马哥在群里派活，需要一个人今早7点来办公室，田钊接了，我就8点多到的办公室。<br>&nbsp;&nbsp;&nbsp;&nbsp;办公室来了两个人，看样子是跟鑫哥他们很熟，我也没问，办公室就我们四个，他们坐下后我便给二位接了两杯水。后来开了把游戏，结果半道鑫哥回来了，我甚至还想打完这局，但是鑫哥说：<code>办公室不能打游戏，无论是手游还是电脑</code> 其实就是在说我，但是没叫我名字，我就直接退了。然后就感觉，我是来实习的阿，我是来学东西的，打游戏可以在宿舍打，办公室打太不应该了。而后我就在网上看一些关于中国农业的文章。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;午餐<strong>蒸饺</strong>！with鑫哥<br>&nbsp;&nbsp;&nbsp;&nbsp;和鑫哥吃饭的时候我们聊了关于过两天巡田的工作，</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;下午继续看了部分文章，鑫哥让我从一张签到表的照片里抄15条签到信息，看不懂的字再问他。22个里面抄12个（他抄了3个），其实没啥大问题，我抄到了14个，剩下都是名字看不懂，看得懂名字的合作社名字可能看不懂，但是合作社名字大概百度一下就百度到了，EZ,最后一个随便找了个看不懂的问了鑫哥。算是完成了<br>鑫哥说：</p>
-<blockquote>
-<p>你们从学校走到社会单位做事，其实工作就是做事，老板让你们做一件事，你在做的时候可能会遇到一些问题，然后你们通过自己，或者同事，把困难解决了，再把结果给老板，老板他只要个结果，就是这样。（大概是这样说的）</p>
-</blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;其实这个道理我也明白，自己也有体会，算是今天的小收获。</p>
-<h3 id="day5">Day 5</h3>
-
-<hr>
-<p><code>2021年7月10日</code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;今早没什么活儿，在办公室学爬虫</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;午餐<strong>水盆羊肉</strong>！with王鼎</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;下午在办公室做了些表格(可以说是文职工作），18点左右，下班的点（其实公司并没有这么明确，是我们自己觉得如此）做完了，我们四人和鑫哥还有小马哥去打球，完事儿小马哥带我们吃了李想大虾。<br>&nbsp;&nbsp;&nbsp;&nbsp;晚上去吃虾，我们喝了点酒，边喝边聊，聊了许多，总结为以下几方面</p>
-<ul>
-<li>中化的历史和未来</li>
-<li>中化农业怎么赚钱</li>
-<li>农业的未来</li>
-<li>农学人的情怀</li>
-<li>中国部分地区高考优惠政策</li>
-<li>不同专业要走的路和要挣的钱</li>
-<li>学生时代恋爱</li>
-<li>大学生（我们）的前途</li>
-</ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;19年毕业的小马哥也是个有情怀的人，（昨天跟鑫哥吃饭也聊了些相关农业之类的，鑫哥对这些事也非常明白，也很有情怀！）今晚我们聊了许多真的也收获了许多，前一段时间我对自己未来要走的路确实非常迷茫，有一定目标但还属于迷茫的范畴。今天又说起这事大家都在开导我, 有些点确实是我没想到的，突然也就想明白了许多。</p>
-<h3 id="day6">Day 6</h3>
-
-<hr>
-<p><code>2021年7月11日</code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;早上到办公室，王鼎、奕涵跟小马哥一起去华洲了，我在办公室改互联网+大赛的PPT,效率很低，没什么思路。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;午餐<strong>大盘鸡</strong>！with师姐（师姐姓师）</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;下午跟着师姐去了三户农户家里，主要就是巡田，推保险（最近是推保险的时间，我们不了解，全是师姐在做，我们跟着）。在官道镇那边的时候，看见了一些老房子，让我想起了从前在跟外婆，跟爷爷生活的日子 —— 一段与山，与水，与萤火虫为伴的日子……</p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph6.1.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="MAP"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph6.1.jpg"></a></p>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;跑了一下午，师姐对农户家里情况都比较了解，（今天下午师姐专门带我们去的比较好说话的农户家里），去了都是巡巡田，拉拉家常,谈的比较融洽，突然不甘于出来就是个销售…不过做农业真的需要情怀，干啥不是干呢。</p>
-<h3 id="day7">Day 7</h3>
-
-<hr>
-<p><code>2021年7月12日</code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;今天没外出，除了早上跟小马哥一起去拉了点种子回来，下午在办公室做表格，做完了我的那部分又继续改PPT，这一天过的很快阿。<br>&nbsp;&nbsp;&nbsp;&nbsp;午餐<strong>驴蹄子面</strong>with小马哥</p>
-<h3 id="day8">Day 8</h3>
-
-<hr>
-<p><code>2021年7月13日</code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;今天是改PPT的一天！ </p>
-<p style="text-align:center;">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph8.1.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="MAP"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph8.1.jpg"></a></p>
-<font style="color:#cecece;">今天的云很好看</font>
-
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;小马哥休假了，今天师姐出去了一趟，我由于在改PPT就没跟着去，田钊和奕涵跟着去了。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;午餐<strong>拉条~</strong></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;下午回宿舍后麻了，就睡着了，第二天听鑫哥说他在楼下喊我俩打球来着，我没听，听师姐说我们来之前鑫哥跟小马哥就投投球，没人打。</p>
-<h3 id="day9">Day 9</h3>
-
-<hr>
-<p><code>2021年7月14日</code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;早上加改完ppt发给学姐，跟着鑫哥出去了，巡了巡田，去农户家里送了点农药，收获挺多的：</p>
-<p style="text-align:center;position:relative;width:40%;float:left;padding-bottom:25px">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph9.1.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="MAP"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph9.1.jpg"></a>
-</p>
-<p style="text-align:center;position:relative;width:50%;padding:15px;margin-bottom: 50px">
-<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph9.2.jpg" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="MAP"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/mapph9.2.jpg"></a>
-</p>
-<br>
-<p style="width=100%;margin:0 auto">
-图1：<font style="color:#cecece;">玉米黏虫危害(上) 玉米螟危害(下) </font>  &nbsp; &nbsp; &nbsp; &nbsp;图2：<font style="color:#cecece;">化控适当(左 较晚(中) 过早(右) </font>
-</p>
-
-
-
-<blockquote>
-<p>玉米叶面有排孔是<font style="color:#ff7f50">玉米螟</font>造成的，其在心叶期潜入心叶驻食，故造成排列整齐的孔洞。而<font style="color:#ff7f50">玉米黏虫</font>则造成叶面不规则的孔洞，大面积缺刻，严重时会将叶片吃光，只留叶脉。</p>
-</blockquote>
-<blockquote>
-<p>玉米化控（控旺）是在玉米6-10叶期对其施用调节剂，控制生长，以达到降低穗位的效果，可有效防止倒伏，又可促进营养物质向穗部运转，减少空杆、秃尖。图中适当时期化控时，最下面的节间（1-3节）距是比较小的，而过晚时间距比较大，可以看到其气生根也抬起很高，过早则会引起不正确缩节，导致发育不良。故化控的时机是很重要的。</p>
-</blockquote>
-<blockquote>
-<p>玉米叶有<strong>五光六毛</strong>的特点，即玉米叶片从基部开始数，一直到第5片叶子是光滑的，是没有绒毛的，而从第6片叶开始有绒毛，摸上去有拉手的感觉。</p>
-</blockquote>
-<blockquote>
-<p>在农药标签的下方，有一条与 底边平行的、不褪色的颜色标志带，不同的颜色代表此农药所属 的类别：<font style="color:#2ed573">绿色标志</font>带代表除草剂，<font style="color:#ff4757">红色</font>为杀虫剂，<font style="color:#2f3542">黑色</font>为杀菌剂，<font style="color:#ffa502">深黄色</font>代表植物生长调节剂，杀鼠剂使用<font style="color:#1e90ff">蓝色</font>（卫生杀虫剂 除外)。</p>
-</blockquote>
-<h3 id="day10">Day 10</h3>
-
-<hr>
-<p><code>2021年7月15日</code></p>
-<h3 id="day11">Day 11</h3>
-
-<hr>
-<p><code>2021年7月16日</code></p>
-<h3 id="day12">Day 12</h3>
-
-<hr>
-<p><code>2021年7月17日</code></p>
-<h3 id="day13">Day 13</h3>
-
-<hr>
-<p><code>2021年7月18日</code></p>
-<h3 id="day14">Day 14</h3>
-
-<hr>
-<p><code>2021年7月19日</code></p>
-<h3 id="day15">Day 15</h3>
-
-<hr>
-<p><code>2021年7月20日</code></p>
-<p>很明显，以上数天没有实质性的太多工作，今天小马哥带我和王鼎去华州了，一整天，跑了很远，主要就是在MAP智农上划地，完事儿又在几个农户家去了一趟，累趴了……</p>
-<h3 id="day16">Day 16--21</h3>
-
-<hr>
-<p><code>2021年7月21-26日</code></p>
-<p>写了一周代码<br>项目地址：：<a href="http://nwafu.ac.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://nwafu.ac.cn/</a><br>源码：<a href="https://github.com/yzyyz1387/flask-visualData-practice" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/yzyyz1387/flask-visualData-practice</a></p>
-<p>文章：</p>
-<ul>
-<li><a href="https://yzyyz.top/archives/f61ee6db.html">Python爬虫（一）</a></li>
-<li><a href="https://yzyyz.top/archives/c6080a03.html">Python爬虫（二）</a></li>
-<li><a href="https://yzyyz.top/archives/8b16a951.html">Python爬虫（三）</a></li>
-<li><a href="https://yzyyz.top/archives/65627bf1.html">Python爬虫（四）-小项目完结</a></li>
-<li><a href="https://yzyyz.top/archives/9ce8dfe4.html">VisualData项目补充</a></li>
-</ul>
+<p>loginre : 注意其中的 ** methods=[‘POST’,’GET’] <strong>， 并使用</strong>request**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@app.route("/loginre" ,methods=['POST','GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">loginre</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">if</span> request.method==<span class="string">'POST'</span>:</span><br><span class="line">        result=request.form</span><br><span class="line">        <span class="keyword">return</span> render_template(<span class="string">"/loginre.html"</span>,result=result)</span><br></pre></td></tr></table></figure>
+<p> loginre.html:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for un,pw in result.items() %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123; un &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123; pw &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">&#123;% endfor%&#125;</span><br></pre></td></tr></table></figure>
 
           
             <br>
@@ -623,7 +500,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
           
         
           
-            <p>本文永久链接是：<a href="https://yzyyz.top/archives/e4acfac9.html">https://yzyyz.top/archives/e4acfac9.html</a></p>
+            <p>本文永久链接是：<a href="https://yzyyz.top/archives/8b16a951.html">https://yzyyz.top/archives/8b16a951.html</a></p>
           
         
       </blockquote>
@@ -658,7 +535,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>随笔</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9C%A8%E8%A5%BF%E5%86%9C/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>在西农</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Python</p></a></div>
 
 
         
@@ -669,8 +546,12 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/e4acfac9.html&title=中化现代农业实习记 | 稚昂长&summary=
-" target="_blank">
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/8b16a951.html&title=Python爬虫（三） | 稚昂长&summary=Flask框架基础
+
+
+
+
+这篇文章给我写的很难受，以为文中提到的代码例子跟博客的渲染器有冲突，改了半天……" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
           
@@ -678,8 +559,12 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/e4acfac9.html&title=中化现代农业实习记 | 稚昂长&summary=
-" target="_blank">
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/8b16a951.html&title=Python爬虫（三） | 稚昂长&summary=Flask框架基础
+
+
+
+
+这篇文章给我写的很难受，以为文中提到的代码例子跟博客的渲染器有冲突，改了半天……" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
           
@@ -687,8 +572,12 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/e4acfac9.html&title=中化现代农业实习记 | 稚昂长&summary=
-" target="_blank">
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/8b16a951.html&title=Python爬虫（三） | 稚昂长&summary=Flask框架基础
+
+
+
+
+这篇文章给我写的很难受，以为文中提到的代码例子跟博客的渲染器有冲突，改了半天……" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
           
@@ -714,9 +603,9 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/archives/f61ee6db.html" rel="prev" title="Python爬虫（一）">
+                                <a href="/archives/65627bf1.html" rel="prev" title="Python爬虫（四）- 小项目完结">
                                   
-                                      Python爬虫（一）
+                                      Python爬虫（四）- 小项目完结
                                   
                                 </a>
                             </h4>
@@ -734,16 +623,16 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/archives/eae69302.html" rel="prev" title="接水自由--方便同学的小项目">
+                                <a href="/archives/c6080a03.html" rel="prev" title="Python爬虫（二）">
                                     
-                                        接水自由--方便同学的小项目
+                                        Python爬虫（二）
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/%E5%BC%80%E5%8F%91/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 开发</a> <a class="tag" href="/tags/%E5%9C%A8%E8%A5%BF%E5%86%9C/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 在西农</a>
+                                    <a class="tag" href="/tags/Python/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Python</a>
                                 </h6>
                             
                         </span>
@@ -788,7 +677,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
 
   <script>
     window.subData = {
-      title: '中化现代农业实习记',
+      title: 'Python爬虫（三）',
       tools: true
     }
   </script>
@@ -814,7 +703,7 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bg"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bg1"><span class="toc-number">1.1.</span> <span class="toc-text">专业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bg2"><span class="toc-number">1.2.</span> <span class="toc-text">集团 公司</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day1"><span class="toc-number">2.</span> <span class="toc-text">Day 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day2"><span class="toc-number">3.</span> <span class="toc-text">Day 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3"><span class="toc-number">4.</span> <span class="toc-text">Day 3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4"><span class="toc-number">5.</span> <span class="toc-text">Day 4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5"><span class="toc-number">6.</span> <span class="toc-text">Day 5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6"><span class="toc-number">7.</span> <span class="toc-text">Day 6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day7"><span class="toc-number">8.</span> <span class="toc-text">Day 7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day8"><span class="toc-number">9.</span> <span class="toc-text">Day 8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day9"><span class="toc-number">10.</span> <span class="toc-text">Day 9</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day10"><span class="toc-number">11.</span> <span class="toc-text">Day 10</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day11"><span class="toc-number">12.</span> <span class="toc-text">Day 11</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day12"><span class="toc-number">13.</span> <span class="toc-text">Day 12</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day13"><span class="toc-number">14.</span> <span class="toc-text">Day 13</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day14"><span class="toc-number">15.</span> <span class="toc-text">Day 14</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day15"><span class="toc-number">16.</span> <span class="toc-text">Day 15</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day16"><span class="toc-number">17.</span> <span class="toc-text">Day 16--21</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#sql"><span class="toc-number">1.</span> <span class="toc-text">Flask框架基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#base"><span class="toc-number">1.1.</span> <span class="toc-text">开始</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#postget"><span class="toc-number">1.2.</span> <span class="toc-text">传入参数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#str"><span class="toc-number">1.2.1.</span> <span class="toc-text">传入字符串</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#int"><span class="toc-number">1.2.2.</span> <span class="toc-text">传入整型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#bianliang"><span class="toc-number">1.2.3.</span> <span class="toc-text">传入变量：普通变量、列表、字典</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#form"><span class="toc-number">1.2.4.</span> <span class="toc-text">表单提交</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
