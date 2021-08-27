@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>基于Flask框架的随机文章网站</title>
+      <link href="/archives/278293dc.html"/>
+      <url>/archives/278293dc.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li>项目地址：<a href="https://github.com/yzyyz1387/storys/" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/yzyyz1387/storys/</a></li><li>示例地址：<a href="https://story.nwafu.ac.cn/" target="_blank" rel="external nofollow noopener noreferrer">https://story.nwafu.ac.cn/</a></li></ul><a id="more"></a><ul><li>关于页面：<a href="https://story.nwafu.ac.cn/about" target="_blank" rel="external nofollow noopener noreferrer">https://story.nwafu.ac.cn/about</a></li><li>网站背景图片来自<a href="https://www.bing.com/?mkt=zh-CN" target="_blank" rel="external nofollow noopener noreferrer">Bing每日图片</a></li><li>故事内容所用字体为<a href="http://www.tsanger.cn/" target="_blank" rel="external nofollow noopener noreferrer">苍耳今楷</a></li><li>创建设想本站故事多与感情相关，也会收录其他内容</li><li>若所用内容涉及侵权，请联系我们删除内容</li><li>用户利用简短的琐碎时间即可完成一次阅读，珍惜美好时光，改善阅读习惯</li><li>联系我们： <a href="mailto:youzyyz1384@qq.com" rel="external nofollow noopener noreferrer" target="_blank">youzyyz1384@qq.com</a></li><li>文章投稿：<a href="https://github.com/yzyyz1387/storys/issues" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/yzyyz1387/storys/issues</a></li></ul><p>每次刷新网页都会随机一个故事，故事储存在根目录<code>story</code>文件下，每个故事格式为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">!story</span><br><span class="line">【标题】</span><br><span class="line">【作者】</span><br><span class="line">【来源链接】</span><br><span class="line">【来源】</span><br><span class="line">【内容】</span><br><span class="line">story!</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VisualData项目补充</title>
       <link href="/archives/9ce8dfe4.html"/>
       <url>/archives/9ce8dfe4.html</url>
