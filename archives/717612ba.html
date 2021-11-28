@@ -1018,6 +1018,29 @@ cursor: url(https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/img/Arrow.cur),auto
     } 
 setInterval("createtime()",250);
 </script>
+
+<!-- 恋爱时间----- -->
+<span id="loveDate">载入天数...</span><span id="timesl">载入时分秒...</span>
+    <script>
+      var nowl = new Date();
+      function createtimel() {
+        var grtl= new Date("09/07/2021 22:00:00");
+        nowl.setTime(nowl.getTime()+250);
+        daysl = (nowl - grtl ) / 1000 / 60 / 60 / 24;
+        dnuml = Math.floor(daysl);
+        hoursl = (nowl - grtl ) / 1000 / 60 / 60 - (24 * dnuml);
+        hnuml = Math.floor(hoursl);
+        if(String(hnuml).length ==1 )
+        {hnuml = "0" + hnuml;}
+        minutesl = (nowl - grtl ) / 1000 /60 - (24 * 60 * dnuml) - (60 * hnuml);
+        mnuml = Math.floor(minutesl); if(String(mnuml).length ==1 ){mnuml = "0" + mnuml;}
+        secondsl = (nowl - grtl ) / 1000 - (24 * 60 * 60 * dnuml) - (60 * 60 * hnuml) - (60 * mnuml);
+        snuml = Math.round(secondsl); if(String(snuml).length ==1 ){snuml = "0" + snuml;}
+        document.getElementById("loveDate").innerHTML = "已恋爱💕 "+dnuml+" 天 ";
+        document.getElementById("timesl").innerHTML = hnuml + " 小时 " + mnuml + " 分 " + snuml + " 秒";
+      }
+      setInterval("createtimel()",250);
+    </script>
    
 <!---字数统计----->
 <i class="fas fa-chart-area"></i>
