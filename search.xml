@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>森林服务器提示forest server does not seem to be set up correctly</title>
+      <link href="/archives/47744284.html"/>
+      <url>/archives/47744284.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/fores.webp" alt="头部大图"></p><a id="more"></a><p>  最近steam促销，TheForest（迷失森林）降价于是就入了，其实是益多送的（我买完他又吧钱转给我了，我也没客气/滑稽）<img src="https://api.isoyu.com/uploads/ARU/GIF_S/0180.gif" alt>。入完之后舍友鑫源也入了，联机时出现了掉线的情况，让之前的辛苦“付之一掉线”…<br>  转念我就趁Cloudcone黑五大促买了个2H2G的VPS，结果习惯了镜像又选的Linux，linux无法开Forest的服务器（有大神用wine成功过，我学不会），rebuild只能在不同linux之间切换，鼓捣了一天也没弄成。<br>  最后就在自己电脑上开吧，反正就我俩玩，（有公网ip或内网穿透也可外网访问）。<br><strong>开服教程</strong>：<a href="https://www.bilibili.com/read/cv2135043" target="_blank" rel="external nofollow noopener noreferrer" title="The Forest / 迷失森林 | 服务器搭建参考">https://www.bilibili.com/read/cv2135043</a></p><hr><p><img src="http://tiebapic.baidu.com/forum/w%3D580/sign=5ce2543237a446237ecaa56aa8237246/a5accf43ad4bd1134230997a4dafa40f4afb05b5.jpg" alt="出现错误"></p><p>  开完后发现鑫源能进，而我进去显示<code>forest server does not seem to be set up correctly</code>。也是花了很长时间都没解决，最后谷歌了一下，找到了一篇老外的帖子：<br><a href="https://www.reddit.com/r/TheForest/comments/a7757z/returning_to_the_forest_cant_get_my_dedicated/" target="_blank" rel="external nofollow noopener noreferrer" title="Returning to The Forest, can&#39;t get my dedicated server up and running again">https://www.reddit.com/r/TheForest/comments/a7757z/returning_to_the_forest_cant_get_my_dedicated/</a><br>  按照评论区老哥的话去试了一下，关掉了我的<code>virtual</code>网络接口，结果就豁然开朗了！</p><blockquote><p>I had such a message, and I noticed also that the IP displayed when joining the server was not matching the IP I had on my host machine.Turns out, that writing the internal IP on the config file is not enough. It was automatically picking up another IP from a virtual network card (bug that ignores the config?).<br>So, in Windows, I disabled all network interfaces except the physical cabled one. From that point on I was able to connect.<br>TLDR:<br>1 - Double check what internal IP your server currently has.<br>2 - Make sure that the internal IP your server has is matching what is written on the server.cfg file.<br>3 - Make sure you have a manual/fixed IP on your server (otherwise it might change at some point in the future).<br>4 - In Windows (of the server), disable all other network interfaces (virtual or otherwise) apart from the one that has the desired IP.<br>Good luck.</p></blockquote><p>最后附鑫源性感黑丝：<br><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/forestxy.png" alt="头部大图"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 游戏 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python爬取杨村近十年天气数据</title>
       <link href="/archives/4e979541.html"/>
       <url>/archives/4e979541.html</url>
