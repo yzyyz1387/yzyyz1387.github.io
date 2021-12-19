@@ -403,10 +403,10 @@ pre{
           
         
           
-            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-12-17T17:08:25+08:00">
+            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-12-20T03:05:25+08:00">
   <a class="notlink">
     <i class="fas fa-save" aria-hidden="true"></i>
-    <p>本页文档最后更新于：2021年12月17日</p>
+    <p>本页文档最后更新于：2021年12月20日</p>
   </a>
 </div>
 
@@ -424,9 +424,10 @@ pre{
         <div class="article-entry" itemprop="articleBody">
           
           <p style="text-align:center;width=200px">
-<a href="https://raw.githubusercontent.com/nonebot/nonebot2/master/docs/.vuepress/public/logo.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/nonebot/logo.png" style="width:200px"></a><br>QQ机器人保姆级平民搭建方法<br> <font color="red">如果你仅想使用python实现机器人的功能而不考虑其他的，请继续阅读<br>如果不是 那你完全没必要读下去</font></p>
+    <a href="https://raw.githubusercontent.com/nonebot/nonebot2/master/docs/.vuepress/public/logo.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/nonebot/logo.png" style="width:200px"></a><br>QQ机器人保姆级平民搭建方法<br> <font color="red">如果你仅想使用python实现机器人的功能而不考虑其他的，请继续阅读<br>如果不是 那你完全没必要读下去<br>如果在阅读时发现了我的错误 烦请在<a href="#comments">评论区</a>提出<br>本人技术不佳 还希望来访大佬指教</font></p>
 
 <a id="more"></a>
+
 <h3 id="fo"> 写在前面</h3>
 
 <h4 id="sum"> 概述</h4>
@@ -548,17 +549,25 @@ pre{
 
 <p>.env.*文件为配置文件，可在任何插件中加载，官方示例</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">HOST&#x3D;0.0.0.0  # 配置 NoneBot 监听的 IP&#x2F;主机名</span><br><span class="line">PORT&#x3D;8080  # 配置 NoneBot 监听的端口</span><br><span class="line">DEBUG&#x3D;true  # 开启 debug 模式 **请勿在生产环境开启**</span><br><span class="line">SUPERUSERS&#x3D;[&quot;123456789&quot;, &quot;987654321&quot;]  # 配置 NoneBot 超级用户</span><br><span class="line">NICKNAME&#x3D;[&quot;awesome&quot;, &quot;bot&quot;]  # 配置机器人的昵称</span><br><span class="line">COMMAND_START&#x3D;[&quot;&#x2F;&quot;, &quot;&quot;]  # 配置命令起始字符</span><br><span class="line">COMMAND_SEP&#x3D;[&quot;.&quot;]  # 配置命令分割字符</span><br><span class="line"></span><br><span class="line"># Custom Configs</span><br><span class="line">CUSTOM_CONFIG1&#x3D;&quot;config in env file&quot;</span><br><span class="line">CUSTOM_CONFIG2&#x3D;  # 留空则从系统环境变量读取，如不存在则为空字符串</span><br></pre></td></tr></table></figure>
-<p>你可以将其复制到<code>.env.dev</code>中<br>其中形如custom这样的配置，你可以自定义,只要确保为JSON格式即可，且大小写不敏感，<br>你可以配置如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BAN&#x3D;[&quot;123456&quot;]</span><br></pre></td></tr></table></figure>
+<p>你可以将其复制到<code>.env.dev</code>中</p>
+<ul>
+<li><p>其中<code>COMMAND_START=[&quot;/&quot;, &quot;&quot;]</code>是对命令起始字符进行配置，当你遇到 <code>怎么让命令没有/也能被机器人识别</code>这个问题时，请对它进行配置。</p>
+</li>
+<li><p><code>DEBUG=true</code>表示开启debug模式，当你对在进行如编写插件等的操作室时，对文件做出了修改，保存文件后，nb会自动重启</p>
+</li>
+<li><p>形如custom这样的配置，你可以自定义,只要确保为JSON格式即可，且大小写不敏感，<br>你可以配置如：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BAN&#x3D;[&quot;123456&quot;]</span><br></pre></td></tr></table></figure>
 
-<p>则在插件中可通过以下方式来调用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line">myconfig = nonebot.get_driver().config.ban</span><br></pre></td></tr></table></figure>
+<p>  则在插件中可通过以下方式来调用（后续使用插件会讲）</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line">myconfig = nonebot.get_driver().config.ban</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
 <h4 id="otherconfig"> 其他配置 </h4>
 
 <p>就我个人而言，使用.env.*是最常使用的，此外还可通过系统环境变量、bot.py来配置，参见官方：<a href="https://v2.nonebot.dev/guide/basic-configuration.html" target="_blank" rel="external nofollow noopener noreferrer" title="基本配置">基本配置</a></p>
 <hr>
-<h3 id="botpy"> nonebot2机器人的配置</h3>
+<h3 id="botpy"> nonebot2机器人的使用</h3>
 
 <p>相信你再<a href="#env">前面的章节中</a>,已经对 <code>.env.dev</code>做出了修改，这里不再赘述</p>
 <p>bot.py中默认生成的内容如下</p>
@@ -605,7 +614,89 @@ pre{
 <a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/nonebot/nbpluginuse.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/nonebot/nbpluginuse.png"></a></p>
 
 <p>这里写的不是很详细，意思是需要艾特机器人并说算性价比即可，或者叫机器人昵称并说算性价比，</p>
-<p>最近考试，没时间更，请看<a href="#pre">官方文档</a></p>
+<h4 id="init">编写插件</h4>
+
+<h5 id="fow">须知</h5>
+
+<p>我们回顾一下我们的目录结构</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">bot</span><br><span class="line">├── cq</span><br><span class="line">├── robot</span><br><span class="line">│   └── ...</span><br><span class="line">│   └── src</span><br><span class="line">│        └── plugins</span><br><span class="line">│   └── bot.py</span><br><span class="line">│   └── ...</span><br></pre></td></tr></table></figure>
+
+<p>cq在之前的操作中已经完成了他的使命，不再讨论。</p>
+<p><code>robot</code>下的<code>src</code>文件夹是你你再进行 <code>nb create</code> 的操作时自动生成的，若没有 <code>src</code> 文件夹，那必定会有一个 与项目名相同的文件夹，按照我的教程来说，在 <code>robot</code>下还有一个 <code>robot</code>文件夹。</p>
+<p>继续拿 <code>src</code> 文件夹来说，在它下面有一个 <code>plugins</code> 文件夹，是插件目录，文件夹里的插件会在 nb启动时被加载。</p>
+<p>这是在<code>nb create</code> 时配置好的，你可以在 <code>pyproject.toml</code> 看到：</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[nonebot.plugins]</span></span><br><span class="line"><span class="attr">plugins</span> = []</span><br><span class="line"><span class="attr">plugin_dirs</span> = [<span class="string">"src/plugins"</span>]</span><br></pre></td></tr></table></figure>
+
+<p>表示这个nb项目的插件目录是 <code>src/plugins</code> </p>
+<p>接下来我将演示一个简单的插件编写，仅提供入门nb的一个思路，其他操作将写在后面，或另撰新文。</p>
+<h5 id="startinit">开始</h5>
+
+<p>官方推荐使用python包文件形式创建插件，即 ：一个插件为一个文件夹，文件夹名即插件名，下含 <code>__init__.py</code>的文件以及其他文件，为一个合法的python包。我们创建一个名为 <code>first_plugin</code> 的插件，欲用它来调用一个每日早报的接口：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">src</span><br><span class="line">│   └── plugins</span><br><span class="line">│        └── first_plugin</span><br><span class="line">│                 └── __init__.py</span><br><span class="line">│                 └── askjson.py</span><br></pre></td></tr></table></figure>
+
+<p>以pycharm为例，在创建插件时，可选择新建下的 python包，该操作会自动生成 <code>__init__.py</code>：</p>
+<p style="text-align:center;">
+<a href="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/nonebot/createplugin.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/nonebot/createplugin.png"></a></p>
+
+
+
+<h5 id="editinit">编写</h5>
+
+<p><strong>&gt; askjson.py</strong></p>
+<p>我们先对<code>askjson.py</code> 进行编写（其实这种简单地操作没必要独立出来一个askjson文件，这里只是示例）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> httpx</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_url</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :return: 早报图片链接</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    url=<span class="string">"https://api.iyk0.com/60s"</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        img_url=httpx.get(url).json()[<span class="string">"imageUrl"</span>]</span><br><span class="line">        <span class="keyword">return</span> img_url</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"出错了捏"</span></span><br></pre></td></tr></table></figure>
+
+<p>上述代码中使用了异步的httpx而不是requests：数据获取应尽量使用<strong>异步</strong>处理。我们访问 <code>https://api.iyk0.com/60s</code>这个接口，该接口会返回：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">"msg"</span>: <span class="string">"Success"</span>,</span><br><span class="line">    <span class="attr">"imageUrl"</span>: <span class="string">"https://img01.sogoucdn.com/app/a/200692/621_2416_feedback_f1971058fc5c40eabc885fa7a18dba28.png"</span>,</span><br><span class="line">    <span class="attr">"tips"</span>: <span class="string">"注意:新闻数据是在每天凌晨一点更新，如设定定时任务请在凌晨一点后调用本接口！谢谢配合！"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>故我们在调用 <code>get_url()</code>时，会返回早报的图片链接（接口正常的情况下）</p>
+<p><strong>&gt; __init__.py</strong> </p>
+<p>在该文件中编写各类事件响应及处理逻辑。</p>
+<p>我通常默认阅读本文的宁具有一定python基础，故某些点不做解释</p>
+<p>通常，最常见的开始姿势如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot <span class="keyword">import</span> on_command</span><br><span class="line"><span class="keyword">from</span> nonebot.rule <span class="keyword">import</span> to_me</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.cqhttp <span class="keyword">import</span> Bot, Event, MessageSegment</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> askjson</span><br><span class="line"></span><br><span class="line">sixty=on_command(<span class="string">"60s"</span>,aliases=&#123;<span class="string">"早报"</span>,<span class="string">"六十"</span>&#125;,priority=<span class="number">2</span>,block=<span class="literal">True</span>)</span><br><span class="line"><span class="meta">@sixty.handle()</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_</span><span class="params">(bot:Bot,event:Event,state:dict)</span>:</span></span><br><span class="line">    img_url=askjson.get_url()</span><br><span class="line">    <span class="keyword">if</span> <span class="string">"出错"</span> <span class="keyword">not</span> <span class="keyword">in</span> img_url:</span><br><span class="line">        <span class="keyword">await</span> sixty.send(message=MessageSegment.image(img_url))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>第2行导入的<code>on_command</code> 注册一个消息类型的命令处理器，也就是说，让机器人识别你的命令需要用到他。</li>
+</ul>
+<ul>
+<li><p>第7行中的写法中：</p>
+<ol>
+<li><code>60s</code>表示命令名</li>
+<li><code>aliases</code> 表示命令别名，即 <code>60s</code>、<code>早报</code>、<code>六十</code> 都会响应这个事件</li>
+<li><code>priority</code>表示优先级，数值越小越优先</li>
+</ol>
+</li>
+<li><p>第8行，紧接着<code>@sixty.handle()</code> sixty被事件响应器的装饰器装饰从而成为事件响应器的事件处理函数,<code>handle()</code>是简单的为事件响应器添加一个事件处理函数，这个函数将会在上一个处理函数正常返回执行完毕后立即执行。</p>
+</li>
+</ul>
+<p><strong>事件处理函数中，除<code>bot</code>外都是可选的</strong></p>
+<ul>
+<li><p>第10行调用我们编写的函数获取到链接，12行中<code>send()</code>函数根据<code>event</code>向触发事件的主体发送消息。<a href="https://v2.nonebot.dev/2.0.0a15/api/adapters/ding.html#async-send-event-message-at-sender-false-webhook-none-secret-none-kwargs" target="_blank" rel="external nofollow noopener noreferrer">点我查看参数</a> </p>
+<p>  我们在注册事件时传入了Event故这里可以直接<code>sixty.send(message=xxx)</code>,我们也可以：<code>bot.send(event=Event,message=xxx)</code></p>
+<p>其中<code>message</code>参数是我们要发送的消息，可以是纯文本 <code>message=&quot;你好&quot;</code> ，这里使用的 <code>MessageSegment</code> 是nb对cq协议的适配，可用于发送CQ码等（个人理解），即:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> sixty.send(message=MessageSegment.image(img_url))</span><br></pre></td></tr></table></figure>
+
+<p>  等价于</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rely=[&#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"image"</span>,</span><br><span class="line">      <span class="string">"data"</span>: &#123;</span><br><span class="line">      <span class="string">"file"</span>: img_url</span><br><span class="line">              &#125;</span><br><span class="line">&#125;]</span><br><span class="line"><span class="keyword">await</span> sixty.send(message=rely)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>如果你要发送文本+图片，如下写法皆可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> sixty.send(message=<span class="string">"今日早报"</span>+MessageSegment.image(img_url))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">rely=[&#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"text"</span>,</span><br><span class="line">      <span class="string">"data"</span>: &#123;</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"今日早报"</span></span><br><span class="line">              &#125;</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"image"</span>,</span><br><span class="line">      <span class="string">"data"</span>: &#123;</span><br><span class="line">      <span class="string">"file"</span>: img_url</span><br><span class="line">              &#125;</span><br><span class="line">&#125;]</span><br><span class="line"><span class="keyword">await</span> sixty.send(message=rely)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>其他</strong></p>
+<p>官方在这里使用 <code>pydantic</code> 库对插件进行配置操作 ：<a href="https://v2.nonebot.dev/guide/creating-a-plugin.html#%E6%8E%A8%E8%8D%90%E7%BB%93%E6%9E%84-%E4%BB%85%E4%BE%9B%E5%8F%82%E8%80%83" target="_blank" rel="external nofollow noopener noreferrer">点击查看</a> 。这里暂时用不到，有需要请阅读官方文档。</p>
+<p><code>2021年12月20日03:05:05</code>待续&amp;晚安</p>
 
           
             <br>
@@ -688,7 +779,7 @@ pre{
     
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/nb2.html&title=【QQ机器人】基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
-QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的，请继续阅读如果不是 那你完全没必要读下去" target="_blank">
+    QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的，请继续阅读如果不是 那你完全没必要读下去如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
           
@@ -697,7 +788,7 @@ QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器�
     
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/nb2.html&title=【QQ机器人】基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
-QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的，请继续阅读如果不是 那你完全没必要读下去" target="_blank">
+    QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的，请继续阅读如果不是 那你完全没必要读下去如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
           
@@ -706,7 +797,7 @@ QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器�
     
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/nb2.html&title=【QQ机器人】基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
-QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的，请继续阅读如果不是 那你完全没必要读下去" target="_blank">
+    QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的，请继续阅读如果不是 那你完全没必要读下去如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
           
@@ -815,7 +906,7 @@ QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器�
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#fo"><span class="toc-number">1.</span> <span class="toc-text"> 写在前面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sum"><span class="toc-number">1.1.</span> <span class="toc-text"> 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pre"><span class="toc-number">1.2.</span> <span class="toc-text"> 准备 </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sta"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">2.1.</span> <span class="toc-text">安装nb</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cqin"><span class="toc-number">2.2.</span> <span class="toc-text"> 安装cq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nbcr"><span class="toc-number">2.3.</span> <span class="toc-text">创建nb项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#done"><span class="toc-number">2.4.</span> <span class="toc-text">大功告成</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#plugin3"><span class="toc-number">3.</span> <span class="toc-text"> nonebot2机器人的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#env"><span class="toc-number">3.1.</span> <span class="toc-text"> .env.*的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#otherconfig"><span class="toc-number">3.2.</span> <span class="toc-text"> 其他配置 </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#botpy"><span class="toc-number">4.</span> <span class="toc-text"> nonebot2机器人的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#store"><span class="toc-number">4.1.</span> <span class="toc-text">使用商店中的插件</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#fo"><span class="toc-number">1.</span> <span class="toc-text"> 写在前面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sum"><span class="toc-number">1.1.</span> <span class="toc-text"> 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pre"><span class="toc-number">1.2.</span> <span class="toc-text"> 准备 </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sta"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">2.1.</span> <span class="toc-text">安装nb</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cqin"><span class="toc-number">2.2.</span> <span class="toc-text"> 安装cq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nbcr"><span class="toc-number">2.3.</span> <span class="toc-text">创建nb项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#done"><span class="toc-number">2.4.</span> <span class="toc-text">大功告成</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#plugin3"><span class="toc-number">3.</span> <span class="toc-text"> nonebot2机器人的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#env"><span class="toc-number">3.1.</span> <span class="toc-text"> .env.*的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#otherconfig"><span class="toc-number">3.2.</span> <span class="toc-text"> 其他配置 </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#botpy"><span class="toc-number">4.</span> <span class="toc-text"> nonebot2机器人的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#store"><span class="toc-number">4.1.</span> <span class="toc-text">使用商店中的插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init"><span class="toc-number">4.2.</span> <span class="toc-text">编写插件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#fow"><span class="toc-number">4.2.1.</span> <span class="toc-text">须知</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#startinit"><span class="toc-number">4.2.2.</span> <span class="toc-text">开始</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#editinit"><span class="toc-number">4.2.3.</span> <span class="toc-text">编写</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1188,7 +1279,7 @@ setInterval("createtime()",250);
    
 <!---字数统计----->
 <i class="fas fa-chart-area"></i>
-<span class="post-count">字数统计：34.9k</span>
+<span class="post-count">字数统计：36.2k</span>
 <br>
 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/icp.png" alt="ICP"><span>陕ICP备2020016014号-1</span></a>
 
