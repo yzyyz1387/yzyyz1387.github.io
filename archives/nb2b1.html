@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长</title>
+  <title>新-基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长</title>
   
   <meta name="keywords" content="幼稚园园长,博客,blog,园长博客,稚昂长,幼稚园园长博客">
   
@@ -342,8 +342,8 @@ pre{
         
   
     <h1 class="title">
-      <a href="/archives/nb2.html">
-        基于Nonebot2和go-cqhttp的机器人搭建
+      <a href="/archives/nb2b1.html">
+        新-基于Nonebot2和go-cqhttp的机器人搭建
       </a>
     </h1>
   
@@ -379,7 +379,7 @@ pre{
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>消息发布于：2021年12月2日</p>
+    <p>消息发布于：2022年1月24日</p>
   </a>
 </div>
 
@@ -403,10 +403,10 @@ pre{
           
         
           
-            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2022-01-24T17:15:58+08:00">
+            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2022-02-08T18:13:50+08:00">
   <a class="notlink">
     <i class="fas fa-save" aria-hidden="true"></i>
-    <p>本页文档最后更新于：2022年1月24日</p>
+    <p>本页文档最后更新于：2022年2月8日</p>
   </a>
 </div>
 
@@ -423,20 +423,21 @@ pre{
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          <p style="text-align:center;width=200px">
-    <a href="https://raw.githubusercontent.com/nonebot/nonebot2/master/docs/.vuepress/public/logo.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/logo.png" style="width:200px"></a><br>QQ机器人保姆级平民搭建方法<br> <font color="red">如果你仅想使用python实现机器人的功能而不考虑其他的(黑产用途、手搓轮子之类的)，请继续阅读<br>如果不是 那你完全没必要读下去<br>如果在阅读时发现了我的错误 烦请在<a href="#comments">评论区</a>提出<br>本人技术不佳 还希望来访大佬指教</font></p>
+          <hr>
+<p style="text-align:center;width=200px">
+    <a href="https://raw.githubusercontent.com/nonebot/nonebot2/master/docs/.vuepress/public/logo.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/logo.png" style="width:200px"></a><br>QQ机器人保姆级平民搭建方法(新)<br> <font color="red">本文内容及部分所用图片来自上一篇教程，与文章内容可能有偏差但不影响部署<br>如果在阅读时发现了我的错误 烦请在<a href="#comments">评论区</a>提出<br>本人技术不佳 还希望来访大佬指教</font></p>
 
 
 <a id="more"></a>
 
 <h3 id="fo"> 写在前面</h3>
 
-<p>本文由于nonebot版本更新，部分内容已不再适用，请转至<a href="https://yzyyz.top/archives/nb2b1.html">基于Nonebot2和go-cqhttp的机器人搭建 新</a></p>
+<p>nb2a16文章原址<a href="https://yzyyz.top/archives/nb2.html">基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长 (yzyyz.top)</a></p>
 <h4 id="sum"> 概述</h4>
-本文将叙述如何在windows下使用Nonebot2（下称nb）和go-cqhttp（下称cq）创建QQ机器人<img src="https://api.isoyu.com/uploads/ARU/GIF_S/0540.gif" style="
+本文将叙述如何在linux（deepin）下使用Nonebot2（下称nb）和go-cqhttp（下称gocq）创建QQ机器人<img src="https://api.isoyu.com/uploads/ARU/GIF_S/0540.gif" style="
     margin: 0;
     display: inline;
-">，若你想使用nb和cq创建机器人，你需要：
+">，若你想使用nb和gocq创建机器人，你需要：
 
 <ol>
 <li>Python环境（3.7.3以上）</li>
@@ -445,19 +446,18 @@ pre{
 <li>Linux能力（部署于linux）</li>
 <li>…</li>
 </ol>
-<p>linux下部署也是一样的，</p>
+<p>windows下部署也是一样的，</p>
 <h4 id="pre"> 准备 </h4> 
 
-<p><strong>什么是nb？什么是cq？</strong><br>关于这部分内容，你可以从他们的官网找到：  </p>
+<p><strong>什么是nb？什么是gocq？</strong><br>关于这部分内容，你可以从他们的官网找到：  </p>
 <blockquote>
-<p>nb文档: <a href="https://v2.nonebot.dev/" target="_blank" rel="external nofollow noopener noreferrer">https://v2.nonebot.dev</a><br>cq文档: <a href="https://docs.go-cqhttp.org/" target="_blank" rel="external nofollow noopener noreferrer">https://docs.go-cqhttp.org/</a><br>你需要记住他们，因为你需要随时查阅文档</p>
+<p>nb文档: <a href="https://v2.nonebot.dev/" target="_blank" rel="external nofollow noopener noreferrer">https://v2.nonebot.dev</a><br>gocq文档: <a href="https://docs.go-cqhttp.org/" target="_blank" rel="external nofollow noopener noreferrer">https://docs.go-cqhttp.org/</a><br>你需要记住他们，因为你需要随时查阅文档</p>
 </blockquote>
-<p><del>简单</del><strong>粗暴</strong>来说，cq就是一个QQ，即你需要用它来登录，接收消息，发送消息；而nb则用来实现机器人的各种功能。<br>如下是他们的项目地址，记得去点个star哦~  </p>
+<p><del>简单</del><strong>粗暴</strong>来说，gocq就是一个QQ，即你需要用它来登录，接收消息，发送消息；而nb则用来实现机器人的各种功能。<br>如下是他们的项目地址，记得去点个star哦~  </p>
 <blockquote>
-<p>nb：<a href="https://github.com/nonebot/nonebot2" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/nonebot/nonebot2</a><br>cq：<a href="https://github.com/Mrs4s/go-cqhttp" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/Mrs4s/go-cqhttp</a>  </p>
+<p>nb：<a href="https://github.com/nonebot/nonebot2" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/nonebot/nonebot2</a><br>gocq：<a href="https://github.com/Mrs4s/go-cqhttp" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/Mrs4s/go-cqhttp</a>  </p>
 </blockquote>
-<p><strong><font color="red">创作本文时，nb最新版本为<code>2.0.0a16</code>，cq最新版本为<code>v1.0.0-beta8-fix1</code>，请注意内容时效！</font></strong></p>
-<p><strong>nb 2.0.0 b1 已发版 其与a16有部分差别，注意查看官方文档</strong></p>
+<p><strong><font color="red">创作本文时，nb最新版本为<code>2.0.0b1</code>，gocq最新版本为`v1.0.0-beta8-fix2，请注意内容时效！</font></strong></p>
 <hr>
 <h3 id="sta">开始</h3>
 
@@ -475,56 +475,64 @@ pre{
 </ul>
 </li>
 <li><p><strong>安装适配器</strong>(使用脚手架安装时已经安装)</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install nonebot-adapter-cqhttp</span><br></pre></td></tr></table></figure>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install nonebot-adapter-onebot</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="cqin"> 安装cq</h4>  
+<h4 id="cqin"> 安装gocq</h4>  
+
+<h5 id="deepin">deepin</h5>
 
 <p>我们打开工作路径（这里我新建一个<code>bot</code>文件夹，<code>bot</code>下新建<code>cq</code>文件夹并打开  </p>
 <p>前往<a href="https://github.com/Mrs4s/go-cqhttp" target="_blank" rel="external nofollow noopener noreferrer"><i class="fas fa-link fa-fw"></i> Release</a>下载最新版，注意与你的操作系统匹配 </p>
-<p>我这里下载 <code>go-cqhttp_windows_amd64.exe</code>, 更名为<code>go-cqhttp.exe</code>,双击启动。</p>
-<p style="text-align:center;">
-<a href="https://cdn.yzyyz.top/nonebot/cqinstall.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/cqinstall.png"></a></p>
-
-
-<br>
-
-<p>这里按照提示点确定，最后会在当前目录生成一个<code>go-cqhttp.bat</code>的批处理文件</p>
-<br>
-<p style="text-align:center;">
-<a href="https://cdn.yzyyz.top/nonebot/cqbat.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/cqbat.png"></a></p>
-
-
-<p>双击运行批处理文件，选择 <strong>3</strong> <code>反向Websocket</code> 回车，此时会在当前文件夹生成 <code>config.yml</code>的配置文件</p>
-<p style="text-align:center;">
-<a href="https://cdn.yzyyz.top/nonebot/cqws.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/cqws.png"></a></p>
-
+<p>我这里下载 <code>go-cqhttp_1.0.0-beta8-fix2_linux_amd64.deb</code>, 并安装。</p>
+<ul>
+<li>在<code>cq</code>目录下执行<code>go-cqhttp</code></li>
+<li>选择<code>反向WebSocket</code>回车</li>
+<li>此时目录下会生成配置文件<code>config.yml</code></li>
+<li>对其进行配置：<ul>
+<li>QQ号及密码</li>
+<li>反向ws地址</li>
+</ul>
+</li>
+</ul>
 <p>使用任何适宜的编辑器对配置文件进行编辑，在<code>行4、5</code>填写要用来做机器人的QQ账号与密码。<code>行96</code> 内容进行修改：</p>
 <blockquote>
 <p>universal: ws://your_websocket_universal.server</p>
 </blockquote>
 <p>修改为</p>
 <blockquote>
-<p>universal: ws://127.0.0.1:8080/cqhttp/ws</p>
+<p>universal: ws://127.0.0.1:8080/onebot/v11/ws</p>
 </blockquote>
-<p>8080是端口号，根据实际需求填写，修改完保存即可，再双击<code>go-cqhttp.bat</code>批处理文件，即可登录成功（有的账号需要扫码登录，根据提示即可）</p>
+<p>8080是端口号，根据实际需求填写，修改完保存即可，再次执行<code>./go-cqhttp</code>，即可登录成功（有的账号需要扫码登录，根据提示即可）</p>
 <p style="text-align:center;">
 <a href="https://cdn.yzyyz.top/nonebot/cqlogin.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/cqlogin.png"></a></p>
 
+
 <p>如图代表登陆成功，下方黄色提示暂且放下不管。</p>
+<br>
+
+<h5 id="deepin">其他Linux发行版</h5>
+
+<p>下载对应release后：</p>
+<ul>
+<li>使用<code>tar -xzvf [文件名]</code>解压</li>
+<li><code>cd</code>设置工作目录为解压后的文件夹</li>
+<li>再执行 <code>./go-cqhttp</code></li>
+<li>按照提示配置<code>config.yml</code>与上方配置相同</li>
+</ul>
 <h4 id="nbcr">创建nb项目</h4>  
 
-<p>返回<code>bot</code>，在此处打开cmd并运行：</p>
+<p>返回<code>bot</code>，在此处打开终端并运行：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb create</span><br></pre></td></tr></table></figure>
 <p>此时按照如下步骤创建项目</p>
 <ul>
 <li>输入<code>项目名称</code> 我这里输入了robot</li>
 <li>使用 <code>↓</code> 选择<code>src</code>文件夹</li>
-<li>输入 <code>y</code> 回车</li>
-<li>按下<font color="red" size="25px">空格</font>键选择<code>cqhttp</code>回车<br>(很多人这里不注意空格，还反过来问我觉得我有问题)</li>
+<li>选择一款预置插件，我按下<font color="red" size="25px">空格</font>选择echo，回车</li>
+<li>按下<font color="red" size="25px">空格</font>键选择<code>noebot v11</code>回车<br>(很多人这里不注意空格)</li>
 </ul>
-<p>请使用任何适宜的软件（如记事本）打开<code>env.dev</code>并做出修改，保证你在前面的步骤中对cq配置的端口与此文件中的端口保持一致</p>
+<p>请使用任何适宜的软件（如记事本(不推荐)）打开<code>env.dev</code>并做出修改，保证你在前面的步骤中对gocq配置的端口与此文件中的端口保持一致</p>
 <blockquote>
 <p>PORT=8080</p>
 </blockquote>
@@ -532,19 +540,19 @@ pre{
 <blockquote>
 <p>PORT=你使用的端口</p>
 </blockquote>
-<p>那么现在在robot下打开cmd,输入以下命令运行nonebot2:</p>
+<p>那么现在在robot下打开终端,输入以下命令运行nonebot2:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb run</span><br></pre></td></tr></table></figure>
 
 <p>此外，在pycharm中运行bot.py也是可行的</p>
-<p><strong><font color="#3898fc">注意，需要让cq和nb都运行，linux可使用进程守护一类的工具让他们后台运行，我个人是宝塔面板中的进程守护来解决这个问题</font></strong></p>
+<p><strong><font color="#3898fc">注意，需要让gocq和nb都运行，linux可使用进程守护一类的工具让他们后台运行，我个人是宝塔面板中的进程守护来解决这个问题</font></strong></p>
 <p style="text-align:center;">
 <a href="https://cdn.yzyyz.top/nonebot/nbrun.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbrun.png"></a></p>
 
-<p>如图表示运行成功，你会发现cq中的黄色提示变成了：</p>
+<p>如图表示运行成功，你会发现gocq中的黄色提示变成了：</p>
 <blockquote>
 <p>已连接到反向Web…..</p>
 </blockquote>
-<p>也就是说，nb与cq之间可以通信了</p>
+<p>也就是说，nb与gocq之间可以通信了</p>
 <h4 id="done">大功告成</h4>
 
 <p>现在，向你的机器人发送 <code>/echo 123</code> 看看会发生什么吧，不出意外地，你的机器人向你回复了<code>123</code></p>
@@ -557,12 +565,10 @@ pre{
 <h4 id="env"> .env.*的配置</h4>
 
 <p>.env.*文件为配置文件，可在任何插件中加载，官方示例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">HOST&#x3D;0.0.0.0  # 配置 NoneBot 监听的 IP&#x2F;主机名</span><br><span class="line">PORT&#x3D;8080  # 配置 NoneBot 监听的端口</span><br><span class="line">DEBUG&#x3D;true  # 开启 debug 模式 **请勿在生产环境开启**</span><br><span class="line">SUPERUSERS&#x3D;[&quot;123456789&quot;, &quot;987654321&quot;]  # 配置 NoneBot 超级用户</span><br><span class="line">NICKNAME&#x3D;[&quot;awesome&quot;, &quot;bot&quot;]  # 配置机器人的昵称</span><br><span class="line">COMMAND_START&#x3D;[&quot;&#x2F;&quot;, &quot;&quot;]  # 配置命令起始字符</span><br><span class="line">COMMAND_SEP&#x3D;[&quot;.&quot;]  # 配置命令分割字符</span><br><span class="line"></span><br><span class="line"># Custom Configs</span><br><span class="line">CUSTOM_CONFIG1&#x3D;&quot;config in env file&quot;</span><br><span class="line">CUSTOM_CONFIG2&#x3D;  # 留空则从系统环境变量读取，如不存在则为空字符串</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HOST&#x3D;0.0.0.0  # 配置 NoneBot 监听的 IP&#x2F;主机名</span><br><span class="line">PORT&#x3D;8080  # 配置 NoneBot 监听的端口</span><br><span class="line">SUPERUSERS&#x3D;[&quot;123456789&quot;, &quot;987654321&quot;]  # 配置 NoneBot 超级用户</span><br><span class="line">NICKNAME&#x3D;[&quot;awesome&quot;, &quot;bot&quot;]  # 配置机器人的昵称</span><br><span class="line">COMMAND_START&#x3D;[&quot;&#x2F;&quot;, &quot;&quot;]  # 配置命令起始字符</span><br><span class="line">COMMAND_SEP&#x3D;[&quot;.&quot;]  # 配置命令分割字符</span><br><span class="line"></span><br><span class="line"># Custom Configs</span><br><span class="line">CUSTOM_CONFIG1&#x3D;&quot;config in env file&quot;</span><br><span class="line">CUSTOM_CONFIG2&#x3D;  # 留空则从系统环境变量读取，如不存在则为空字符串</span><br></pre></td></tr></table></figure>
 <p>你可以将其复制到<code>.env.dev</code>中</p>
 <ul>
-<li><p>其中<code>COMMAND_START=[&quot;/&quot;, &quot;&quot;]</code>是对命令起始字符进行配置，当你遇到 <code>怎么让命令没有/也能被机器人识别</code>这个问题时，请对它进行配置。</p>
-</li>
-<li><p><code>DEBUG=true</code>表示开启debug模式，当你对在进行如编写插件等的操作时，对文件做出了修改，保存文件后，nb会自动重启</p>
+<li><p>其中<code>COMMAND_START=[&quot;/&quot;, &quot;&quot;]</code>是对命令起始字符进行配置，当你遇到 <code>怎么让命令没有/也能被机器人识别</code>这个问题时，请对它进行配置。这样，你的命令前就不同加<code>/</code>了</p>
 </li>
 <li><p>形如custom这样的配置，你可以自定义,只要确保为JSON格式即可，且大小写不敏感，<br>你可以配置如：</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BAN&#x3D;[&quot;123456&quot;]</span><br></pre></td></tr></table></figure>
@@ -574,55 +580,60 @@ pre{
 </ul>
 <h4 id="otherconfig"> 其他配置 </h4>
 
-<p>就我个人而言，使用.env.*是最常使用的，此外还可通过系统环境变量、bot.py来配置，参见官方：<a href="https://v2.nonebot.dev/guide/basic-configuration.html" target="_blank" rel="external nofollow noopener noreferrer" title="基本配置">基本配置</a></p>
+<p>就我个人而言，使用.env.*是最常使用的，此外还可通过系统环境变量、bot.py来配置，参见官方：[基本配置](<a href="https://v2.nonebot.dev/docs/tutorial/configuration" target="_blank" rel="external nofollow noopener noreferrer">配置 | NoneBot</a> “基本配置”)</p>
 <hr>
 <h3 id="botpy"> nonebot2机器人的使用</h3>
 
 <p>相信你再<a href="#env">前面的章节中</a>,已经对 <code>.env.dev</code>做出了修改，这里不再赘述</p>
 <p>bot.py中默认生成的内容如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.cqhttp <span class="keyword">import</span> Bot <span class="keyword">as</span> CQHTTPBot</span><br><span class="line"></span><br><span class="line"><span class="comment"># Custom your logger</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># from nonebot.log import logger, default_format</span></span><br><span class="line"><span class="comment"># logger.add("error.log",</span></span><br><span class="line"><span class="comment">#            rotation="00:00",</span></span><br><span class="line"><span class="comment">#            diagnose=False,</span></span><br><span class="line"><span class="comment">#            level="ERROR",</span></span><br><span class="line"><span class="comment">#            format=default_format)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You can pass some keyword args config to init function</span></span><br><span class="line">nonebot.init()</span><br><span class="line">app = nonebot.get_asgi()</span><br><span class="line"></span><br><span class="line">driver = nonebot.get_driver()</span><br><span class="line">driver.register_adapter(<span class="string">"cqhttp"</span>, CQHTTPBot)</span><br><span class="line"></span><br><span class="line">nonebot.load_builtin_plugins()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Please DO NOT modify this file unless you know what you are doing!</span></span><br><span class="line"><span class="comment"># As an alternative, you should use command `nb` or modify `pyproject.toml` to load plugins</span></span><br><span class="line">nonebot.load_from_toml(<span class="string">"pyproject.toml"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Modify some config / config depends on loaded configs</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># config = driver.config</span></span><br><span class="line"><span class="comment"># do something...</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    nonebot.logger.warning(<span class="string">"Always use `nb run` to start the bot instead of manually running!"</span>)</span><br><span class="line">    nonebot.run(app=<span class="string">"__mp_main__:app"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.onebot.v11 <span class="keyword">import</span> Adapter <span class="keyword">as</span> ONEBOT_V11Adapter</span><br><span class="line"></span><br><span class="line"><span class="comment"># Custom your logger</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># from nonebot.log import logger, default_format</span></span><br><span class="line"><span class="comment"># logger.add("error.log",</span></span><br><span class="line"><span class="comment">#            rotation="00:00",</span></span><br><span class="line"><span class="comment">#            diagnose=False,</span></span><br><span class="line"><span class="comment">#            level="ERROR",</span></span><br><span class="line"><span class="comment">#            format=default_format)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You can pass some keyword args config to init function</span></span><br><span class="line">nonebot.init()</span><br><span class="line">app = nonebot.get_asgi()</span><br><span class="line"></span><br><span class="line">driver = nonebot.get_driver()</span><br><span class="line">driver.register_adapter(ONEBOT_V11Adapter)</span><br><span class="line"></span><br><span class="line">nonebot.load_builtin_plugins(<span class="string">"echo"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Please DO NOT modify this file unless you know what you are doing!</span></span><br><span class="line"><span class="comment"># As an alternative, you should use command `nb` or modify `pyproject.toml` to load plugins</span></span><br><span class="line">nonebot.load_from_toml(<span class="string">"pyproject.toml"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Modify some config / config depends on loaded configs</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># config = driver.config</span></span><br><span class="line"><span class="comment"># do something...</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    nonebot.logger.warning(<span class="string">"Always use `nb run` to start the bot instead of manually running!"</span>)</span><br><span class="line">    nonebot.run(app=<span class="string">"__mp_main__:app"</span>)</span><br></pre></td></tr></table></figure>
 
 
-<p>我们大可去掉其中的注释，改为:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.cqhttp <span class="keyword">import</span> Bot</span><br><span class="line"></span><br><span class="line">driver = nonebot.get_driver()</span><br><span class="line">driver.register_adapter(<span class="string">"cqhttp"</span>, Bot)</span><br><span class="line">nonebot.load_builtin_plugins()</span><br><span class="line">nonebot.load_from_toml(<span class="string">"pyproject.toml"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    nonebot.logger.warning(<span class="string">"Always use `nb run` to start the bot instead of manually running!"</span>)</span><br><span class="line">    nonebot.run(app=<span class="string">"__mp_main__:app"</span>)</span><br></pre></td></tr></table></figure>
+<p>阅读注释后（看不懂请使用翻译）我们大可去掉其中的注释，改为:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.onebot.v11 <span class="keyword">import</span> Adapter <span class="keyword">as</span> ONEBOT_V11Adapter</span><br><span class="line"></span><br><span class="line">nonebot.init()</span><br><span class="line">app = nonebot.get_asgi()</span><br><span class="line">driver = nonebot.get_driver()</span><br><span class="line">driver.register_adapter(ONEBOT_V11Adapter)</span><br><span class="line">nonebot.load_builtin_plugins(<span class="string">"echo"</span>)</span><br><span class="line">nonebot.load_from_toml(<span class="string">"pyproject.toml"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    nonebot.logger.warning(<span class="string">"Always use `nb run` to start the bot instead of manually running!"</span>)</span><br><span class="line">    nonebot.run(app=<span class="string">"__mp_main__:app"</span>)</span><br></pre></td></tr></table></figure>
 
-<p>这里的 <code>nonebot.load_builtin_plugins()</code> 是加载本地插件，我们暂时搁置，现在讲讲如何使用别人写好的插件</p>
+<p>这里的 <code>nonebot.load_builtin_plugins(&quot;echo&quot;)</code> 是加载此前选择的预置插件，我们暂时搁置，现在讲讲如何使用别人写好的插件</p>
 <h4 id="store">使用商店中的插件</h4>
 
-<p>在<a href="https://v2.nonebot.dev/store.html" target="_blank" rel="external nofollow noopener noreferrer">nb的商店</a>中，有很多插件，比如这个工作性价比插件</p>
+<p>(<code>2022年1月24日16:24:05</code>部分插件未适配最新版nb,请参考：<a href="https://github.com/Lancercmd/nonebot2-store-test/issues/1" target="_blank" rel="external nofollow noopener noreferrer">📝 NoneBot2 商店插件兼容性报告 </a>)</p>
+<p>在<a href="https://v2.nonebot.dev/store.html" target="_blank" rel="external nofollow noopener noreferrer">nb的商店</a>中，有很多插件，比如这个黑丝插件</p>
 <p style="text-align:center;">
-<a href="https://cdn.yzyyz.top/nonebot/nbstore.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbstore.png"></a></p>
+<a href="https://cdn.yzyyz.top/nonebot/nbstore2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbstore2.png"></a></p>
+
 
 <ul>
 <li><p>安装方法一</p>
 <p> 点击复制安装命令，你的剪贴板会复制这段命令：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb plugin install nonebot_plugin_workscore</span><br></pre></td></tr></table></figure>
-<p> 这段命令你需要在 <code>robot</code> 文件夹下，打开cmd执行，他会安装插件并将配置写进 <code>pyproject.toml</code> 中，这样你无需修改 <code>bot.py</code> 即可在nb运行的时候加载这个插件</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb plugin install nonebot_plugin_heisi</span><br></pre></td></tr></table></figure>
+<p> 这段命令你需要在 <code>robot</code> 文件夹下，打开终端执行，他会安装插件并将配置写进 <code>pyproject.toml</code> 中，这样你无需修改 <code>bot.py</code> 即可在nb运行的时候加载这个插件</p>
 </li>
 <li><p>安装方法二<br>  若你在方法一中遇到了安装问题，一般情况下，你可以将上述命令视作</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install nonebot_plugin_workscore</span><br></pre></td></tr></table></figure>
-<p> 在任何打开的cmd中都可以执行这段命令，而值得注意的是：<br> <font color="red">如果你使用了方法二，你需要在 <code>bot.py</code>中的 <code>nonebot.load_from_toml(&quot;pyproject.toml&quot;)</code>前添加一句：</font></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nonebot.load_plugin(&quot;nonebot_plugin_workscore&quot;)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install nonebot_plugin_heisi</span><br></pre></td></tr></table></figure>
+<p> 在任何打开的终端中都可以执行这段命令，而值得注意的是：<br> <font color="red">如果你使用了方法二，你需要在 <code>bot.py</code>中的 <code>nonebot.load_from_toml(&quot;pyproject.toml&quot;)</code>前添加一句：</font></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nonebot.load_plugin(&quot;nonebot_plugin_heisi&quot;)</span><br></pre></td></tr></table></figure>
 
 <p> 此时你的<code>bot.py</code>应该是：</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.cqhttp <span class="keyword">import</span> Bot</span><br><span class="line"></span><br><span class="line">driver = nonebot.get_driver()</span><br><span class="line">driver.register_adapter(<span class="string">"cqhttp"</span>, Bot)</span><br><span class="line">nonebot.load_builtin_plugins()</span><br><span class="line">	</span><br><span class="line">nonebot.load_plugin(<span class="string">"nonebot_plugin_workscore"</span>)</span><br><span class="line">	</span><br><span class="line">nonebot.load_from_toml(<span class="string">"pyproject.toml"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    nonebot.logger.warning(<span class="string">"Always use `nb run` to start the bot instead of manually running!"</span>)</span><br><span class="line">    nonebot.run(app=<span class="string">"__mp_main__:app"</span>)</span><br></pre></td></tr></table></figure>
-<p> 即加载 “nonebot_plugin_workscore” 这一插件</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.onebot.v11 <span class="keyword">import</span> Adapter <span class="keyword">as</span> ONEBOT_V11Adapter</span><br><span class="line"></span><br><span class="line">nonebot.init()</span><br><span class="line">app = nonebot.get_asgi()</span><br><span class="line">driver = nonebot.get_driver()</span><br><span class="line">driver.register_adapter(ONEBOT_V11Adapter)</span><br><span class="line">nonebot.load_builtin_plugins(<span class="string">"echo"</span>)</span><br><span class="line">nonebot.load_plugin(<span class="string">"nonebot_plugin_heisi"</span>)</span><br><span class="line">nonebot.load_from_toml(<span class="string">"pyproject.toml"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    nonebot.logger.warning(<span class="string">"Always use `nb run` to start the bot instead of manually running!"</span>)</span><br><span class="line">    nonebot.run(app=<span class="string">"__mp_main__:app"</span>)</span><br></pre></td></tr></table></figure>
+<p> 即加载 “nonebot_plugin_heisi” 这一插件</p>
+<p> 注意：这是方法二才需要的，一般情况下你不用这样做</p>
 </li>
 </ul>
 <p>tips: 多数情况下，在插件右上角的图标中进入他的仓库页面，你可以找到插件的详细用法</p>
 <p style="text-align:center;">
-<a href="https://cdn.yzyyz.top/nonebot/nbstore.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbstore.png"></a></p>
+<a href="https://cdn.yzyyz.top/nonebot/nbstore2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbstore2.png"></a></p>
 
 
 <p>完成安装后，重启nb，你会看到</p>
 <p style="text-align:center;">
-<a href="https://cdn.yzyyz.top/nonebot/nbpluginsu.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbpluginsu.png"></a></p>
+<a href="https://cdn.yzyyz.top/nonebot/nbpluginsu2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbpluginsu2.png"></a></p>
 
-<p>表示 “nonebot_plugin_workscore” 插件已经成功导入，在<a href="https://github.com/yzyyz1387/nonebot_plugin_workscore" target="_blank" rel="external nofollow noopener noreferrer">插件的仓库页面</a>我们可以看到它的用法：</p>
+
+<p>表示 “nonebot_plugin_heisi” 插件已经成功导入，在<a href="https://github.com/yzyyz1387/nonebot_plugin_workscore" target="_blank" rel="external nofollow noopener noreferrer">插件的仓库页面</a>我们可以看到它的用法：</p>
 <p style="text-align:center;">
-<a href="https://cdn.yzyyz.top/nonebot/nbpluginuse.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbpluginuse.png"></a></p>
+<a href="https://cdn.yzyyz.top/nonebot/nbpluginuse2.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/nbpluginuse2.png"></a></p>
 
-<p>这里写的不是很详细，意思是需要艾特机器人并说算性价比即可，或者叫机器人昵称并说算性价比，</p>
+
+<p>故我们在.env.dev中做出配置，再重启nb，在群内发送<code>.黑丝</code>即可</p>
 <h4 id="init">编写插件</h4>
 
 <h5 id="fow">须知</h5>
@@ -630,7 +641,7 @@ pre{
 <p>我们回顾一下我们的目录结构</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">bot</span><br><span class="line">├── cq</span><br><span class="line">├── robot</span><br><span class="line">│   └── ...</span><br><span class="line">│   └── src</span><br><span class="line">│        └── plugins</span><br><span class="line">│   └── bot.py</span><br><span class="line">│   └── ...</span><br></pre></td></tr></table></figure>
 
-<p>cq在之前的操作中已经完成了他的使命，不再讨论。</p>
+<p>gocq在之前的操作中已经完成了他的使命，不再讨论。</p>
 <p><code>robot</code>下的<code>src</code>文件夹是你你再进行 <code>nb create</code> 的操作时自动生成的，若没有 <code>src</code> 文件夹，那必定会有一个 与项目名相同的文件夹，按照我的教程来说，在 <code>robot</code>下还有一个 <code>robot</code>文件夹。</p>
 <p>继续拿 <code>src</code> 文件夹来说，在它下面有一个 <code>plugins</code> 文件夹，是插件目录，文件夹里的插件会在 nb启动时被加载。</p>
 <p>这是在<code>nb create</code> 时配置好的，你可以在 <code>pyproject.toml</code> 看到：</p>
@@ -663,12 +674,12 @@ pre{
 <p>在该文件中编写各类事件响应及处理逻辑。</p>
 <p>我通常默认阅读本文的宁具有一定python基础，故某些点不做解释</p>
 <p>通常，最常见的开始姿势如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot <span class="keyword">import</span> on_command,logger</span><br><span class="line"><span class="keyword">from</span> nonebot.rule <span class="keyword">import</span> to_me</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.cqhttp <span class="keyword">import</span> Bot, Event, MessageSegment</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> askjson</span><br><span class="line"></span><br><span class="line">sixty=on_command(<span class="string">"60s"</span>,aliases=&#123;<span class="string">"早报"</span>,<span class="string">"六十"</span>&#125;,priority=<span class="number">2</span>,block=<span class="literal">True</span>)</span><br><span class="line"><span class="meta">@sixty.handle()</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_</span><span class="params">(bot:Bot,event:Event,state:dict)</span>:</span></span><br><span class="line">    img_url=(<span class="keyword">await</span> askjson.get_url())</span><br><span class="line">    <span class="keyword">if</span> img_url:</span><br><span class="line">        <span class="keyword">await</span> sixty.send(message=MessageSegment.image(img_url[<span class="string">"imageUrl"</span>]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        logger.info(<span class="string">'获取时出现错误'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nonebot</span><br><span class="line"><span class="keyword">from</span> nonebot <span class="keyword">import</span> on_command,logger</span><br><span class="line"><span class="keyword">from</span> nonebot.rule <span class="keyword">import</span> to_me</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.onebot.v11 <span class="keyword">import</span> Bot, MessageEvent, MessageSegment</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> askjson</span><br><span class="line"></span><br><span class="line">sixty=on_command(<span class="string">"60s"</span>,aliases=&#123;<span class="string">"早报"</span>,<span class="string">"六十"</span>&#125;,priority=<span class="number">2</span>,block=<span class="literal">True</span>)</span><br><span class="line"><span class="meta">@sixty.handle()</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_</span><span class="params">(bot:Bot,event:MessageEvent)</span>:</span></span><br><span class="line">    img_url=(<span class="keyword">await</span> askjson.get_url())</span><br><span class="line">    <span class="keyword">if</span> img_url:</span><br><span class="line">        <span class="keyword">await</span> sixty.send(message=MessageSegment.image(img_url[<span class="string">"imageUrl"</span>]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        logger.info(<span class="string">'获取时出现错误'</span>)</span><br></pre></td></tr></table></figure>
 
 
 
 <ul>
-<li>第2行导入的<code>on_command</code> 注册一个消息类型的命令处理器，也就是说，让机器人识别你的命令需要用到他。<code>logger</code>是nb 日志记录器对象。详见： <a href="https://v2.nonebot.dev/api/log.html#logger" target="_blank" rel="external nofollow noopener noreferrer">NoneBot.log 模块</a></li>
+<li>第2行导入的<code>on_command</code> 注册一个消息类型的命令处理器，也就是说，让机器人识别你的命令需要用到他。<code>logger</code>是nb 日志记录器对象。详见： <a href="https://v2.nonebot.dev/docs/next/api/log" target="_blank" rel="external nofollow noopener noreferrer">NoneBot.log 模块</a></li>
 </ul>
 <ul>
 <li><p>第7行中的写法中：</p>
@@ -681,14 +692,15 @@ pre{
 <li><p>第8行，紧接着<code>@sixty.handle()</code> sixty被事件响应器的装饰器装饰从而成为事件响应器的事件处理函数,<code>handle()</code>是简单的为事件响应器添加一个事件处理函数，这个函数将会在上一个处理函数正常返回执行完毕后立即执行。</p>
 </li>
 </ul>
-<p><strong>事件处理函数中，除<code>bot</code>外都是可选的</strong></p>
+<p><del><strong>事件处理函数中，除<code>bot</code>外都是可选的</strong></del></p>
+<p><strong>b1中,按需传入参数，bot也可以不传，反正这里可以这样写，读者日后慢慢会理解</strong></p>
 <ul>
 <li><p>第10行调用我们编写的函数获取到链接，12行中<code>send()</code>函数根据<code>event</code>向触发事件的主体发送消息。<a href="https://v2.nonebot.dev/2.0.0a15/api/adapters/ding.html#async-send-event-message-at-sender-false-webhook-none-secret-none-kwargs" target="_blank" rel="external nofollow noopener noreferrer">点我查看参数</a> </p>
-<p>  我们在注册事件时传入了Event故这里可以直接<code>sixty.send(message=xxx)</code>,我们也可以：<code>bot.send(event=Event,message=xxx)</code></p>
+<p>  我们在注册事件时传入了Event故这里可以直接<code>sixty.send(message=xxx)</code>,我们也可以：<code>bot.send(event=event,message=xxx)</code></p>
 <p>其中<code>message</code>参数是我们要发送的消息，可以是纯文本 <code>message=&quot;你好&quot;</code> ，这里使用的 <code>MessageSegment</code> 是nb对cq协议的适配，可用于发送CQ码等（个人理解），即:</p>
   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> sixty.send(message=MessageSegment.image(img_url))</span><br></pre></td></tr></table></figure>
 
-<p>  等价于</p>
+<p>  等价于（不推荐）</p>
   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rely=[&#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"image"</span>,</span><br><span class="line">      <span class="string">"data"</span>: &#123;</span><br><span class="line">      <span class="string">"file"</span>: img_url</span><br><span class="line">              &#125;</span><br><span class="line">&#125;]</span><br><span class="line"><span class="keyword">await</span> sixty.send(message=rely)</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -716,11 +728,11 @@ pre{
 <li><p>消息内容 <code>早报</code></p>
 </li>
 <li><p>事件被那个插件的Matcher处理了</p>
-<p>在cq的日志界面看到</p>
+<p>在gocq的日志界面看到</p>
 <p style="text-align:center;">
 <a href="https://cdn.yzyyz.top/nonebot/logcq.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/logcq.png"></a></p>  
 
-<p>一般情况下，使用小号来登录cq作为机器人，在发送群聊消息时，可能会出现:</p>
+<p>一般情况下，使用小号来登录gocq作为机器人，在发送群聊消息时，可能会出现:</p>
 <p style="text-align:center;">
 <a href="https://cdn.yzyyz.top/nonebot/fk.png" target="_blank" rel="external nofollow noopener noreferrer" data-fancybox="images" data-caption="nonebot"><img src="https://cdn.yzyyz.top/nonebot/fk.png"></a></p>  
 这种情况我们称之为 `喜报`
@@ -738,20 +750,22 @@ pre{
 </li>
 <li><p>tips:发送本地图片：</p>
 <ul>
-<li><p>利用cq+nb作为机器人发送本地图片时，若使用相对路径，要记得 路径是相对cq的 而不是相对nb项目的</p>
+<li><p>利用gocq+nb作为机器人发送本地图片时，若使用相对路径，要记得 路径是相对gocq的 而不是相对nb项目的，</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> sixty.send(message=MessageSegment.image(<span class="string">"file:///路径"</span>))</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rely=[&#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"image"</span>,</span><br><span class="line">      <span class="string">"data"</span>: &#123;</span><br><span class="line">      <span class="string">"file"</span>: <span class="string">"file:///路径"</span></span><br><span class="line">              &#125;</span><br><span class="line">&#125;]</span><br><span class="line"><span class="keyword">await</span> sixty.send(message=rely)</span><br></pre></td></tr></table></figure>
 
-
-
 </li>
 </ul>
 </li>
 </ul>
+<p>路径问题本人一般使用<code>Path</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line">img_path = Path() / <span class="string">"xxx.png"</span></span><br><span class="line"><span class="comment"># .resolve() 转为绝对路径</span></span><br><span class="line">img_path2 = img_path.resolve()</span><br></pre></td></tr></table></figure>
+
+<p>上述<code>img_path</code>都是Path对象，需要使用时可<code>str(img_path)</code>, 此为个人见解，若有错误，烦请在评论区指出</p>
+<p>此外：<a href="https://www.cnblogs.com/heniu/p/12872604.html" target="_blank" rel="external nofollow noopener noreferrer">python路径操作新标准：pathlib 模块 - 和牛 - 博客园 (cnblogs.com)</a></p>
 <p><strong>其他</strong></p>
-<p>官方在这里使用 <code>pydantic</code> 库对插件进行配置操作 ：<a href="https://v2.nonebot.dev/guide/creating-a-plugin.html#%E6%8E%A8%E8%8D%90%E7%BB%93%E6%9E%84-%E4%BB%85%E4%BE%9B%E5%8F%82%E8%80%83" target="_blank" rel="external nofollow noopener noreferrer">点击查看</a> 。这里暂时用不到，有需要请阅读官方文档。</p>
-<p><code>2021年12月25日00:40:40</code>待续&amp;考试加油</p>
+<p>官方配置文档 ：<a href="https://v2.nonebot.dev/docs/tutorial/configuration" target="_blank" rel="external nofollow noopener noreferrer">配置 | NoneBot</a> 。这里暂时用不到，有需要请阅读之。</p>
 
           
             <br>
@@ -787,7 +801,7 @@ pre{
           
         
           
-            <p>本文永久链接是：<a href="https://yzyyz.top/archives/nb2.html">https://yzyyz.top/archives/nb2.html</a></p>
+            <p>本文永久链接是：<a href="https://yzyyz.top/archives/nb2b1.html">https://yzyyz.top/archives/nb2b1.html</a></p>
           
         
       </blockquote>
@@ -833,8 +847,9 @@ pre{
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/nb2.html&title=基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
-    QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的(黑产用途、手搓轮子之类的)，请继续阅读如果不是 那你完全没必要读下去如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yzyyz.top/archives/nb2b1.html&title=新-基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
+
+    QQ机器人保姆级平民搭建方法(新) 本文内容及部分所用图片来自上一篇教程，与文章内容可能有偏差但不影响部署如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
           
             <img src="https://cdn.yzyyz.top/xaoxuu/logo/128/qq.png">
           
@@ -842,8 +857,9 @@ pre{
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/nb2.html&title=基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
-    QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的(黑产用途、手搓轮子之类的)，请继续阅读如果不是 那你完全没必要读下去如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yzyyz.top/archives/nb2b1.html&title=新-基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
+
+    QQ机器人保姆级平民搭建方法(新) 本文内容及部分所用图片来自上一篇教程，与文章内容可能有偏差但不影响部署如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
           
             <img src="https://cdn.yzyyz.top/xaoxuu/logo/128/qzone.png">
           
@@ -851,8 +867,9 @@ pre{
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/nb2.html&title=基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
-    QQ机器人保姆级平民搭建方法 如果你仅想使用python实现机器人的功能而不考虑其他的(黑产用途、手搓轮子之类的)，请继续阅读如果不是 那你完全没必要读下去如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://yzyyz.top/archives/nb2b1.html&title=新-基于Nonebot2和go-cqhttp的机器人搭建 | 稚昂长&summary=
+
+    QQ机器人保姆级平民搭建方法(新) 本文内容及部分所用图片来自上一篇教程，与文章内容可能有偏差但不影响部署如果在阅读时发现了我的错误 烦请在评论区提出本人技术不佳 还希望来访大佬指教" target="_blank">
           
             <img src="https://cdn.yzyyz.top/xaoxuu/logo/128/weibo.png">
           
@@ -874,40 +891,21 @@ pre{
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
                                 <a href="/archives/siji.html" rel="prev" title="四季">
-                                  
-                                      四季
-                                  
+                                    
+                                        四季
+                                    
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
                                     <a class="tag" href="/tags/%E9%9A%8F%E7%AC%94/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 随笔</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/archives/47744284.html" rel="prev" title="森林服务器提示forest server does not seem to be set up correctly">
-                                    
-                                        森林服务器提示forest server does not seem to be set up correctly
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/%E6%B8%B8%E6%88%8F/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 游戏</a>
                                 </h6>
                             
                         </span>
@@ -952,7 +950,7 @@ pre{
 
   <script>
     window.subData = {
-      title: '基于Nonebot2和go-cqhttp的机器人搭建',
+      title: '新-基于Nonebot2和go-cqhttp的机器人搭建',
       tools: true
     }
   </script>
@@ -980,7 +978,7 @@ pre{
 
 
     <div class="content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#fo"><span class="toc-number">1.</span> <span class="toc-text"> 写在前面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sum"><span class="toc-number">1.1.</span> <span class="toc-text"> 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pre"><span class="toc-number">1.2.</span> <span class="toc-text"> 准备 </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sta"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">2.1.</span> <span class="toc-text">安装nb</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cqin"><span class="toc-number">2.2.</span> <span class="toc-text"> 安装cq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nbcr"><span class="toc-number">2.3.</span> <span class="toc-text">创建nb项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#done"><span class="toc-number">2.4.</span> <span class="toc-text">大功告成</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#plugin3"><span class="toc-number">3.</span> <span class="toc-text"> nonebot2机器人的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#env"><span class="toc-number">3.1.</span> <span class="toc-text"> .env.*的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#otherconfig"><span class="toc-number">3.2.</span> <span class="toc-text"> 其他配置 </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#botpy"><span class="toc-number">4.</span> <span class="toc-text"> nonebot2机器人的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#store"><span class="toc-number">4.1.</span> <span class="toc-text">使用商店中的插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init"><span class="toc-number">4.2.</span> <span class="toc-text">编写插件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#fow"><span class="toc-number">4.2.1.</span> <span class="toc-text">须知</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#startinit"><span class="toc-number">4.2.2.</span> <span class="toc-text">开始</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#editinit"><span class="toc-number">4.2.3.</span> <span class="toc-text">编写</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#fo"><span class="toc-number">1.</span> <span class="toc-text"> 写在前面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sum"><span class="toc-number">1.1.</span> <span class="toc-text"> 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pre"><span class="toc-number">1.2.</span> <span class="toc-text"> 准备 </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sta"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">2.1.</span> <span class="toc-text">安装nb</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cqin"><span class="toc-number">2.2.</span> <span class="toc-text"> 安装gocq</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#deepin"><span class="toc-number">2.2.1.</span> <span class="toc-text">deepin</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#deepin"><span class="toc-number">2.2.2.</span> <span class="toc-text">其他Linux发行版</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nbcr"><span class="toc-number">2.3.</span> <span class="toc-text">创建nb项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#done"><span class="toc-number">2.4.</span> <span class="toc-text">大功告成</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#plugin3"><span class="toc-number">3.</span> <span class="toc-text"> nonebot2机器人的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#env"><span class="toc-number">3.1.</span> <span class="toc-text"> .env.*的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#otherconfig"><span class="toc-number">3.2.</span> <span class="toc-text"> 其他配置 </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#botpy"><span class="toc-number">4.</span> <span class="toc-text"> nonebot2机器人的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#store"><span class="toc-number">4.1.</span> <span class="toc-text">使用商店中的插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init"><span class="toc-number">4.2.</span> <span class="toc-text">编写插件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#fow"><span class="toc-number">4.2.1.</span> <span class="toc-text">须知</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#startinit"><span class="toc-number">4.2.2.</span> <span class="toc-text">开始</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#editinit"><span class="toc-number">4.2.3.</span> <span class="toc-text">编写</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
